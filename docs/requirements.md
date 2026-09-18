@@ -1,39 +1,32 @@
 # Requirements
 
-This is a public product brief, not a private equipment/questionnaire record.
+The user describes music in ordinary language, without DAW or music-theory expertise.
+Support original songs, backing music, loops and personal listening projects. Do not restrict the product to J-pop.
+Requests may delegate a whole song or only lyrics, melody, accompaniment, a section or one part.
+Inputs include briefs, reference tracks/artists, humming, MIDI and existing projects.
+Lyric/vocal scope is Korean, English and Japanese, singly or mixed; instrumentals require no language.
+Preserve editable MIDI, separate source audio, devices and the Live Set when the requested deliverable is a DAW project.
+Use available instruments and licensed local samples first. Spending and external uploads require explicit authorization.
+Target Windows, Codex and Ableton first. Installed versions and actual MCP capabilities need runtime inspection.
 
-## Confirmed product direction
+## Confirmed source policy
 
-The user describes music in ordinary language without DAW or music-theory expertise.
-Support original songs, backing music and personal listening. A request may delegate everything or only text, melody, accompaniment, a section or a part.
-Inputs can be a short brief, reference track/artist, hummed audio, MIDI or an existing project.
-Preserve editable MIDI, separated original audio and the Live Set when requested; a stem/WAV is not a substitute.
-Use owned instruments and licensed samples first. Purchases, credits and external audio uploads need explicit permission.
-Target local Windows, Codex and Ableton first; installed versions and MCP capabilities require real discovery.
+Keep only useful in-scope knowledge locally. Chinese-specialist source originals are not wanted, even as backups.
+Physically delete excluded material; do not hide it behind production filters or a maintenance bypass.
+Keep general theory regardless of its original prose language and preserve Japanese kanji.
+Keep attribution and legally required notices. The retained selection is not a byte-identical copy of both entire source repositories.
+No upstream runtime/install download, submodule, automatic update or missing-file recovery.
 
-## Owner-confirmed scope revision, 2026-09-18
+## Implemented layers
 
-Lyric/vocal languages are Korean (ko), English (en) and Japanese (ja), including mixed-language songs. Instrumentals require no lyric language.
-Chinese/Mandarin/Cantonese production, Chinese-style songwriting and Chinese traditional orchestration are excluded. Other lyric languages are outside current product scope too.
-Do not turn a scope mismatch into an automatic translation, new dependency or claimed support. Preserve supplied material and identify the limitation.
-The three-language limit is not a J-pop-only or three-genre limit. Non-excluded styles and advanced general theory remain available.
-A reference document's Chinese prose is not a Chinese production requirement. Japanese kanji and loanwords need their intended pronunciation, not script-based rejection.
-Language, vocals and intermediate approval remain per-song choices inside this scope; do not re-interview the owner for permanent defaults.
+One producer entry skill with conditional craft and ko/en/ja references.
+Locally retained, selected source documents with current file hashes and origin provenance.
+Mido-based editable MIDI creation, inspection and protected interval-limited note replacement.
+Read-only discovery of existing local audio filenames, relative paths, sizes and file hashes. No decoder, sonic ranking or account integration is implied.
 
-## Implementation boundaries
+## Completion is not one switch
 
-- One producer skill selects small task references; no all-guide workflow.
-- General prosody is separated from Korean, English and Japanese working guides.
-- Default local source navigation excludes five Chinese-specialist modules and the dedicated Chinese-folk-orchestra reference. This is module/file filtering, not sentence-level content classification.
-- Complete pinned original backups remain in Git and the distribution for provenance and loss prevention. All 121 file hashes and original notices still verify.
-- Archive audit is an explicit maintainer operation, not a production fallback. No upstream fetch or second skill-pack installation is needed.
-- One Mido helper creates/inspects MIDI and replaces one track/interval while protecting the rest.
-- No bundled MCP server, synth, account integration, singing engine or automatic spending.
-- The verified offline path is notes -> editable MIDI -> scoped edit -> readback. Real Live save/reopen and listening remain separate acceptance tests.
-
-## Completion means three different things
-
-Package: metadata, paths, dependencies, helper tests and distribution are valid.
-Behavior: actual Codex traces satisfy evals/scenarios.json, including the language boundary.
-Music/DAW: Live opens the result, sources remain editable and the user has heard it.
-Do not use a pass in one category as proof of the others.
+Package: structural checks, helper tests and distribution generation pass.
+Behavior: actual Codex traces satisfy the task-scope scenarios.
+Music/DAW: actual Live operations, saved editable sources, reopen and appropriate listening review succeed.
+Never report one layer as proof of the others.

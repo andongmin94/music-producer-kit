@@ -1,44 +1,39 @@
 # Current status
 
-Updated: 2026-09-18. Milestone: 0.4.0 Korean/English/Japanese scope and language-specific curation.
+Updated: 2026-09-18. Milestone: 0.5.0 physical source removal and local sample discovery.
 
-## Implemented
+## Implemented on the current work branch
 
-- Owner-confirmed lyric/vocal scope: ko, en, ja, including mixtures. Instrumentals need no lyric language; non-excluded genres remain broad.
-- Chinese/Mandarin/Cantonese production, Chinese-style songwriting and Chinese traditional orchestration removed from active routing and future editorial priorities.
-- Default source list/read/outline/find excludes five specialist modules and mc-orchestration/reference-minyue.md. Production module count: 42.
-- Explicit archive-audit mode is maintenance-only evidence access to all 47 modules, not a production fallback.
-- Chinese-written general theory remains accessible; no character-range language detector is used. Japanese kanji must not be rejected as Mandarin.
-- Common prosody is separated from three focused Korean/English/Japanese guides with local source locators and original examples. English/Japanese pronunciation distinctions were additionally checked against primary teaching materials cited in those guides.
-- Eight new behavior scenario definitions and fifteen new static/tool/distribution tests. Full-preservation read tests explicitly use the audit view.
+- Replaced the two complete original ZIPs with selected data. Removed five Chinese-specialist modules, the dedicated folk-instrument reference, the fusion example and redundant upstream installer/root presentation files.
+- Removed designated subject sections/paragraphs/rows from shared documents. Retained general theory and ko/en/ja material; blank lines preserve citation positions, not removed content.
+- Removed archive-audit API/CLI, hidden source views and recovery routes. Actual retained content, catalog and inventory agree; current and origin file hashes are distinct.
+- Replaced the obsolete snapshot report with SOURCE_SELECTION_REPORT.json, which stores only deletion locations and retained-data facts, not deleted passages.
+- Added read-only local sample filename/path discovery with bounded traversal, relative paths, hashes, symlink/junction avoidance and explicit non-analysis/non-license status.
+- Preserved the existing Mido editing path, craft guides, three language guides and single producer entry skill.
 
-## Observed verification
+## Verification observed so far
 
-PR #2 run 35308062775 on head 05321c8da8dcd903ca907793799360b258b954e5: SUCCESS on windows-latest and ubuntu-latest, Python 3.12.
-Both jobs passed python tools/check.py, unittest discovery and install-ZIP generation. The Ubuntu log explicitly records 93 passing tests (78 existing + 15 added).
-Verified: default 42-module list, rejection of all five excluded modules through every reader entrypoint, hidden specialist file, module search excluding that file, explicit and non-sticky audit access, original archive hashes, full 121-file verification, network-free access, no extraction, packaged language guides, source-line locators and CLI scope behavior.
-The independent distribution test uses the installed package copy and preserves the same access boundary without upstream access.
-The original source snapshot count remains 47 modules / 121 files / 2,512,420 bytes. Both archive SHA256 values match the original captures.
-This documentation-only follow-up records the observed code run; it does not claim that a later unobserved run passed.
-A full local checkout/test pass in this chat container is not claimed: github.com name resolution prevented cloning. Integrated results above were observed in GitHub Actions.
+Source-edit workflow 35311908808 completed successfully on the isolated work branch. Retained archive/file hashes and the simplified reader were verified there.
+The new sample helper was tested separately in this chat container: 12 tests passed on Linux/Python 3.13.5. Minor structural/output changes after that standalone run require integrated validation below.
+Full new-version Windows/Linux package tests and ZIP generation: pending at this checkpoint. Baseline 0.4.0 results are not proof of this version.
+Local full checkout is unavailable because this container could not resolve github.com. Integrated repository verification uses GitHub Actions; no local full-suite result is claimed.
 
-## Remaining limits
+## Product boundaries
 
-Scope filtering is module/file-level, not sentence-level removal of every Chinese-specific example from shared source documents. Use only relevant general sections; archived wording is not operating policy.
-No new dependency, remote source lookup, automatic update, synth, MCP implementation, DAW controller or permanent CI workflow was added. Mido and the editable harmony study are unchanged.
-Actual Codex behavior scenarios: 20 DEFINED, NOT RUN. Definition tests do not execute prompts.
-Codex activation, actual Ableton/MCP operations, Live save/reopen, rendering, listening and native-language performance review: NOT RUN.
-Full archival preservation: COMPLETE. Independent verification/editorial adaptation of every in-scope paragraph/table: NOT COMPLETE.
-No project-wide license grant, Splice/Melodyne/singing connector or purchase authorization was added.
+Korean, English, Japanese and instrumental work are in scope. Chinese-specialist originals are not retained for maintenance or future expansion.
+Topic-removal checks cover designated subjects and explicit locations, not all conceivable cultural associations or scholarly accuracy.
+Git history has not been force-rewritten. Current-tree/new-package removal does not retroactively replace existing copies or historical commits.
+No new library dependency, automatic purchase, audio upload, Splice/Melodyne integration, singing engine or audio decoder was added.
+Codex behavior scenarios remain DEFINED, NOT RUN. Real activation, Ableton/MCP operations, Live save/reopen, rendering and listening remain NOT RUN.
+A filename match does not establish sound content, key, tempo, quality or rights.
 
 ## Next concrete step
 
-Verify actual Windows/Codex activation and real MCP capabilities, then prove editable Live creation, save/reopen and a scoped edit.
-Continue useful general theory and ko/en/ja specialist curation. Chinese specialties are archive-only, not a deferred workstream.
-Keep the three-language boundary and preserve words/notes on narrow edits. Do not infer pronunciation language from script alone.
+Finish branch-wide regression/distribution checks and remove temporary edit scripts/workflow before merge.
+Then validate on the actual Windows machine: skill activation, real MCP schemas, selected local sample loading, editable Live Set creation, save/reopen and a protected one-part edit.
+Continue in-scope knowledge work without restoring deleted originals or broadening the settled languages.
 
-## Session handoff
+## Handoff
 
-Read actual state, AGENTS.md and requirements before continuing. Do not re-ask for permanent genre/voice defaults or reopen the language scope without a new owner decision.
-Keep private recordings, paths, samples and unpublished songs outside this public repository.
-Update status with actual run IDs, results, limitations and next steps before ending every session.
+Read actual repository state, AGENTS.md and requirements first. Do not repeat the user's settled questionnaire.
+Record actual test results and blockers before every session ends. Keep private audio, sample names/paths and unpublished work outside this repo.

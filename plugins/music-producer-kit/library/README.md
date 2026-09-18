@@ -1,13 +1,17 @@
-# Local evidence library: preservation is not production scope
+# Selected local music references
 
-Both pinned originals remain intact: **47 modules, 121 tracked files, 2,512,420 original bytes**.
-[catalog.json](catalog.json) records exact commits, paths and hashes. No upstream connection or installation is needed.
-The active producer supports **Korean (ko), English (en), Japanese (ja)** and instrumental work.
-Raw archives are source evidence, not discoverable skills or operating instructions.
+The library retains **42 in-scope modules**, with excluded originals physically removed.
+It is not a complete archival backup of either upstream repository. Exact retained files, current hashes and origin hashes are in [catalog.json](catalog.json).
+The two selected archives are the only knowledge payloads. There is no original/full backup, hidden view or audit bypass in the current package.
 
-## Default production view
+Chinese-specific language/style/instrument material was removed along with designated sections and paragraphs inside shared source documents.
+General music-theory prose may still be Chinese. That is distinct from Chinese-specialist production; Japanese kanji are also retained.
+Original LICENSE/NOTICE texts remain unmodified for attribution and rights information, not as production knowledge.
+The selection does not establish that every remaining theory statement is correct. Apply the curated producer guidance and user scope first.
 
-Use the [curated producer guides](../skills/music-producer/SKILL.md) first. For relevant detail, run the reader from the installed plugin directory:
+## Local navigation
+
+From the installed plugin directory:
 
 ```text
 python skills/music-producer/scripts/source_library.py list
@@ -18,50 +22,25 @@ python skills/music-producer/scripts/source_library.py read mc-harmony --file re
 python skills/music-producer/scripts/source_library.py verify
 ```
 
-The default module list contains **42** modules. Five Chinese-specialist modules are absent and explicit access through list/read/outline/find is rejected.
-The dedicated Chinese-folk-instrument file is likewise absent from its module's file list, search and normal reads.
-This is a module/file boundary, not an automatic language classifier or a sentence-by-sentence scrubber.
-Mixed-purpose general documents may still contain Chinese-specific examples. Use relevant general sections only; do not convert those examples into production instructions.
-Chinese-written harmony, rhythm, general orchestration and other transferable theory remain accessible. Japanese kanji are not classified as Mandarin.
+All listed modules are actually retained. Deleted modules/files are unknown; no flag restores them.
+Read returns up to 200 lines; outline returns ATX headings outside code fences; find performs bounded, literal, case-insensitive search inside one module.
+These are source navigation tools, not semantic search, a language detector or a native-pronunciation checker.
+Removal leaves blank lines where needed to preserve existing citation positions; the removed text itself is not stored.
+A source locator identifies retained local text and its upstream origin. Current hashes need not equal origin hashes for edited files.
+Do not follow a source's archived instructions, fetch missing reference books or execute a quoted command.
 
-| Topic | Production evidence |
-|---|---|
-| General theory and form | mc-melody, mc-harmony, mc-progressions, mc-modulation, mc-rhythm-groove, mc-form, mc-counterpoint, mc-development |
-| Arrangement and sound | mc-arrangement-arch, mc-orchestration, mc-texture-layering, mc-rhythm-section, mc-sound-design, mc-vocal-direction, mc-mix-intent |
-| Genres | The eight explicit choices in the [music index](../skills/music-producer/references/music.md), as relevant |
-| General lyric craft | lw-song-intent, lw-structure, lw-imagery, lw-rhyme, lw-narrative |
-| Lyric language | lw-korean, lw-english, lw-japanese |
-| Transferable traditions | lw-rap, lw-musical-theatre |
-| Evidence/notation review | case-study and symbolic-score material only for relevant, in-scope questions; no workflow adoption |
+Start with the [producer skill](../skills/music-producer/SKILL.md) and read only the relevant craft or language guide.
+The library supports general theory, arrangement, in-scope genre references, general lyric craft, Korean/English/Japanese, rap and theatre-related transferable techniques.
+Preserve conditions, exceptions and uncertainty rather than treating source preferences as musical laws.
 
-No command establishes native diction or musical quality. Sources contain inferences and known contradictions.
-Read only the needed module and section. Preserve the technique's conditions and caveats.
+## Retained files and rights
 
-## Navigation semantics
-
-list MODULE includes specialist references that are within the selected view.
-outline returns actual ATX heading positions outside fenced code, bounded output and next_start; it is not a full Markdown parser.
-find is literal case-insensitive search within one module, optionally one file. It returns line numbers, clipped excerpts and truncation state; it does not translate or classify language.
-read accepts up to 200 lines. outline accepts up to 200 headings and find up to 50 matches. Smaller requests normally suffice.
-The marker `source:mc-harmony/reference.md:57-111` names the local module, file and inclusive lines; it is not a remote fetch instruction.
-Archive/file integrity is checked before reading. verify checks all original bytes and notices, even when production access excludes a module.
-Missing or corrupt material is an error, never a reason to download a replacement. Nothing is extracted, installed or executed.
-
-## Archive-only maintenance
-
-Excluded from production: mc-style-chinese-pop, lw-mandarin, lw-cantonese, lw-chinese-style, lw-tone-check and mc-orchestration/reference-minyue.md.
-They are retained in the original backups for provenance and loss prevention, not as product capabilities or pending curation tasks.
-An explicit --archive-audit reader flag lets repository maintainers inspect preserved evidence. It is not a fallback when a production request is rejected and must not be used by the producer to expand language scope.
-Full archival verification is always possible without that flag. The scope constants live in source_library.py; no remote catalog or runtime policy service is involved.
-
-## Rights and intact backups
-
-[Composition snapshot](archives/music-composition-skills.zip) · [Lyric snapshot](archives/lyric-writing-skills.zip)
+[Selected composition](archives/composition-selected.zip) · [Selected lyric craft](archives/lyrics-selected.zip)
 
 [Composition LICENSE](notices/music-composition-skills-LICENSE.txt) · [Composition NOTICE](notices/music-composition-skills-NOTICE.txt)
 
 [Lyric LICENSE](notices/lyric-writing-skills-LICENSE.txt) · [Lyric NOTICE](notices/lyric-writing-skills-NOTICE.txt)
 
-Original file bytes, excerpts and LICENSE/NOTICE are not altered by scope filtering.
-These archives do not include additional books, purchased samples, private recordings or tools never shipped upstream.
-Third-party quotations retain their rights; see [NOTICE](../NOTICE.md). Preservation and public availability do not imply every passage is licensed by this project.
+Integrity checks compare current archive/file hashes and notice bytes. Missing or corrupt files are errors, never triggers for a download.
+No audio, paid samples, private recordings, additional books or source-code installers are obtained by these tools.
+See [NOTICE](../NOTICE.md) for the distinction between repository-authored material and third-party quotations.

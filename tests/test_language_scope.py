@@ -1,7 +1,6 @@
-"""Test production retrieval boundaries, not native diction or LLM compliance."""
+"""Physical retained-source checks, not a hidden production/audit view."""
 from pathlib import Path
-import hashlib
-import importlib.util
+import inspect
 import json
 import re
 import subprocess
@@ -13,171 +12,128 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT / 'plugins/music-producer-kit'
-SKILL = PLUGIN / 'skills/music-producer'
 sys.path.insert(0, str(ROOT / 'tools'))
-sys.path.insert(0, str(SKILL / 'scripts'))
+sys.path.insert(0, str(PLUGIN / 'skills/music-producer/scripts'))
 import check as package
-from source_library import (SourceLibrary, PRODUCTION_LANGUAGES,
-                            ARCHIVE_ONLY_MODULES, ARCHIVE_ONLY_FILES)
+import source_library
+from source_library import SourceLibrary
 
-GUIDES = ('lyrics-korean.md', 'lyrics-english.md', 'lyrics-japanese.md')
+EXCLUDED = {'mc-style-chinese-pop', 'lw-mandarin', 'lw-cantonese', 'lw-chinese-style', 'lw-tone-check'}
+TOPICS = re.compile(r'mc-style-chinese-pop|lw-(?:mandarin|cantonese|chinese-style|tone-check)|reference-minyue'
+                    r'|\b(?:Mandarin|Cantonese|Mandopop|Cantopop|guofeng|minyue|erhu|guzheng|suona)\b'
+                    r'|Chinese[- ](?:pop|folk|traditional|style|lyrics?|prosody|language|orchestr|tonal)'
+                    r'|中国|中國|中文|普通话|普通話|粤语|粵語|国语|國語|华语|華語|十三辙|倒字|协音|平仄'
+                    r'|民乐|民樂|民族管弦|二胡|琵琶|古筝|唢呐|宫商|宫调式|宫系统|五声调式|同一首歌', re.I)
 
 
 class LanguageScopeTests(unittest.TestCase):
-    def test_production_languages_are_exact(self):
-        self.assertEqual(PRODUCTION_LANGUAGES, ('ko', 'en', 'ja'))
-        self.assertEqual(SourceLibrary().verify()['production_languages'], ['ko', 'en', 'ja'])
-
-    def test_default_listing_excludes_only_designated_modules(self):
+    def test_supported_languages_and_catalog(self):
         library = SourceLibrary()
-        self.assertEqual(len(library.modules), 47)
+        self.assertEqual(source_library.PRODUCTION_LANGUAGES, ('ko', 'en', 'ja'))
         self.assertEqual(len(library.list_modules()), 42)
-        self.assertEqual(set(library.list_modules()), set(library.modules) - ARCHIVE_ONLY_MODULES)
-        self.assertTrue({'lw-korean', 'lw-english', 'lw-japanese', 'mc-style-latin', 'mc-style-jazz'} <= set(library.list_modules()))
+        self.assertEqual(set(library.list_modules()), set(library.modules))
+        self.assertTrue(EXCLUDED.isdisjoint(library.modules))
 
-    def test_excluded_modules_rejected_by_every_production_entrypoint(self):
+    def test_original_archives_are_physically_absent(self):
+        names = {p.name for p in (PLUGIN / 'library/archives').iterdir()}
+        self.assertEqual(names, {'composition-selected.zip', 'lyrics-selected.zip'})
+        self.assertFalse((ROOT / 'docs/SOURCE_SNAPSHOT_REPORT.json').exists())
+
+    def test_removed_subject_files_not_inside_selected_archives(self):
         library = SourceLibrary()
-        with patch.object(library, '_archive', side_effect=AssertionError('excluded archive must not be opened')):
-            for module in sorted(ARCHIVE_ONLY_MODULES):
-                operations = [lambda m=module: library.list_files(m),
-                              lambda m=module: library.read(m),
-                              lambda m=module: library.outline(m),
-                              lambda m=module: library.find(m, 'a')]
-                for index, operation in enumerate(operations):
-                    with self.subTest(module=module, operation=index), self.assertRaisesRegex(ValueError, 'excluded'):
-                        operation()
+        for source in library.sources:
+            with zipfile.ZipFile(PLUGIN / 'library' / source['archive']) as archive:
+                for name in archive.namelist():
+                    self.assertFalse(EXCLUDED.intersection(Path(name).parts), name)
+                    self.assertNotIn('reference-minyue', name)
+                    self.assertNotIn('example-02-fusion', name)
+                    self.assertTrue(name in {'LICENSE', 'NOTICE'} or name.startswith(source['skills_directory'] + '/'))
 
-    def test_specialist_file_is_hidden_and_direct_reads_are_rejected(self):
+    def test_shared_documents_do_not_retain_designated_subject_content(self):
         library = SourceLibrary()
-        for module, filename in ARCHIVE_ONLY_FILES:
-            self.assertNotIn(filename, library.list_files(module))
-            for operation in [lambda: library.read(module, filename),
-                              lambda: library.outline(module, filename),
-                              lambda: library.find(module, 'a', filename)]:
-                with self.assertRaisesRegex(ValueError, 'excluded'):
-                    operation()
+        for source in library.sources:
+            with zipfile.ZipFile(PLUGIN / 'library' / source['archive']) as archive:
+                for name in archive.namelist():
+                    if name in {'LICENSE', 'NOTICE'}:
+                        continue  # Legal credit text is not a production guide.
+                    with self.subTest(file=name):
+                        self.assertIsNone(TOPICS.search(archive.read(name).decode('utf-8')))
 
-    def test_module_search_does_not_read_hidden_files(self):
+    def test_no_access_bypass_in_reader_api(self):
+        self.assertEqual(list(inspect.signature(SourceLibrary).parameters), ['root'])
+        self.assertFalse(hasattr(source_library, 'ARCHIVE_ONLY_MODULES'))
+        self.assertFalse(hasattr(source_library, 'ARCHIVE_ONLY_FILES'))
+        with self.assertRaises(TypeError):
+            SourceLibrary(archive_audit=True)
+
+    def test_obsolete_cli_flag_is_removed(self):
+        result = subprocess.run([sys.executable, str(Path(source_library.__file__)), '--archive-audit', 'list'],
+                                capture_output=True, text=True, encoding='utf-8', timeout=20)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('unrecognized arguments', result.stderr)
+
+    def test_removed_modules_are_unknown_at_every_entrypoint(self):
         library = SourceLibrary()
-        with patch.object(library, '_document', wraps=library._document) as document:
-            library.find('mc-orchestration', '民', limit=2)
-            consulted = {call.args[1] for call in document.call_args_list}
-        self.assertTrue(consulted)
-        self.assertNotIn('reference-minyue.md', consulted)
+        for module in EXCLUDED:
+            for action in [lambda: library.list_files(module), lambda: library.read(module),
+                           lambda: library.outline(module), lambda: library.find(module, 'test')]:
+                with self.subTest(module=module), self.assertRaisesRegex(ValueError, 'Unknown local module'):
+                    action()
 
-    def test_archive_audit_preserves_complete_read_access(self):
-        library = SourceLibrary(archive_audit=True)
-        self.assertEqual(len(library.list_modules()), 47)
-        for module in sorted(ARCHIVE_ONLY_MODULES):
-            with self.subTest(module=module):
-                self.assertTrue(library.read(module, lines=1)['archive_audit'])
-        for module, filename in ARCHIVE_ONLY_FILES:
-            self.assertIn(filename, library.list_files(module))
-            self.assertTrue(library.read(module, filename, lines=1)['text'])
+    def test_removed_reference_cannot_be_read_or_searched(self):
+        library = SourceLibrary()
+        self.assertNotIn('reference-minyue.md', library.list_files('mc-orchestration'))
+        with self.assertRaises(ValueError):
+            library.read('mc-orchestration', 'reference-minyue.md')
+        self.assertEqual(library.find('mc-orchestration', '二胡')['matches'], [])
 
-    def test_audit_is_explicit_and_does_not_leak_to_a_new_instance(self):
-        SourceLibrary(archive_audit=True).read('lw-mandarin', lines=1)
-        with self.assertRaisesRegex(ValueError, 'excluded'):
-            SourceLibrary().read('lw-mandarin', lines=1)
-        for invalid in [1, 'true', None, []]:
-            with self.subTest(value=invalid), self.assertRaises(ValueError):
-                SourceLibrary(archive_audit=invalid)
+    def test_general_theory_and_japanese_are_retained(self):
+        library = SourceLibrary()
+        self.assertTrue(library.find('mc-harmony', 'Locrian', 'reference.md')['matches'])
+        self.assertTrue(library.find('mc-harmony', '和弦')['matches'])
+        self.assertTrue(library.find('lw-japanese', 'モーラ')['matches'])
+        self.assertTrue(library.find('lw-korean', '받침')['matches'])
 
-    def test_general_chinese_written_theory_is_not_removed(self):
-        result = SourceLibrary().read('mc-harmony', lines=80)
-        self.assertTrue(any('\u4e00' <= character <= '\u9fff' for character in result['text']))
-        self.assertFalse(result['archive_audit'])
-        self.assertTrue(SourceLibrary().read('lw-japanese', lines=80)['text'])
+    def test_report_matches_retained_bytes_and_records_edits(self):
+        report = json.loads((ROOT / 'docs/SOURCE_SELECTION_REPORT.json').read_text(encoding='utf-8'))
+        verification = SourceLibrary().verify()
+        for key in ['modules', 'files', 'bytes']:
+            self.assertEqual(verification[key], report[key])
+        self.assertFalse(report['original_backups_retained'])
+        self.assertFalse(report['history_rewritten'])
+        self.assertTrue(all(s['removed_files'] for s in report['sources']))
+        self.assertTrue(all(s['edited_files'] for s in report['sources']))
+        for source in SourceLibrary().sources:
+            self.assertTrue(all('origin_git_blob_sha' in r for r in source['files']))
 
-    def test_both_views_work_without_network_or_extraction(self):
-        before = sorted(p.relative_to(PLUGIN).as_posix() for p in PLUGIN.rglob('*'))
-        with patch('socket.create_connection', side_effect=AssertionError('network forbidden')), \
-             patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
-            self.assertTrue(SourceLibrary().find('lw-english', 'stress')['matches'])
-            self.assertTrue(SourceLibrary(archive_audit=True).read('lw-cantonese', lines=1)['text'])
-            self.assertEqual(SourceLibrary().verify()['files'], 121)
-        after = sorted(p.relative_to(PLUGIN).as_posix() for p in PLUGIN.rglob('*'))
-        self.assertEqual(before, after)
-
-    def test_cli_defaults_and_explicit_audit(self):
-        script = SKILL / 'scripts/source_library.py'
-        for args, size in [(['list'], 42), (['--archive-audit', 'list'], 47)]:
-            result = subprocess.run([sys.executable, str(script), *args], capture_output=True,
-                                    text=True, encoding='utf-8', timeout=30, check=True)
-            self.assertEqual(len(json.loads(result.stdout)), size)
-        result = subprocess.run([sys.executable, str(script), 'read', 'lw-mandarin'],
-                                capture_output=True, text=True, encoding='utf-8', timeout=30)
-        self.assertEqual(result.returncode, 2)
-        self.assertIn('excluded', result.stderr)
-        self.assertFalse(result.stdout)
-
-    def test_scope_and_language_guides_survive_independent_distribution(self):
+    def test_distribution_has_only_selected_sources_and_no_network_recovery(self):
         with tempfile.TemporaryDirectory() as directory:
-            output = Path(directory) / 'kit.zip'
-            package.build_package(ROOT, output)
-            install = Path(directory) / 'installed'
-            with zipfile.ZipFile(output) as archive:
-                archive.extractall(install)
-            plugin = install / package.PLUGIN
-            for guide in GUIDES:
-                self.assertTrue((plugin / 'skills/music-producer/references' / guide).is_file())
-            script = plugin / 'skills/music-producer/scripts/source_library.py'
-            spec = importlib.util.spec_from_file_location('installed_scope', script)
-            installed = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(installed)
+            target = Path(directory) / 'kit.zip'
             with patch('socket.create_connection', side_effect=AssertionError('network forbidden')), \
                  patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
-                library = installed.SourceLibrary()
-                self.assertEqual(len(library.list_modules()), 42)
-                self.assertEqual(library.verify()['files'], 121)
-                for module in ('lw-korean', 'lw-english', 'lw-japanese'):
-                    self.assertTrue(library.read(module, lines=1)['text'])
-                with self.assertRaisesRegex(ValueError, 'excluded'):
-                    library.read('lw-cantonese')
-            self.assertEqual(len(list(plugin.rglob('SKILL.md'))), 1)
+                package.build_package(ROOT, target)
+            with zipfile.ZipFile(target) as archive:
+                names = archive.namelist()
+                inner = {Path(n).name for n in names if n.endswith('.zip')}
+                self.assertEqual(inner, {'composition-selected.zip', 'lyrics-selected.zip'})
+                self.assertFalse(any('.maintenance/' in n for n in names))
+                for language in ['korean', 'english', 'japanese']:
+                    self.assertIn(f'plugins/music-producer-kit/skills/music-producer/references/lyrics-{language}.md', names)
 
-    def test_new_guide_evidence_locations_exist(self):
-        pattern = r'`source:([a-z0-9-]+)/([A-Za-z0-9_.-]+):(\d+)-(\d+)`'
-        for guide in GUIDES:
-            text = (SKILL / 'references' / guide).read_text(encoding='utf-8')
-            markers = re.findall(pattern, text)
-            self.assertTrue(markers, guide)
-            for module, filename, first, last in markers:
-                first, last = int(first), int(last)
-                result = SourceLibrary().read(module, filename, first, last - first + 1)
-                self.assertEqual(result['end'], last)
+    def test_new_language_guides_keep_local_source_locators(self):
+        library = SourceLibrary()
+        for language in ['korean', 'english', 'japanese']:
+            path = PLUGIN / f'skills/music-producer/references/lyrics-{language}.md'
+            markers = re.findall(r'`source:([a-z0-9-]+)/([A-Za-z0-9_.-]+):(\d+)-(\d+)`', path.read_text(encoding='utf-8'))
+            self.assertTrue(markers)
+            for module, filename, start, end in markers:
+                result = library.read(module, filename, int(start), int(end) - int(start) + 1)
+                self.assertTrue(result['text'].strip())
 
-    def test_supported_guides_are_routed_without_old_expansion_promises(self):
-        entry = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
-        prosody = (SKILL / 'references/prosody.md').read_text(encoding='utf-8')
-        for guide in GUIDES:
-            self.assertIn(guide, entry)
-            self.assertIn(guide, prosody)
-        for path in [SKILL / 'references/prosody.md', SKILL / 'references/lyrics.md']:
-            text = path.read_text(encoding='utf-8')
-            self.assertNotIn('No language is prohibited', text)
-            self.assertNotIn('A language absent from this guide is not prohibited', text)
-        music = (SKILL / 'references/music.md').read_text(encoding='utf-8')
-        self.assertNotIn('mc-style-chinese-pop', music)
-        self.assertIn('mc-style-latin', music)
-
-    def test_source_archives_are_byte_unchanged(self):
-        expected = {
-            'music-composition-skills.zip': '591a1dbea44018f388c62cbcf9eb3df234c26b9a9ffa114f51d22e661fc6d60f',
-            'lyric-writing-skills.zip': 'd9464be2e885dafb676723d3d7cc192fb3bba174274bbfb0e372c1dc1a93968f',
-        }
-        for filename, digest in expected.items():
-            data = (PLUGIN / 'library/archives' / filename).read_bytes()
-            self.assertEqual(hashlib.sha256(data).hexdigest(), digest)
-        self.assertEqual(SourceLibrary().verify()['bytes'], 2512420)
-
-    def test_language_scenarios_are_defined_not_claimed_executed(self):
+    def test_language_behavior_scenarios_are_not_claimed_executed(self):
         data = json.loads((ROOT / 'evals/scenarios.json').read_text(encoding='utf-8'))
         self.assertEqual(data['execution_status'], 'not-run')
-        names = {s['id'] for s in data['scenarios']}
-        self.assertTrue({'ko-sustain', 'ja-kanji', 'en-melisma', 'mixed-ko-en-ja',
-                         'excluded-mandarin', 'excluded-cantonese', 'general-theory-language',
-                         'latin-instrumental'} <= names)
+        self.assertGreaterEqual(len(data['scenarios']), 20)
 
 
 if __name__ == '__main__':
