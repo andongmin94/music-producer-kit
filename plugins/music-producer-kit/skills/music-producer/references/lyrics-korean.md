@@ -50,6 +50,6 @@ Recorded-voice pitch/timing edits belong to [vocal production](vocal-production.
 
 ## Local evidence
 
-[Local reader](../../../library/README.md): `source:lw-korean/SKILL.md:65-220`.
+[Local reader](../../../library/README.md): `source:lw-korean/SKILL.md:60-202`.
 The source itself distinguishes pronunciation references from its own stronger singing inferences. This guide retains the distinction and removes automatic coda prohibitions.
 Examples and scope decisions are our own exposition. The source books and a pronunciation engine are not bundled; this is not a full phonology reference or a native-vocal performance certification.

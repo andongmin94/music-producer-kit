@@ -62,3 +62,9 @@ MIDI helper hashes do not verify Live devices, automation, routing or source-fil
 
 Mark each stage PASS / FAIL / NOT RUN, including exact command or observed tool evidence.
 Do not mark an unrun stage as PASS. Keep private diagnostic paths and audio out of any public report.
+
+## Local sample inventory before sound selection
+
+Use the sample guide on an explicitly chosen owned sample directory. Save the JSON outside this repository and the installed plugin.
+Inspect a selected file again before an actual Live import. The inventory does not establish a Splice license or that audio was heard.
+See [sample workflow](../plugins/music-producer-kit/skills/music-producer/references/samples.md).

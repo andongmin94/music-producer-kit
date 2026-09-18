@@ -85,8 +85,8 @@ Do not claim improved singability or memorability from file validity. Mark the r
 
 [Local source reader](../../../library/README.md):
 
-- `source:mc-melody/SKILL.md:47-135` — contour, timing and preparation of leaps; absolute leap and climax rules are not retained.
+- `source:mc-melody/SKILL.md:45-133` — contour, timing and preparation of leaps; absolute leap and climax rules are not retained.
 - `source:mc-development/SKILL.md:1-115` — identity, development versus accumulation, repetition and thematic continuity.
-- `source:mc-workflow/SKILL.md:185-220` — numerical duration and section consistency; aesthetic gates removed.
+- `source:mc-workflow/SKILL.md:178-213` — numerical duration and section consistency; aesthetic gates removed.
 
 The motif and time calculations are original examples. The protected-material, loop-delivery and transcription protocols are project decisions, not quotations or demonstrated musical-quality improvements.

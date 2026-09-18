@@ -49,7 +49,7 @@ Do not mark an unperformed listening comparison as passed.
 
 ## Evidence and editorial boundary
 
-[Local reader](../../../library/README.md): `source:lw-english/SKILL.md:50-100`.
+[Local reader](../../../library/README.md): `source:lw-english/SKILL.md:47-97`.
 Stronger archived claims about fixed word stress, forbidden function words or counting only stresses are not universal rules here.
 Primary pronunciation teaching references checked on 2026-09-18:
 - [British Council: Word stress](https://www.teachingenglish.org.uk/professional-development/teachers/knowing-subject/word-stress).

@@ -115,6 +115,6 @@ Read these source ranges with the [local reader](../../../library/README.md). So
 
 - `source:mc-harmony/SKILL.md:165-259` — color options and stopping after an unhelpful reharmonization.
 - `source:mc-harmony/reference.md:9-156` — non-chord tones, tensions, source disagreements and contextual exceptions.
-- `source:mc-modulation/SKILL.md:26-99` — temporary departures, destination and return planning.
+- `source:mc-modulation/SKILL.md:26-93` — temporary departures, destination and return planning.
 
 The MIDI study, interval recipes, protected-material protocol and corrections to blanket rules are this project's own working exposition. Specific textbook page claims remain attributed through the preserved source; not independently re-certified here.

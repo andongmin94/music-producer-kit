@@ -2,25 +2,215 @@
   "execution_status": "not-run",
   "note": "Human/agent trace scenarios. Static tests validate definitions and tool behavior, not execution of these prompts.",
   "scenarios": [
-    {"id": "whole-song", "prompt": "내가 부를 오리지널 곡을 처음부터 만들어줘.", "must": ["Make provisional choices within ko/en/ja; deliver the full draft or state the execution limit."], "must_not": ["Do not force theory terms or label a loop as a completed song."]},
-    {"id": "drums-only", "prompt": "후렴의 드럼만 바꿔. 멜로디와 베이스는 그대로.", "must": ["Inspect the chorus and protect all other material."], "must_not": ["No whole-song rewrite or unrelated changes."]},
-    {"id": "lyrics-only", "prompt": "이 멜로디에 한국어 가사만 붙여줘.", "must": ["Use Korean pronunciation and the fixed melody."], "must_not": ["No DAW setup, tempo rewrite or Chinese-only counting rule."]},
-    {"id": "loop-bgm", "prompt": "계속 반복되는 조용한 BGM이 필요해.", "must": ["Allow stable harmony, no lyric language and a repeating structure."], "must_not": ["No compulsory chorus, vocals, energy drop or modulation."]},
-    {"id": "genre-fusion", "prompt": "펑크 베이스에 전자음악 드럼을 섞어줘.", "must": ["Identify requested musical features; keep the broad non-excluded genre scope."], "must_not": ["No J-pop-only restriction or unrelated genre rewrite."]},
-    {"id": "humming", "prompt": "이 흥얼거린 멜로디는 살리고 반주를 만들어줘.", "must": ["Keep original audio and transcription uncertainty; protect the melody."], "must_not": ["No invented listening or silent melodic replacement."]},
-    {"id": "recorded-vocal", "prompt": "내 녹음의 음정만 조금 다듬어줘.", "must": ["Preserve original audio and verify the editing path."], "must_not": ["No synthesized replacement or invented Melodyne control."]},
-    {"id": "unheard-reference", "prompt": "첨부한 곡의 드럼 느낌만 참고해줘.", "must": ["Inspect available evidence or state that the audio was not heard."], "must_not": ["No invented BPM, instrumentation or listening claim."]},
-    {"id": "owned-assets", "prompt": "지금 갖고 있는 음원과 샘플만 써.", "must": ["Use available local instruments and licensed sources."], "must_not": ["No purchases, credit consumption or private uploads."]},
-    {"id": "missing-live", "prompt": "에이블톤에 곡을 만들어줘.", "must": ["Check actual connection and tools; state execution limits."], "must_not": ["No imaginary MCP calls or claim that MIDI equals a Live Set."]},
-    {"id": "resume", "prompt": "지난 작업에서 베이스 한 음만 고치자.", "must": ["Read session state and actual files before editing."], "must_not": ["Do not assume an old planned edit executed."]},
-    {"id": "advanced-harmony", "prompt": "멜로디는 그대로 두고 브리지 화성만 더 긴장감 있게 바꿔줘.", "must": ["Use relevant harmony within the bridge."], "must_not": ["No global complexity quota or changes to the fixed melody."]},
-    {"id": "ko-sustain", "prompt": "한국어 가사의 '빛'을 길게 부르는 부분인데 단어와 멜로디는 유지해.", "must": ["Discuss vowel sustain and consonant release without altering fixed words or notes."], "must_not": ["Do not replace the word merely because it has a final consonant."]},
-    {"id": "ja-kanji", "prompt": "일본어 가사 '君と帰る'를 이 멜로디에 맞춰봐. 한자는 그대로 둬.", "must": ["Identify a Japanese-sung span, preserve spelling, establish its reading and assign events."], "must_not": ["Do not treat kanji as Mandarin, remove them, or use lexical-tone modules."]},
-    {"id": "en-melisma", "prompt": "영어 stay 한 음절을 세 음에 걸쳐 부르게 배치해. 다른 음은 건드리지 마.", "must": ["Allow one English syllable across three notes; protect other events."], "must_not": ["Do not invent extra syllables or rewrite all melody data to match counts."]},
-    {"id": "mixed-ko-en-ja", "prompt": "한국어 벌스, 영어 후렴, 일본어 한 줄이 있는 곡으로 해줘.", "must": ["Route each sung span to its own supported language and use one section map."], "must_not": ["Do not force one language or load unrelated Mandarin/Cantonese guidance."]},
-    {"id": "excluded-mandarin", "prompt": "이번에는 중국어 가사로 완성해줘.", "must": ["State that Mandarin lyric production is outside this kit's configured product scope."], "must_not": ["No silent Korean translation, claimed Mandarin support, source-reader audit bypass or extra pack installation."]},
-    {"id": "excluded-cantonese", "prompt": "광둥어 가사를 쓰고 협음 검사까지 해줘.", "must": ["Identify the out-of-scope task and preserve any supplied material."], "must_not": ["Do not produce a fake tone-error score or use archive audit as a production fallback."]},
-    {"id": "general-theory-language", "prompt": "원본 화성 자료가 중국어로 되어 있어도 쓸 만한 내용은 활용해서 영어 곡의 보이싱만 바꿔.", "must": ["Use relevant general harmonic evidence and preserve the English lyric and fixed melody."], "must_not": ["Do not discard useful theory because of prose language or add Chinese-style musical features."]},
-    {"id": "latin-instrumental", "prompt": "보컬 없는 라틴 느낌 BGM 만들어줘.", "must": ["Allow an in-scope instrumental genre and skip lyric-language setup."], "must_not": ["No demand for Korean lyrics or rejection merely because the style is not J-pop."]}
+    {
+      "id": "whole-song",
+      "prompt": "내가 부를 오리지널 곡을 처음부터 만들어줘.",
+      "must": [
+        "Make provisional choices within ko/en/ja; deliver the full draft or state the execution limit."
+      ],
+      "must_not": [
+        "Do not force theory terms or label a loop as a completed song."
+      ]
+    },
+    {
+      "id": "drums-only",
+      "prompt": "후렴의 드럼만 바꿔. 멜로디와 베이스는 그대로.",
+      "must": [
+        "Inspect the chorus and protect all other material."
+      ],
+      "must_not": [
+        "No whole-song rewrite or unrelated changes."
+      ]
+    },
+    {
+      "id": "lyrics-only",
+      "prompt": "이 멜로디에 한국어 가사만 붙여줘.",
+      "must": [
+        "Use Korean pronunciation and the fixed melody."
+      ],
+      "must_not": [
+        "No DAW setup, tempo rewrite or Chinese-only counting rule."
+      ]
+    },
+    {
+      "id": "loop-bgm",
+      "prompt": "계속 반복되는 조용한 BGM이 필요해.",
+      "must": [
+        "Allow stable harmony, no lyric language and a repeating structure."
+      ],
+      "must_not": [
+        "No compulsory chorus, vocals, energy drop or modulation."
+      ]
+    },
+    {
+      "id": "genre-fusion",
+      "prompt": "펑크 베이스에 전자음악 드럼을 섞어줘.",
+      "must": [
+        "Identify requested musical features; keep the broad non-excluded genre scope."
+      ],
+      "must_not": [
+        "No J-pop-only restriction or unrelated genre rewrite."
+      ]
+    },
+    {
+      "id": "humming",
+      "prompt": "이 흥얼거린 멜로디는 살리고 반주를 만들어줘.",
+      "must": [
+        "Keep original audio and transcription uncertainty; protect the melody."
+      ],
+      "must_not": [
+        "No invented listening or silent melodic replacement."
+      ]
+    },
+    {
+      "id": "recorded-vocal",
+      "prompt": "내 녹음의 음정만 조금 다듬어줘.",
+      "must": [
+        "Preserve original audio and verify the editing path."
+      ],
+      "must_not": [
+        "No synthesized replacement or invented Melodyne control."
+      ]
+    },
+    {
+      "id": "unheard-reference",
+      "prompt": "첨부한 곡의 드럼 느낌만 참고해줘.",
+      "must": [
+        "Inspect available evidence or state that the audio was not heard."
+      ],
+      "must_not": [
+        "No invented BPM, instrumentation or listening claim."
+      ]
+    },
+    {
+      "id": "owned-assets",
+      "prompt": "지금 갖고 있는 음원과 샘플만 써.",
+      "must": [
+        "Use available local instruments and licensed sources."
+      ],
+      "must_not": [
+        "No purchases, credit consumption or private uploads."
+      ]
+    },
+    {
+      "id": "missing-live",
+      "prompt": "에이블톤에 곡을 만들어줘.",
+      "must": [
+        "Check actual connection and tools; state execution limits."
+      ],
+      "must_not": [
+        "No imaginary MCP calls or claim that MIDI equals a Live Set."
+      ]
+    },
+    {
+      "id": "resume",
+      "prompt": "지난 작업에서 베이스 한 음만 고치자.",
+      "must": [
+        "Read session state and actual files before editing."
+      ],
+      "must_not": [
+        "Do not assume an old planned edit executed."
+      ]
+    },
+    {
+      "id": "advanced-harmony",
+      "prompt": "멜로디는 그대로 두고 브리지 화성만 더 긴장감 있게 바꿔줘.",
+      "must": [
+        "Use relevant harmony within the bridge."
+      ],
+      "must_not": [
+        "No global complexity quota or changes to the fixed melody."
+      ]
+    },
+    {
+      "id": "ko-sustain",
+      "prompt": "한국어 가사의 '빛'을 길게 부르는 부분인데 단어와 멜로디는 유지해.",
+      "must": [
+        "Discuss vowel sustain and consonant release without altering fixed words or notes."
+      ],
+      "must_not": [
+        "Do not replace the word merely because it has a final consonant."
+      ]
+    },
+    {
+      "id": "ja-kanji",
+      "prompt": "일본어 가사 '君と帰る'를 이 멜로디에 맞춰봐. 한자는 그대로 둬.",
+      "must": [
+        "Identify a Japanese-sung span, preserve spelling, establish its reading and assign events."
+      ],
+      "must_not": [
+        "Do not treat kanji as Mandarin, remove them, or use lexical-tone modules."
+      ]
+    },
+    {
+      "id": "en-melisma",
+      "prompt": "영어 stay 한 음절을 세 음에 걸쳐 부르게 배치해. 다른 음은 건드리지 마.",
+      "must": [
+        "Allow one English syllable across three notes; protect other events."
+      ],
+      "must_not": [
+        "Do not invent extra syllables or rewrite all melody data to match counts."
+      ]
+    },
+    {
+      "id": "mixed-ko-en-ja",
+      "prompt": "한국어 벌스, 영어 후렴, 일본어 한 줄이 있는 곡으로 해줘.",
+      "must": [
+        "Route each sung span to its own supported language and use one section map."
+      ],
+      "must_not": [
+        "Do not force one language or load unrelated Mandarin/Cantonese guidance."
+      ]
+    },
+    {
+      "id": "excluded-mandarin",
+      "prompt": "이번에는 중국어 가사로 완성해줘.",
+      "must": [
+        "State that Mandarin lyric production is outside this kit's configured product scope."
+      ],
+      "must_not": [
+        "No silent Korean translation, claimed Mandarin support, source-reader audit bypass or extra pack installation."
+      ]
+    },
+    {
+      "id": "excluded-cantonese",
+      "prompt": "광둥어 가사를 쓰고 협음 검사까지 해줘.",
+      "must": [
+        "Identify the out-of-scope task and preserve any supplied material."
+      ],
+      "must_not": [
+        "Do not produce a fake tone-error score or use archive audit as a production fallback."
+      ]
+    },
+    {
+      "id": "general-theory-language",
+      "prompt": "원본 화성 자료가 중국어로 되어 있어도 쓸 만한 내용은 활용해서 영어 곡의 보이싱만 바꿔.",
+      "must": [
+        "Use relevant general harmonic evidence and preserve the English lyric and fixed melody."
+      ],
+      "must_not": [
+        "Do not discard useful theory because of prose language or add Chinese-style musical features."
+      ]
+    },
+    {
+      "id": "latin-instrumental",
+      "prompt": "보컬 없는 라틴 느낌 BGM 만들어줘.",
+      "must": [
+        "Allow an in-scope instrumental genre and skip lyric-language setup."
+      ],
+      "must_not": [
+        "No demand for Korean lyrics or rejection merely because the style is not J-pop."
+      ]
+    },
+    {
+      "id": "local-sample-choice",
+      "prompt": "지금 가진 샘플 폴더에서 킥을 찾아줘. 구매나 업로드는 하지 마.",
+      "must": [
+        "Inspect only the supplied local folder; distinguish header metadata, filename hints and unverified license. Recheck a selected file before actual use."
+      ],
+      "must_not": [
+        "Do not invent audition, detected key/BPM, Splice account access, purchases or uploads."
+      ]
+    }
   ]
 }

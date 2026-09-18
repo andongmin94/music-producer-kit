@@ -33,7 +33,6 @@ The following [local modules](../../../library/README.md) are available as conte
 The table is a source map, not an exhaustive genre allowlist. For example, Latin instrumentation may support an English lyric without enabling Spanish lyric production.
 Chinese-pop and Chinese-style production are excluded. Do not restore them via an archived workflow, corpus example or folk-instrument reference.
 General theory written in Chinese remains evidence; the prose language does not dictate the song's language or style.
-Use the local reader's default view. Read the relevant condition and exception, not all genres or the archive-audit view.
 
 ## Keep edits local
 

@@ -56,7 +56,7 @@ For English or Korean spans inside the song, load only their corresponding langu
 
 ## Evidence and editorial boundary
 
-[Local reader](../../../library/README.md): `source:lw-japanese/SKILL.md:53-145`.
+[Local reader](../../../library/README.md): `source:lw-japanese/SKILL.md:50-122`.
 The archive's one-mora/one-note shortcuts and numerical accent-deviation gates are not adopted.
 Primary pronunciation teaching references checked on 2026-09-18:
 - [Tokyo University of Foreign Studies: 拍感覚基礎](https://www.coelang.tufs.ac.jp/mt/ja/pmod/practical/01-10-01.php).

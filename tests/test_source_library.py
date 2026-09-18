@@ -36,7 +36,7 @@ class SourceLibraryTests(unittest.TestCase):
                        'archive': 'archives/example.zip',
                        'archive_sha256': hashlib.sha256(self.archive.read_bytes()).hexdigest(),
                        'skills_directory': 'plugins/example/skills', 'modules': ['mc-example'], 'files': records}
-        self.catalog = {'version': 1, 'sources': [self.source]}
+        self.catalog = {'version': 2, 'sources': [self.source]}
         for name in ('LICENSE', 'NOTICE'):
             (self.root / 'notices' / ('example-' + name + '.txt')).write_bytes(self.data[name])
         self.save_catalog()
