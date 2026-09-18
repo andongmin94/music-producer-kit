@@ -91,6 +91,9 @@ def check(root: Path = ROOT) -> dict:
         if not desc or len(desc) > 1024:
             raise ValueError('Skill description is missing or too long')
         seen.add(name)
+    for obsolete_archive in ('music-composition-skills.zip', 'lyric-writing-skills.zip'):
+        if (root / PLUGIN / 'library/archives' / obsolete_archive).exists():
+            raise ValueError('Obsolete original source archive must be removed')
     files = package_files(root)
     for path in files:
         if path.suffix == '.json':

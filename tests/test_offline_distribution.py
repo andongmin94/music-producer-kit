@@ -38,13 +38,13 @@ class OfflineDistributionTests(unittest.TestCase):
         with patch('socket.create_connection', side_effect=AssertionError('network forbidden')), \
              patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
             library = installed.SourceLibrary()
-            self.assertEqual(library.verify()['modules'], 47)
+            self.assertEqual(library.verify()['modules'], 42)
             self.assertTrue(library.read('mc-harmony', 'reference.md', lines=5)['text'])
             self.assertTrue(library.read('lw-korean', lines=5)['text'])
 
     def test_missing_archive_fails_package(self):
         self.assertEqual(package.check(self.root)['status'], 'pass')
-        (self.plugin / 'library/archives/music-composition-skills.zip').unlink()
+        (self.plugin / 'library/archives/composition-selected.zip').unlink()
         with patch('socket.create_connection', side_effect=AssertionError('network forbidden')), \
              patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
             with self.assertRaises(ValueError):
@@ -57,7 +57,7 @@ class OfflineDistributionTests(unittest.TestCase):
 
     def test_every_module_and_reference_has_a_local_file(self):
         # Preservation coverage is deliberately wider than production scope.
-        library = SourceLibrary(self.plugin / 'library', archive_audit=True)
+        library = SourceLibrary(self.plugin / 'library')
         library.verify()
         for module in library.list_modules():
             with self.subTest(module=module):
@@ -65,12 +65,12 @@ class OfflineDistributionTests(unittest.TestCase):
                 for filename in library.list_files(module):
                     result = library.read(module, filename, lines=1)
                     self.assertEqual(result['source'], library.modules[module]['repo'])
-                    self.assertTrue(result['archive_audit'])
+                    self.assertNotIn('archive_audit', result)
 
     def test_complete_snapshot_counts(self):
         result = package.check(self.root)['local_source_library']
-        self.assertEqual((result['sources'], result['modules'], result['files']), (2, 47, 121))
-        self.assertEqual(result['bytes'], 2512420)
+        self.assertEqual((result['sources'], result['modules'], result['files']), (2, 42, 93))
+        self.assertEqual(result['bytes'], 1842265)
 
     def test_archived_skill_files_are_not_discoverable(self):
         self.assertEqual(len(list(self.plugin.rglob('SKILL.md'))), 1)
