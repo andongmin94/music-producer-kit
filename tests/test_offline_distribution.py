@@ -43,9 +43,12 @@ class OfflineDistributionTests(unittest.TestCase):
             self.assertTrue(library.read('lw-korean', lines=5)['text'])
 
     def test_missing_archive_fails_package(self):
+        self.assertEqual(package.check(self.root)['status'], 'pass')
         (self.plugin / 'library/archives/music-composition-skills.zip').unlink()
-        with self.assertRaisesRegex(ValueError, 'no download'):
-            package.check(self.root)
+        with patch('socket.create_connection', side_effect=AssertionError('network forbidden')), \
+             patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
+            with self.assertRaises(ValueError):
+                package.check(self.root)
 
     def test_unknown_zip_not_packaged(self):
         extra = self.plugin / 'library/archives/private-samples.zip'
