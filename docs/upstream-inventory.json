@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "meaning": "Module coverage index, not a claim of full content transfer. Original source directories remain pinned; no upstream text is bundled.",
+  "sources": [
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "commit": "064683f05643ba1801063c0f4cac848cdd1e36a8",
+      "skills": [
+        {
+          "name": "mc-workflow",
+          "decision": "replace-workflow",
+          "destination": "SKILL.md"
+        },
+        {
+          "name": "mc-melody",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-harmony",
+          "decision": "scoped-summary",
+          "destination": "references/music.md"
+        },
+        {
+          "name": "mc-progressions",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-modulation",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-rhythm-groove",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-form",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-counterpoint",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-development",
+          "decision": "scoped-summary",
+          "destination": "references/music.md"
+        },
+        {
+          "name": "mc-arrangement-arch",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-orchestration",
+          "decision": "scoped-summary",
+          "destination": "references/arrangement.md"
+        },
+        {
+          "name": "mc-texture-layering",
+          "decision": "scoped-summary",
+          "destination": "references/arrangement.md"
+        },
+        {
+          "name": "mc-rhythm-section",
+          "decision": "scoped-summary",
+          "destination": "references/music.md"
+        },
+        {
+          "name": "mc-sound-design",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-vocal-direction",
+          "decision": "scoped-summary",
+          "destination": "references/lyrics.md"
+        },
+        {
+          "name": "mc-mix-intent",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-jpop",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-citypop-rnb",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-jazz",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-latin",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-chinese-pop",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-edm",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-rock-band",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-cinematic",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-style-hiphop",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "mc-render-compile",
+          "decision": "inactive-backend",
+          "destination": "references/ableton.md"
+        },
+        {
+          "name": "mc-symbolic-score",
+          "decision": "midi-subset-implemented",
+          "destination": "scripts/midi_tools.py"
+        },
+        {
+          "name": "mc-ai-tell-audit",
+          "decision": "replace-aesthetic-gates",
+          "destination": "references/review.md"
+        },
+        {
+          "name": "mc-case-studies",
+          "decision": "evidence-index-only",
+          "destination": null
+        }
+      ],
+      "skills_directory": "plugins/music-composition/skills"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "commit": "91bb089a835fbccd268ea5b6da81f284d84526d5",
+      "skills": [
+        {
+          "name": "lw-workflow",
+          "decision": "replace-workflow",
+          "destination": "SKILL.md"
+        },
+        {
+          "name": "lw-song-intent",
+          "decision": "scoped-summary",
+          "destination": "references/lyrics.md"
+        },
+        {
+          "name": "lw-structure",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-imagery",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-rhyme",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-narrative",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-mandarin",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-cantonese",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-english",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-japanese",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-korean",
+          "decision": "inference-demoted",
+          "destination": "references/lyrics.md"
+        },
+        {
+          "name": "lw-chinese-style",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-musical-theatre",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-rap",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-tone-check",
+          "decision": "deferred-preserve",
+          "destination": null
+        },
+        {
+          "name": "lw-suno-interface",
+          "decision": "inactive-backend",
+          "destination": null
+        },
+        {
+          "name": "lw-ai-tell-audit",
+          "decision": "replace-aesthetic-gates",
+          "destination": "references/review.md"
+        },
+        {
+          "name": "lw-case-studies",
+          "decision": "deferred-preserve",
+          "destination": null
+        }
+      ],
+      "skills_directory": "plugins/lyric-writing/skills"
+    }
+  ]
+}

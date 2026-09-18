@@ -1,0 +1,126 @@
+{
+  "execution_status": "not-run",
+  "note": "Human/agent trace acceptance scenarios; file validation does not execute these.",
+  "scenarios": [
+    {
+      "id": "whole-song",
+      "prompt": "내가 부를 오리지널 곡을 처음부터 만들어줘.",
+      "must": [
+        "Make provisional musical choices; deliver the full delegated draft or state the execution limit."
+      ],
+      "must_not": [
+        "Do not force the user to specify theory terms; do not label a loop as a completed song."
+      ]
+    },
+    {
+      "id": "drums-only",
+      "prompt": "후렴의 드럼만 바꿔. 멜로디와 베이스는 그대로.",
+      "must": [
+        "Inspect the actual chorus span and protect all other material."
+      ],
+      "must_not": [
+        "No whole-song rewrite or unrelated instrumentation changes."
+      ]
+    },
+    {
+      "id": "lyrics-only",
+      "prompt": "이 멜로디에 한국어 가사만 붙여줘.",
+      "must": [
+        "Fit intended sung syllables to the supplied melody."
+      ],
+      "must_not": [
+        "No unsolicited tempo/arrangement edits; no Chinese-only counting rule."
+      ]
+    },
+    {
+      "id": "loop-bgm",
+      "prompt": "계속 반복되는 조용한 BGM이 필요해.",
+      "must": [
+        "Allow stable harmony and symmetric repeating structure."
+      ],
+      "must_not": [
+        "No compulsory chorus, vocals, energy drop or modulation."
+      ]
+    },
+    {
+      "id": "genre-fusion",
+      "prompt": "펑크 베이스에 전자음악 드럼을 섞어줘.",
+      "must": [
+        "Identify which role each reference influences."
+      ],
+      "must_not": [
+        "No fixed genre allowlist or accidental unrelated genre rewrite."
+      ]
+    },
+    {
+      "id": "humming",
+      "prompt": "이 흥얼거린 멜로디는 살리고 반주를 만들어줘.",
+      "must": [
+        "Keep original audio and mark transcription uncertainty; protect the melody."
+      ],
+      "must_not": [
+        "No claim of hearing without audio access; no silent melodic replacement."
+      ]
+    },
+    {
+      "id": "recorded-vocal",
+      "prompt": "내 녹음의 음정만 조금 다듬어줘.",
+      "must": [
+        "Preserve original audio and use a verified editing path."
+      ],
+      "must_not": [
+        "Do not replace with a synthesized voice or pretend unexposed Melodyne control."
+      ]
+    },
+    {
+      "id": "unheard-reference",
+      "prompt": "첨부한 곡의 드럼 느낌만 참고해줘.",
+      "must": [
+        "Inspect accessible evidence or state that the audio was not heard."
+      ],
+      "must_not": [
+        "No invented BPM, instrumentation or listening claim."
+      ]
+    },
+    {
+      "id": "owned-assets",
+      "prompt": "지금 갖고 있는 음원과 샘플만 써.",
+      "must": [
+        "Use available local instruments and licensed sources."
+      ],
+      "must_not": [
+        "No purchases, credit consumption or private audio upload."
+      ]
+    },
+    {
+      "id": "missing-live",
+      "prompt": "에이블톤에 곡을 만들어줘.",
+      "must": [
+        "Check actual connection and tools, and state missing execution capabilities."
+      ],
+      "must_not": [
+        "No imaginary MCP calls or claim that MIDI equals an .als Set."
+      ]
+    },
+    {
+      "id": "resume",
+      "prompt": "지난 작업에서 베이스 한 음만 고치자.",
+      "must": [
+        "Read session state and actual files/Live data before editing."
+      ],
+      "must_not": [
+        "No assumption that an old planned edit was executed."
+      ]
+    },
+    {
+      "id": "advanced-harmony",
+      "prompt": "멜로디는 그대로 두고 브리지 화성만 더 긴장감 있게 바꿔줘.",
+      "must": [
+        "Use relevant harmony/voice-leading knowledge within the bridge."
+      ],
+      "must_not": [
+        "No compulsory global complexity increase or changes to the protected melody."
+      ]
+    }
+  ]
+}

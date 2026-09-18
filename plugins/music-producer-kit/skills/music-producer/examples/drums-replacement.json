@@ -1,0 +1,38 @@
+[
+  {
+    "pitch": 36,
+    "start": 4,
+    "duration": 0.25,
+    "velocity": 104
+  },
+  {
+    "pitch": 42,
+    "start": 4.5,
+    "duration": 0.25,
+    "velocity": 65
+  },
+  {
+    "pitch": 38,
+    "start": 5,
+    "duration": 0.25,
+    "velocity": 100
+  },
+  {
+    "pitch": 36,
+    "start": 6,
+    "duration": 0.25,
+    "velocity": 105
+  },
+  {
+    "pitch": 42,
+    "start": 6.5,
+    "duration": 0.25,
+    "velocity": 70
+  },
+  {
+    "pitch": 38,
+    "start": 7,
+    "duration": 0.25,
+    "velocity": 102
+  }
+]

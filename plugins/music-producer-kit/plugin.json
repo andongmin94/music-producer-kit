@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "music-producer-kit",
+  "version": "0.1.0",
+  "description": "Intent-driven music production with scoped edits and editable sources. Ableton-first; live integration pending.",
+  "repository": "https://github.com/andongmin94/music-producer-kit",
+  "keywords": [
+    "music",
+    "composition",
+    "ableton",
+    "lyrics",
+    "midi"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Music Producer Kit",
+        "shortDescription": "Create music and revise only the requested parts",
+        "developerName": "andongmin94",
+        "category": "Productivity"
+      }
+    }
+  }
+}

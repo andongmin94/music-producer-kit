@@ -1,0 +1,20 @@
+{
+  "name": "music-producer-kit",
+  "interface": {
+    "displayName": "Music Producer Kit"
+  },
+  "plugins": [
+    {
+      "name": "music-producer-kit",
+      "source": {
+        "source": "local",
+        "path": "./plugins/music-producer-kit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
