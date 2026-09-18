@@ -94,7 +94,8 @@ class ProbeUnitTests(unittest.TestCase):
 
     def test_private_exclusive_output(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
+            # Windows may supply an 8.3 alias for the same real temporary directory.
+            root = Path(tmp).resolve()
             path = root / 'report.json'
             self.assertEqual(probe.private_output(path), path)
             path.write_text('protected', encoding='utf-8')
@@ -205,6 +206,64 @@ class ProbeSDKTests(unittest.TestCase):
             self.assertEqual(result.returncode, 2)
             self.assertFalse(output.exists())
             self.assertFalse(json.loads(result.stdout)['live_verified'])
+
+    def test_real_loopback_http_catalog_without_proxy_or_tool_calls(self):
+        import socket
+        import threading
+        import time
+        import uvicorn
+        from mcp.server import MCPServer
+
+        mcp = MCPServer('HTTP fixture, not Ableton')
+        invoked = []
+
+        @mcp.tool()
+        def forbidden_write(value: int) -> int:
+            invoked.append(value)
+            return value
+
+        with tempfile.TemporaryDirectory() as tmp, socket.socket() as sock:
+            sock.bind(('127.0.0.1', 0))
+            sock.listen(128)
+            endpoint = f'http://127.0.0.1:{sock.getsockname()[1]}/mcp'
+            server = uvicorn.Server(uvicorn.Config(mcp.streamable_http_app(),
+                                                   log_level='error', access_log=False,
+                                                   timeout_graceful_shutdown=2))
+            failures = []
+
+            def serve():
+                try:
+                    server.run(sockets=[sock])
+                except BaseException as error:
+                    failures.append(error)
+
+            thread = threading.Thread(target=serve, daemon=True)
+            thread.start()
+            try:
+                deadline = time.monotonic() + 10
+                while not server.started and thread.is_alive() and time.monotonic() < deadline:
+                    time.sleep(0.02)
+                self.assertTrue(server.started, str(failures))
+                output = Path(tmp) / 'report.json'
+                with patch.dict(os.environ, {'HTTP_PROXY': 'http://127.0.0.1:1',
+                                              'HTTPS_PROXY': 'http://127.0.0.1:1',
+                                              'ALL_PROXY': 'http://127.0.0.1:1', 'NO_PROXY': ''}):
+                    result = asyncio.run(probe.probe(output=output, url=endpoint, timeout=10))
+                self.assertEqual(result['transport'], 'streamable-http')
+                self.assertEqual([t['name'] for t in result['tools']], ['forbidden_write'])
+                self.assertEqual(invoked, [])
+                self.assertEqual(json.loads(output.read_text(encoding='utf-8'))['catalog_sha256'],
+                                 result['catalog_sha256'])
+                self.assertFalse(result['live_state_read'])
+                self.assertFalse(result['live_verified'])
+            finally:
+                server.should_exit = True
+                thread.join(timeout=5)
+                if thread.is_alive():
+                    server.force_exit = True
+                    thread.join(timeout=3)
+            self.assertFalse(thread.is_alive(), 'HTTP fixture did not stop')
+            self.assertFalse(failures)
 
 
 if __name__ == '__main__':
