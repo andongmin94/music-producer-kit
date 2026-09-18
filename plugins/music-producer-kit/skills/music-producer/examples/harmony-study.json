@@ -1,0 +1,40 @@
+{
+  "bpm": 96,
+  "meter": [4, 4],
+  "length_beats": 16,
+  "tracks": [
+    {
+      "name": "Harmony",
+      "channel": 0,
+      "program": 0,
+      "notes": [
+        {"pitch": 60, "start": 0, "duration": 4, "velocity": 68},
+        {"pitch": 64, "start": 0, "duration": 4, "velocity": 68},
+        {"pitch": 67, "start": 0, "duration": 4, "velocity": 68},
+        {"pitch": 71, "start": 0, "duration": 4, "velocity": 68},
+        {"pitch": 60, "start": 4, "duration": 4, "velocity": 68},
+        {"pitch": 64, "start": 4, "duration": 4, "velocity": 68},
+        {"pitch": 67, "start": 4, "duration": 4, "velocity": 68},
+        {"pitch": 69, "start": 4, "duration": 4, "velocity": 68},
+        {"pitch": 60, "start": 8, "duration": 4, "velocity": 68},
+        {"pitch": 62, "start": 8, "duration": 4, "velocity": 68},
+        {"pitch": 65, "start": 8, "duration": 4, "velocity": 68},
+        {"pitch": 69, "start": 8, "duration": 4, "velocity": 68},
+        {"pitch": 59, "start": 12, "duration": 4, "velocity": 68},
+        {"pitch": 62, "start": 12, "duration": 4, "velocity": 68},
+        {"pitch": 65, "start": 12, "duration": 4, "velocity": 68},
+        {"pitch": 67, "start": 12, "duration": 4, "velocity": 68}
+      ]
+    },
+    {
+      "name": "Bass",
+      "channel": 1,
+      "notes": [
+        {"pitch": 48, "start": 0, "duration": 4, "velocity": 72},
+        {"pitch": 45, "start": 4, "duration": 4, "velocity": 72},
+        {"pitch": 50, "start": 8, "duration": 4, "velocity": 72},
+        {"pitch": 43, "start": 12, "duration": 4, "velocity": 72}
+      ]
+    }
+  ]
+}

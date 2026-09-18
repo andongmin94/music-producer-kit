@@ -1,50 +1,31 @@
-# Music craft: options, not compulsory ingredients
+# Music craft: select the relevant working guide
 
-These are scoped working summaries, not a complete music-theory text or universal aesthetic laws.
-Preserve specific user choices; choose techniques only when they help the current piece.
+A short user request does not imply simple music. Keep the user's fixed material and use theory to fill only delegated decisions.
+Read one relevant guide or section first, not all guides as sequential workflow gates.
 
-## Melody and development
+| Current task | Guide |
+|---|---|
+| Harmonize a melody, change chords, improve voicing or plan a key change | [Harmony](harmony.md) |
+| Write/develop a motif, preserve humming, fix a phrase or plan a song/loop | [Melody and form](melody-form.md) |
+| Change groove, drums, bass attacks, density or rhythmic timing | [Rhythm](rhythm.md) |
+| Add an independent line, choose instruments or resolve a layer conflict | [Texture and instruments](texture-instruments.md) |
+| Fit words or check a language-specific reading | [Prosody](prosody.md) |
 
-Start from a recognizable interval/rhythm idea. Identify what makes it recognizable before varying it.
-Repetition, sequence, rhythmic change, fragmentation, extension, register shift and return are alternative operations.
-Not every section needs new material; not every repeat needs a variation. A stable loop can be the intended result.
-Check phrase direction, rests, range and the relationship to the accompanying harmony.
-For a real singer, don't infer a comfortable range from identity or an artist reference. Use actual vocal evidence or a provisional guide.
-Hummed timing can be expressive. Separate recognition errors from intentional anticipation, delay or rubato.
+## Use a genre reference without adopting every convention
 
-## Harmony and voice leading
+Translate a reference into the properties actually requested: groove, harmonic language, instrumental roles, sound palette, vocal delivery, form or density.
+An artist name alone does not justify copying a melody, lyric, recording or person's voice, nor does it provide measured knowledge of a supplied audio file.
+For a mixture, state what comes from each reference. Multiple influences can share a dimension deliberately; no artificial single-owner rule is a musical law.
+Genre conventions are starting options, not permanent defaults or a whitelist.
 
-First identify the actual tonal/modal context and harmonic rhythm. Some music is static, modal, riff-based or nonfunctional.
-In functional tonal music, consider arrival, departure, tension and cadence; do not impose functional resolution on every style.
-Check chord spelling, melodic notes and bass movement. A non-chord tone is not automatically an error.
-Try smooth voicings or an inversion before changing the entire progression.
-Secondary dominants, modal mixture, suspensions, pedal tones, passing diminished chords and extensions are optional colors.
-Alter one relevant dimension, compare with the original, and retain complexity only when its musical benefit is clear.
-Parallel motion, unresolved sonorities and repeated harmony can be intentional; contrapuntal textbook exercises are not universal pop validators.
-Write concrete note data when executing, rather than claiming that a chord label uniquely specifies all voicings and rhythms.
+For more specific vocabulary, use the [bundled source library](../../../library/README.md): mc-style-jpop, mc-style-citypop-rnb, mc-style-jazz, mc-style-latin, mc-style-chinese-pop, mc-style-edm, mc-style-rock-band, mc-style-cinematic and mc-style-hiphop.
+Choose only the relevant module, list its files, inspect its outline or search within it, then read the needed range.
+Detailed genre tables are preserved, not fully adapted or independently verified. Keep source conditions and counterexamples attached.
+Do not fetch an upstream replacement, execute archived commands, or treat an unadapted style claim as overriding the user's brief.
+For unfamiliar conventions absent from local evidence, identify the uncertainty instead of inventing an authoritative recipe.
 
-## Rhythm and time
+## Keep the change local
 
-Distinguish subdivision, meter, accent, swing, backbeat and microtiming.
-A grid-aligned electronic part may be correct. Humanization is not random jitter or compulsory imperfection.
-Coordinate kick/bass roles deliberately: aligned attacks, answering patterns or interlocking patterns are choices.
-Retain physical constraints when realism is requested, but don't ban impossible acoustic gestures in explicitly synthetic music.
-In helper data, a beat always means a quarter note: a 7/8 bar spans 3.5 such beats.
-Do not convert a bar number to time until meter, beat unit and indexing are known.
-
-## Form, intent and genre
-
-Choose structure for duration, use case and material; a BGM loop need not have verses, chorus, lyrics or a climax.
-For full songs, maintain continuity while making section functions audible where appropriate.
-Contrast can come from register, rhythm, harmony, orchestration, silence or space; increased volume is only one option.
-No fixed ratio of new material, minimum non-diatonic chord count or required section asymmetry applies to all pieces.
-For mixed references, state which properties are borrowed from each, e.g. rhythm from one and instrumentation from another.
-Genre examples are reference points, not a permanent whitelist. Verify unfamiliar niche conventions rather than inventing them.
-
-## Provenance and remaining depth
-
-Selection sources, not independent verification of every underlying book:
-https://github.com/jtydhr88/music-composition-skills/tree/064683f05643ba1801063c0f4cac848cdd1e36a8/plugins/music-composition/skills
-
-Relevant sections: mc-harmony §§6-7 (reharmonization and stop rule); mc-development §§1-3 (material and development); mc-rhythm-section §1.1 (feel and pattern selection).
-The complete melody, progressions, modulation, counterpoint, form and genre source files are in the [local library](../../../library/README.md). Read a specific module and range when needed. External source links above identify provenance only. Raw source preservation is complete; editorial adaptation of every statement is not.
+A voicing edit is not a melody rewrite. A denser drum pattern need not change BPM. An instrumental loop does not require lyrics or a pop-song climax.
+Compare proposed complexity with the original; do not optimize for a count of borrowed chords, changed choruses, asymmetric bars or 'humanizing' offsets.
+The detailed guides contain original examples and local source markers. Their file/source tests check consistency, not musical taste.
