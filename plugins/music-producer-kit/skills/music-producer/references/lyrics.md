@@ -1,19 +1,25 @@
-# Lyrics and vocals: select only what this task requires
+# Lyrics and vocals: Korean, English and Japanese only
+
+Choose the current song's language from ko/en/ja, including mixtures. Do not infer it solely from the conversation or an artist's nationality.
+Instrumental work does not load lyric-language guides.
 
 | Task | Read |
 |---|---|
-| New lyric, words-only rewrite, theme, structure or rhyme | [Lyric craft](lyric-craft.md) |
-| Fit fixed music to words or words to fixed music; Korean/Japanese/English reading | [Prosody](prosody.md) |
-| Vocal guide, recording edit, harmonies, doubles or synthesis | [Vocal production](vocal-production.md) |
+| Theme, text-only edit, lyric structure or rhyme | [Lyric craft](lyric-craft.md) |
+| Melody/word assignment or a language mixture | [Prosody](prosody.md) |
+| Korean phrase | [Korean](lyrics-korean.md) |
+| English phrase | [English](lyrics-english.md) |
+| Japanese phrase | [Japanese](lyrics-japanese.md) |
+| Guide, recorded voice, harmonies or synthesis | [Vocal production](vocal-production.md) |
 
-A lyrics-only request does not activate DAW or synthesis setup. A melody guide is not sung audio.
-Preserve approved text and melody according to the current request. Music-first, lyrics-first and jointly editable work have different authorized variables.
-Use one section map and alignment record in the private song workspace; no compulsory full LYR-SPEC is needed.
+A lyrics-only task does not activate DAW/synthesis setup. Preserve approved text and melody according to the request.
+Use one section map and the selected pronunciations in the private song workspace rather than a compulsory large lyric schema.
 
-## Additional languages and traditions
+## Additional craft, not additional languages
 
-Mandarin, Cantonese, rap and musical-theatre material remains in the [bundled local library](../../../library/README.md).
-The relevant modules include lw-mandarin, lw-cantonese, lw-tone-check, lw-rap, lw-musical-theatre and lw-chinese-style.
-Detailed imagery, rhyme and narrative materials also remain local in lw-imagery, lw-rhyme and lw-narrative.
-Read only a relevant file/range, retain uncertainty and do not reinstate the archived universal object, repetition or rhyme gates.
-No language is prohibited by absence from this starter guide. Do not claim a native-speaker check or automated tone analysis that was not performed.
+General imagery, rhyme, narrative, rap and musical-theatre techniques remain in the [local library](../../../library/README.md): lw-imagery, lw-rhyme, lw-narrative, lw-rap and lw-musical-theatre.
+Use transferable technique only for the supported production scope. Stage conventions, Chinese-specific examples or a source's linguistic assumptions are not universal rules.
+Mandarin, Cantonese, Chinese-style lyrics and tone-matching checks are excluded, not deferred production features.
+Other languages are unsupported too; state the boundary without silently translating or replacing supplied words.
+Source text written in Chinese and Japanese lyrics containing kanji are not reasons to discard useful general theory or a Japanese lyric.
+Do not claim native-language review, a pronunciation engine or automatic tone analysis that was not performed.
