@@ -1,7 +1,7 @@
 name: Check package
 on:
   push:
-    branches: [main, work/curated-knowledge]
+    branches: [main]
   pull_request:
 permissions:
   contents: read
@@ -22,28 +22,3 @@ jobs:
       - run: python tools/check.py
       - run: python -m unittest discover -s tests -v
       - run: python tools/check.py --package dist/music-producer-kit.zip
-      - name: Inspect locally bundled evidence for editorial review
-        if: runner.os == 'Linux'
-        shell: python
-        run: |
-          import sys
-          sys.path.insert(0, 'plugins/music-producer-kit/skills/music-producer/scripts')
-          from source_library import SourceLibrary
-          library = SourceLibrary()
-          print(library.verify())
-          selections = [
-              ('mc-melody', 'SKILL.md', 1, 135),
-              ('mc-harmony', 'reference.md', 1, 160),
-              ('mc-modulation', 'SKILL.md', 1, 100),
-              ('mc-counterpoint', 'SKILL.md', 1, 100),
-              ('mc-rhythm-groove', 'SKILL.md', 1, 100),
-              ('lw-structure', 'SKILL.md', 1, 100),
-              ('lw-japanese', 'SKILL.md', 1, 145),
-              ('lw-english', 'SKILL.md', 1, 100),
-          ]
-          for module, filename, start, lines in selections:
-              result = library.read(module, filename, start, lines)
-              print(f'BEGIN SOURCE {module}/{filename} {start}-{result["end"]} {result["commit"]}')
-              for number, line in enumerate(result['text'].splitlines(), start):
-                  print(f'{number}: {line}')
-              print(f'END SOURCE {module}/{filename}')

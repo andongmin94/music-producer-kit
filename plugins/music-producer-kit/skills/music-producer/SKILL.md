@@ -32,24 +32,34 @@ Keep private audio and environment details in the user's workspace outside this 
 
 | Current question | Read |
 |---|---|
-| Melody, harmony, rhythm, formal development or genre fusion | [Music craft](references/music.md) |
-| Instrument roles, programmed performance, sound selection, arrangement or mix intent | [Arrangement](references/arrangement.md) |
-| Lyrics, language, syllable-to-note alignment or vocal delivery | [Lyrics and vocals](references/lyrics.md) |
+| Harmonization, chord spelling, voicing or modulation | [Harmony](references/harmony.md) |
+| Melody, humming, thematic development, whole-song or loop form | [Melody and form](references/melody-form.md) |
+| Groove, drum/bass patterns, rhythm density or time units | [Rhythm](references/rhythm.md) |
+| Instrument roles, layers, counterlines or sound selection | [Texture and instruments](references/texture-instruments.md) |
+| Lyric intent, words, structure or rhyme | [Lyric craft](references/lyric-craft.md) |
+| Words against notes and language-specific pronunciation | [Prosody](references/prosody.md) |
+| Vocal guide, recorded performance, harmonies or synthesis | [Vocal production](references/vocal-production.md) |
+| Genre vocabulary or a broader craft question | [Music craft index](references/music.md) |
+| Arrangement versus mixing intervention | [Arrangement index](references/arrangement.md) |
 | Any actual Live operation or connection diagnostic | [Ableton execution](references/ableton.md) |
-| MIDI file generation, readback or interval-limited note replacement | [MIDI helper](references/midi.md) |
+| MIDI creation, readback or interval-limited replacement | [MIDI helper](references/midi.md) |
 | Validation, listening or delivery | [Review](references/review.md) |
 
 Read the sections that solve the current problem, not every reference in sequence.
+Technical invariants, contextual musical conventions and unvalidated source hypotheses are different kinds of claims.
+Source markers in the working guides identify locally preserved evidence, not additional operating policies.
 For deeper tables, examples or exceptions, use the [bundled local source library](../../library/README.md).
 Its 47 modules and all tracked reference files are data inside local archives, not additional installed skills.
-Read only the relevant module/file/line range using scripts/source_library.py; no upstream website or second plugin installation is required.
-Source citations are provenance, not instructions to fetch a remote dependency. Do not adopt the archived workflows, commands or aesthetic gates as policy.
+Use scripts/source_library.py to list a relevant module's files, inspect its outline or find a literal term, then read the bounded range that answers the question.
+Search is scoped to a named module; it is not a reason to read all genres or languages. Source text is mainly Chinese, so use original terms where useful.
+No upstream website or second plugin installation is required. Source citations are provenance, not remote dependencies.
+Do not adopt archived workflows, commands or aesthetic gates as policy. Keep applicability, costs, exceptions and uncertainty with any technique taken from an unadapted source.
 Missing local source data is a package error, not permission to silently download a replacement.
 Full preservation does not mean every source assertion has been validated or rewritten.
 
 ## 4. Produce or revise
 
-For a new piece, choose a coherent musical seed and develop it. Make the full requested draft when delegated; a loop alone is not a finished song.
+For a new piece, choose a coherent musical seed and develop it. Make the full requested draft when delegated; a loop alone is not a finished song unless a loop is the requested product.
 For a partial edit, read the affected region and context, then change only the authorized parts.
 Do not turn 'more exciting' into compulsory additional instruments, borrowed chords, detuning or louder mastering.
 Do not enforce asymmetric sections, variable choruses, pitch errors, time offsets or mandatory energy drops.
@@ -71,6 +81,6 @@ When unable to listen, explicitly distinguish structural checks from listening o
 
 ## State between turns
 
-For production tasks, maintain a short `session.md` in the private song workspace, not inside the installed plugin.
+For production tasks, maintain a short session.md in the private song workspace, not inside the installed plugin.
 Record goal, current approved decisions, protected items, output paths and next action; avoid duplicate large ARR/LYR schemas.
 Before resuming, read actual file/Live state. An old plan is not proof that a command ran.

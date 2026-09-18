@@ -1,49 +1,49 @@
 # Current status
 
-Updated: 2026-09-18. Milestone: 0.2.0 self-contained upstream source preservation.
+Updated: 2026-09-18. Milestone: 0.3.0 scoped craft guides and local source navigation.
 
-## Implemented
+## Implemented in this increment
 
-- Complete tracked-file snapshots of both pinned sources are committed locally: 29 composition modules / 74 files and 18 lyric modules / 47 files. Total 121 files, 2,512,420 original bytes.
-- Original file bytes, LICENSE/NOTICE, source commits/tree IDs, per-file Git blob SHA and SHA256, and archive SHA256 are preserved. See SOURCE_SNAPSHOT_REPORT.json.
-- Source archives are included inside the plugin, not Git submodules or references to a remote installation.
-- A standard-library-only reader lists modules/files and reads bounded line ranges from local archives without extraction, execution or downloads.
-- One curated entry skill remains discoverable; raw source workflows are data, not operating policies.
-- Package checks verify both archives, source-file hashes, notices and 47-module coverage. Only the two named source ZIPs are allowlisted.
-- Existing scoped MIDI helper remains unchanged.
-- The one-time network snapshot workflow was removed after its successful capture. Normal installation/read/verification never fetches upstream sources.
+- Seven working guides: harmony, melody/form, rhythm, texture/instruments, lyric craft, prosody and vocal production. The single entry skill selects only the applicable guide; the former broad summaries are routing indexes.
+- Each guide records bounded local source ranges, its editorial corrections and the remaining specialist coverage. See knowledge-curation.md.
+- Explicit distinctions between protected melody/chords/bass, tonal conventions and requirements, real pronunciation and written counts, note events and syllables, recorded vocals and synthesis.
+- The existing standard-library source reader now supports module-scoped literal search and fenced-code-aware ATX outlines, with bounded output, source positions and preserved evidence warnings.
+- An original four-bar editable harmony/bass study using the existing Mido helper, with document-to-note and protected-edit tests.
+- Fourteen new tests for navigation, source markers, independent distribution and executable examples. No new dependencies, MCP implementation or extra permanent CI workflow.
 
-## Observed verification
+## Preserved working product
 
-Source capture run 35299006712: SUCCESS. Both pinned Git commits fetched, all tracked blob hashes checked, ZIP readback checked, and source data committed as 9da6420.
-Local Linux: 19 new reader unit tests PASS.
-CI run 35299974015 on code commit 342d6f60522f8883a3f59fc26005a9ea969937d2: SUCCESS on both windows-latest and ubuntu-latest, Python 3.12.
-Each platform passed package validation, the 64-test suite (39 existing + 19 reader + 6 distribution), and install-ZIP generation.
-The distribution test extracts the built ZIP into an independent directory, removes its source checkout copy, blocks network calls, and verifies/reads the bundled library.
-Every module and associated local reference is readable; the complete 121-file inventory and original byte count match.
-Missing/corrupt archives, unsafe paths, notice changes and unlisted files are rejected. No remote recovery is attempted.
-The reproducible-package test passes independently on both platforms; cross-platform ZIP byte identity was not asserted.
-The initial integration run 35299878510 caught an over-specific expected error string in the missing-archive test. Commit 342d6f6 tests rejection/network isolation without depending on which validator runs first.
+Both complete pinned source snapshots remain unchanged: 47 modules, 121 tracked files, 2,512,420 original bytes, with file/archive hashes and original LICENSE/NOTICE.
+The original SKILL.md files remain archived data, not discoverable skills. No upstream download, submodule, silent remote recovery or automatic update is introduced.
+The scoped MIDI helper remains unchanged. Source books, audio, internal tools and corpora never shipped by upstream are not included.
 
-Static/offline tests are not Codex behavioral or music-quality evaluations.
-Codex plugin activation, actual Ableton MCP operations, Live save/reopen and listening: NOT RUN.
+## Observed verification before final validation
 
-## Preservation versus adaptation
+Baseline 0.2.0: CI run 35299974015 passed the 64-test suite and package build on Windows/Linux, Python 3.12.
+Review-branch run 35305684141 also passed the baseline suite on both platforms and read selected evidence directly from the local archives. Its temporary source-inspection CI step has been removed from the final change.
+The new 0.3.0 guide/navigation/example tests are written; their final CI result is not yet recorded at this checkpoint.
+Do not interpret prior baseline passes as validation of the new code.
 
-Full original file preservation: COMPLETE.
-Editorial conversion of every source paragraph/table into curated production guidance: NOT COMPLETE.
-Detailed knowledge can now be consulted locally; do not silently turn an archived source's imperatives or inferred rules into new instructions.
-Source books, recordings, private tools and corpora that upstream never shipped were not acquired.
-No bundled MCP server, Splice/Melodyne/singing connector, or project-wide license grant.
+Static/offline tests are not model behavioral or musical-quality evaluations.
+Codex plugin activation, actual Ableton MCP operations, Live save/reopen, audio rendering and listening: NOT RUN.
+No Splice/Melodyne/singing connector or project-wide license grant has been added.
+
+## Preservation versus editorial adaptation
+
+Complete original file preservation: COMPLETE.
+Selected seven-guide adaptation with local examples and caveats: IMPLEMENTED, validation pending at this checkpoint.
+Editorial conversion or independent verification of every source paragraph/table: NOT COMPLETE.
+Genre, specialist orchestration, extended harmony/form/counterpoint, language and sound-design details remain in the local library for targeted review.
+See knowledge-curation.md for what moved and what still needs work; do not claim all 47 modules were fully rewritten.
 
 ## Next concrete step
 
-Verify real Windows/Codex activation and actual MCP schemas, then create a scratch Live Set and prove save/reopen plus a drum-only edit.
-Continue section-level adaptation from the LOCAL library, retaining conditions, counterexamples and provenance.
-Do not repeat resolved genre/voice preference questions or restore a dependency on upstream websites.
+Observe the current code's Windows/Linux tests and package build before merging.
+Then verify real Windows/Codex activation and actual MCP schemas; prove an editable scratch Live Set, save/reopen and a scoped edit before claiming DAW automation.
+Continue specialist knowledge adaptation from local evidence without a genre whitelist or mandatory aesthetic gates.
 
 ## Session handoff
 
-Read actual repository state, this file and AGENTS.md first.
-Keep private equipment paths, recordings and samples outside this public repository.
-Append actual outcomes and blockers before each session ends; do not call a queued run a passing run.
+Read actual repository state, AGENTS.md and this file before work.
+Do not repeat resolved global genre/voice questions. Keep private paths, recordings, samples and unpublished songs outside this repository.
+Record actual test run IDs, failures, fixes and remaining blockers when ending a session. A queued run is not a passing run.
