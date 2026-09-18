@@ -73,4 +73,4 @@ Without audio, report the pattern and timing changes and leave the audible groov
 - `source:mc-rhythm-groove/SKILL.md:41-98` — tempo versus density, metric position and anticipation; rigid definitions and root mandates relaxed.
 - `source:mc-rhythm-section/SKILL.md:1-100` — feel, pattern selection, kick-bass relationship and performance context.
 
-The grid and unit calculations are project examples. Device-specific mappings are deliberately not inferred from these sources. Specialist genre patterns remain available in the full local archive.
+The grid and unit calculations are project examples. Device-specific mappings are deliberately not inferred from these sources. Specialist genre patterns remain available in the selected local archive.

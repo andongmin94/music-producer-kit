@@ -169,7 +169,7 @@ class CuratedKnowledgeTests(unittest.TestCase):
             with patch('socket.create_connection', side_effect=AssertionError('network forbidden')), \
                  patch('urllib.request.urlopen', side_effect=AssertionError('network forbidden')):
                 library = installed.SourceLibrary()
-                self.assertEqual(library.verify()['files'], 121)
+                self.assertEqual(library.verify()['files'], 89)
                 self.assertTrue(library.find('mc-harmony', 'Locrian')['matches'])
                 self.assertTrue(library.outline('lw-english')['headings'])
                 self.assertEqual(len(list(plugin.rglob('SKILL.md'))), 1)

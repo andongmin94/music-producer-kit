@@ -21,7 +21,7 @@ class PackageTests(unittest.TestCase):
     def test_valid_package(self):
         result = package.check(self.root)
         self.assertEqual(result['skills'], 1)
-        self.assertEqual(result['upstream_modules_catalogued'], 47)
+        self.assertEqual(result['source_modules'], 41)
         self.assertFalse(result['behavior_scenarios_executed'])
 
     def test_package_excludes_private_workspace(self):
@@ -74,11 +74,11 @@ class PackageTests(unittest.TestCase):
             package.within(self.root, self.root.parent / 'outside.txt')
 
     def test_incomplete_inventory(self):
-        p = self.root / 'docs/upstream-inventory.json'
+        p = self.root / 'plugins/music-producer-kit/library/catalog.json'
         data = json.loads(p.read_text(encoding='utf-8'))
-        data['sources'][0]['skills'].pop()
+        data['sources'][0]['modules'].pop()
         p.write_text(json.dumps(data))
-        with self.assertRaisesRegex(ValueError, 'incomplete'):
+        with self.assertRaisesRegex(ValueError, 'cover'):
             package.check(self.root)
 
     def test_skill_name_mismatch(self):

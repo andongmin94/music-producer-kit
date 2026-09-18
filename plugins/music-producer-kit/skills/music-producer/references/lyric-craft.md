@@ -63,10 +63,10 @@ Do not claim native-language review, successful singing or audio generation unle
 
 [Local source reader](../../../library/README.md):
 
-- `source:lw-song-intent/SKILL.md:1-115` — intention types, perspective and repetition; mandatory object/type gates relaxed.
-- `source:lw-structure/SKILL.md:1-100` — phrase structure, timing and placement; automatic structural verdicts removed.
-- `source:lw-workflow/SKILL.md:155-265` — documented contradictory chorus/object checks and the music/lyric handoff.
-- `source:lw-workflow/LYR-SPEC.schema.md:1-95` — text/melody interface and language leakage in common fields.
-- `source:lw-musical-theatre/SKILL.md:1-95` — character diction and content-sensitive form; theatre conventions are not imposed on pop.
+- `source:lw-song-intent/SKILL.md:1-111` — intention types, perspective and repetition; mandatory object/type gates relaxed.
+- `source:lw-structure/SKILL.md:1-99` — phrase structure, timing and placement; automatic structural verdicts removed.
+- `source:lw-workflow/SKILL.md:134-225` — documented contradictory chorus/object checks and the music/lyric handoff.
+- `source:lw-workflow/LYR-SPEC.schema.md:1-77` — text/melody interface and language leakage in common fields.
+- `source:lw-musical-theatre/SKILL.md:1-94` — character diction and content-sensitive form; theatre conventions are not imposed on pop.
 
 This is a partial editorial adaptation. Specialist rhetoric, narrative, imagery and rhyme tables remain locally preserved for further review; no corpus-derived percentages are used as composition requirements.

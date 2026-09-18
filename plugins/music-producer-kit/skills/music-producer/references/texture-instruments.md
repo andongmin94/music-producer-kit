@@ -54,6 +54,8 @@ For intentionally synthetic music, impossible acoustic gestures may be allowed; 
 
 ## 6. Sound selection from a functional brief
 
+For actual available audio files use [Local samples](samples.md); do not invent sample filenames.
+
 Choose attack, sustain/release, range, harmonic/noise character and role before browsing presets or buying another instrument.
 Start with existing sounds and licensed local samples. Compare candidates in the intended part, not only in solo preview.
 A loop may bring fixed chords, timing and a recognizable phrase. A one-shot provides different editing freedom.
@@ -72,7 +74,7 @@ For stable BGM, a deliberately even profile and consistent width can be function
 [Local source reader](../../../library/README.md):
 
 - `source:mc-texture-layering/SKILL.md:1-105` — roles, depth, density and arrangement-level alternatives to mixing.
-- `source:mc-orchestration/SKILL.md:1-95` — instrument choice, blending/separation and detailed local reference routing.
-- `source:mc-counterpoint/SKILL.md:1-100` — independent lines and complementary axes; universal classification gates removed.
+- `source:mc-orchestration/SKILL.md:1-86` — instrument choice, blending/separation and detailed local reference routing.
+- `source:mc-counterpoint/SKILL.md:1-96` — independent lines and complementary axes; universal classification gates removed.
 
 The contour example and protected-scope protocol are original. Detailed orchestral, folk-instrument and synth tables are preserved, not fully adapted in this guide. No fixed psychoacoustic thresholds or device mappings are claimed.

@@ -54,9 +54,9 @@ Mandarin tone matching, Cantonese pitch categories and Chinese rhyme classes are
 
 [Local reader](../../../library/README.md):
 
-- `source:lw-korean/SKILL.md:65-220` — written syllables, liaison and explicitly inferred singing advice.
-- `source:lw-japanese/SKILL.md:53-145` — mora, reading and note-mapping distinctions.
-- `source:lw-english/SKILL.md:50-100` — lexical stress and phrase emphasis.
-- `source:lw-workflow/LYR-SPEC.schema.md:1-95` — historical text/music interface; shared Chinese-specific fields are not retained.
+- `source:lw-korean/SKILL.md:60-202` — written syllables, liaison and explicitly inferred singing advice.
+- `source:lw-japanese/SKILL.md:50-122` — mora, reading and note-mapping distinctions.
+- `source:lw-english/SKILL.md:47-97` — lexical stress and phrase emphasis.
+- `source:lw-workflow/LYR-SPEC.schema.md:1-77` — historical text/music interface; shared Chinese-specific fields are not retained.
 
 The examples and workflow are project-authored adaptations. The archived sources are not pronunciation engines or universal artistic laws. Detailed language references are local; external citations in the language guides are verification provenance, not runtime dependencies.

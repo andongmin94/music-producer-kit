@@ -46,7 +46,7 @@ Do not diagnose a buried vocal as primarily bad intonation without evidence; arr
 
 [Local source reader](../../../library/README.md):
 
-- `source:mc-vocal-direction/SKILL.md:1-105` — performance vocabulary and consonant/vowel distinction; perfection-as-AI claims and fixed delivery quotas removed.
-- `source:mc-workflow/SKILL.md:220-300` — scope of source diagnostics and handoff; diagnostic hypotheses are not measured facts.
+- `source:mc-vocal-direction/SKILL.md:1-104` — performance vocabulary and consonant/vowel distinction; perfection-as-AI claims and fixed delivery quotas removed.
+- `source:mc-workflow/SKILL.md:213-293` — scope of source diagnostics and handoff; diagnostic hypotheses are not measured facts.
 
 Specific harmony stacks, recorded examples and detailed mix practice are still in the local archives pending fuller adaptation. Actual Melodyne, Splice and singing-engine connectors are not supplied by this guide.

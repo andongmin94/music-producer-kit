@@ -13,7 +13,7 @@ PLUGIN = Path('plugins/music-producer-kit')
 MARKETPLACE = Path('.agents/plugins/marketplace.json')
 SCHEMA = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
 TEXT_SUFFIXES = {'.md', '.json', '.py', '.txt'}
-ARCHIVES = ('music-composition-skills.zip', 'lyric-writing-skills.zip')
+ARCHIVES = ('composition-selected.zip', 'lyrics-selected.zip')
 sys.path.insert(0, str(ROOT / PLUGIN / 'skills/music-producer/scripts'))
 from source_library import SourceLibrary
 
@@ -105,28 +105,24 @@ def check(root: Path = ROOT) -> dict:
                 raise ValueError(f'Broken link in {path.relative_to(root)}: {target}')
             if path.is_relative_to(root / PLUGIN):
                 within(root / PLUGIN, destination)
-    inventory = read_json(root / 'docs/upstream-inventory.json')
-    counts = {source['repo']: len(source['skills']) for source in inventory['sources']}
-    if sorted(counts.values()) != [18, 29]:
-        raise ValueError('The audited upstream module inventory is incomplete')
-    for source in inventory['sources']:
-        if not re.fullmatch('[a-f0-9]{40}', source['commit']):
-            raise ValueError('Upstream references must be pinned to a commit')
-        names = [s['name'] for s in source['skills']]
-        if len(names) != len(set(names)):
-            raise ValueError('Duplicate upstream inventory entry')
     library = SourceLibrary(root / PLUGIN / 'library')
     preservation = library.verify()
-    expected = {s['repo']: (s['commit'], {m['name'] for m in s['skills']}) for s in inventory['sources']}
-    actual = {s['repo']: (s['commit'], set(s['modules'])) for s in library.sources}
-    if expected != actual:
-        raise ValueError('Bundled source library and adaptation inventory disagree')
     if {Path(s['archive']).name for s in library.sources} != set(ARCHIVES):
         raise ValueError('Source archive allowlist mismatch')
-    for source in inventory['sources']:
-        path = within(root, root / source['local_archive'])
-        if path not in files or not path.is_file():
-            raise ValueError('Inventory must point to a packaged local archive')
+    if sorted(len(s['modules']) for s in library.sources) != [13, 28]:
+        raise ValueError('The selected source module inventory is incomplete')
+    excluded = {'mc-style-chinese-pop', 'lw-mandarin', 'lw-cantonese',
+                'lw-chinese-style', 'lw-tone-check', 'lw-case-studies'}
+    if set(library.modules) & excluded:
+        raise ValueError('Removed specialist sources were reintroduced')
+    for source in library.sources:
+        if not re.fullmatch('[a-f0-9]{40}', source['commit']):
+            raise ValueError('Source provenance must be pinned to a commit')
+        if any('reference-minyue' in f['path'] or 'reference-corpus' in f['path'] for f in source['files']):
+            raise ValueError('Removed specialist reference was reintroduced')
+    for obsolete in ('music-composition-skills.zip', 'lyric-writing-skills.zip'):
+        if (root / PLUGIN / 'library/archives' / obsolete).exists():
+            raise ValueError('Obsolete full snapshot still exists')
     scenarios = read_json(root / 'evals/scenarios.json')['scenarios']
     if len(scenarios) < 8 or len({s['id'] for s in scenarios}) != len(scenarios):
         raise ValueError('Behavior scenarios missing or duplicated')
@@ -134,7 +130,7 @@ def check(root: Path = ROOT) -> dict:
         if not scenario['prompt'] or not scenario['must'] or not scenario['must_not']:
             raise ValueError('Incomplete behavior scenario')
     return {'status': 'pass', 'version': manifest['version'], 'skills': len(skills),
-            'upstream_modules_catalogued': sum(counts.values()), 'local_source_library': preservation,
+            'source_modules': len(library.modules), 'local_source_library': preservation,
             'behavior_scenarios_defined': len(scenarios), 'behavior_scenarios_executed': False,
             'host_installation_verified': False, 'live_verified': False, 'audio_reviewed': False}
 

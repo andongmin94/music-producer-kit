@@ -1,0 +1,388 @@
+{
+  "date": "2026-09-18",
+  "selection": "ko-en-ja-and-general-craft",
+  "modules": 41,
+  "files": 89,
+  "bytes": 1805308,
+  "removed_files": [
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": ".agents/plugins/marketplace.json",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": ".claude-plugin/marketplace.json",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "README.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "README_JA.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "README_KO.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "README_ZH.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/.claude-plugin/plugin.json",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-orchestration/reference-minyue.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-style-chinese-pop/SKILL.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-workflow/example-02-fusion.yaml",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": ".agents/plugins/marketplace.json",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": ".claude-plugin/marketplace.json",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "README.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "README_JA.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "README_KO.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "README_ZH.md",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/.claude-plugin/plugin.json",
+      "reason": "unused-upstream-installation-or-presentation"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-cantonese/SKILL.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-cantonese/reference-calc.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-cantonese/reference.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-case-studies/SKILL.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-case-studies/reference-corpus-2.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-case-studies/reference-corpus.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-case-studies/reference.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-chinese-style/SKILL.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-chinese-style/reference.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-mandarin/SKILL.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-mandarin/reference.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-tone-check/SKILL.md",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-workflow/LYR-SPEC.template.yaml",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-workflow/example-00-ai-default.yaml",
+      "reason": "excluded-specialist"
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-workflow/example-01-jacket.yaml",
+      "reason": "excluded-specialist"
+    }
+  ],
+  "edited_files": [
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-case-studies/reference.md",
+      "removed_lines": 6
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-counterpoint/SKILL.md",
+      "removed_lines": 4
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-counterpoint/reference.md",
+      "removed_lines": 1
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-development/SKILL.md",
+      "removed_lines": 1
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-form/reference.md",
+      "removed_lines": 9
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-melody/SKILL.md",
+      "removed_lines": 2
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-melody/reference.md",
+      "removed_lines": 38
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-modulation/SKILL.md",
+      "removed_lines": 6
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-modulation/reference.md",
+      "removed_lines": 0
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
+      "removed_lines": 107
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-orchestration/reference-keyboard-harp.md",
+      "removed_lines": 2
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-tutti.md",
+      "removed_lines": 0
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-orchestration/reference.md",
+      "removed_lines": 10
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-progressions/SKILL.md",
+      "removed_lines": 9
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-progressions/reference.md",
+      "removed_lines": 2
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-style-hiphop/SKILL.md",
+      "removed_lines": 19
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-style-jpop/SKILL.md",
+      "removed_lines": 1
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
+      "removed_lines": 1
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-vocal-direction/SKILL.md",
+      "removed_lines": 1
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
+      "removed_lines": 6
+    },
+    {
+      "repo": "jtydhr88/music-composition-skills",
+      "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
+      "removed_lines": 7
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-ai-tell-audit/SKILL.md",
+      "removed_lines": 8
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-english/SKILL.md",
+      "removed_lines": 68
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-english/reference.md",
+      "removed_lines": 2
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-imagery/SKILL.md",
+      "removed_lines": 4
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-imagery/reference.md",
+      "removed_lines": 22
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-japanese/SKILL.md",
+      "removed_lines": 66
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-japanese/reference.md",
+      "removed_lines": 1
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-korean/SKILL.md",
+      "removed_lines": 92
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-korean/reference-terms.md",
+      "removed_lines": 15
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-korean/reference.md",
+      "removed_lines": 41
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-musical-theatre/SKILL.md",
+      "removed_lines": 7
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-narrative/SKILL.md",
+      "removed_lines": 4
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-rap/SKILL.md",
+      "removed_lines": 119
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-rhyme/SKILL.md",
+      "removed_lines": 43
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-rhyme/reference.md",
+      "removed_lines": 2
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-song-intent/SKILL.md",
+      "removed_lines": 18
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-structure/SKILL.md",
+      "removed_lines": 7
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-structure/reference-stability.md",
+      "removed_lines": 4
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-structure/reference.md",
+      "removed_lines": 5
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-suno-interface/SKILL.md",
+      "removed_lines": 6
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-workflow/LYR-SPEC.schema.md",
+      "removed_lines": 28
+    },
+    {
+      "repo": "jtydhr88/lyric-writing-skills",
+      "path": "plugins/lyric-writing/skills/lw-workflow/SKILL.md",
+      "removed_lines": 45
+    }
+  ],
+  "history_rewritten": false,
+  "complete_upstream_snapshot": false
+}
