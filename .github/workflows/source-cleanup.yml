@@ -1,0 +1,26 @@
+name: Remove excluded source data
+on:
+  push:
+    branches: [work/remove-excluded-sources]
+    paths: [.maintenance/prune_sources.py, .github/workflows/source-cleanup.yml]
+permissions:
+  contents: write
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Remove excluded originals and verify retained bytes
+        run: python .maintenance/prune_sources.py
+      - name: Commit selected data and reader without changing main
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add plugins/music-producer-kit/library plugins/music-producer-kit/skills/music-producer/scripts/source_library.py tools/check.py docs/upstream-inventory.json docs/SOURCE_SELECTION_REPORT.json docs/SOURCE_SNAPSHOT_REPORT.json
+          git commit -m 'data: remove excluded originals and delete archive access bypass'
+          git push origin HEAD:work/remove-excluded-sources
