@@ -5,8 +5,8 @@
       "repo": "jtydhr88/music-composition-skills",
       "commit": "064683f05643ba1801063c0f4cac848cdd1e36a8",
       "tree": "c7d2225ff5ee3b4a2d89518634244d0670ed2af6",
-      "archive": "archives/music-composition-skills.zip",
-      "archive_sha256": "591a1dbea44018f388c62cbcf9eb3df234c26b9a9ffa114f51d22e661fc6d60f",
+      "archive": "archives/composition-selected.zip",
+      "archive_sha256": "ee2605cb77ed11e69735452684762e0f9fa859139c47dad729295f7fa6bd730c",
       "skills_directory": "plugins/music-composition/skills",
       "modules": [
         "mc-ai-tell-audit",
@@ -25,7 +25,6 @@
         "mc-rhythm-groove",
         "mc-rhythm-section",
         "mc-sound-design",
-        "mc-style-chinese-pop",
         "mc-style-cinematic",
         "mc-style-citypop-rnb",
         "mc-style-edm",
@@ -41,542 +40,534 @@
       ],
       "files": [
         {
-          "path": ".agents/plugins/marketplace.json",
-          "mode": "100644",
-          "size": 1015,
-          "git_blob_sha": "e50801dd107677ec029acc869bc781b50a1a3fa0",
-          "sha256": "2c52939ae22c8486fa622ad36bc7ba23c01dd39c751c1fb5ec95ec26c936713b"
-        },
-        {
-          "path": ".claude-plugin/marketplace.json",
-          "mode": "100644",
-          "size": 1180,
-          "git_blob_sha": "d02fbe545902cbacc085c66dd3050256ea41d2e4",
-          "sha256": "839b0f2b506f01f35e8c1edbe308715ffd6dc2314119cf49a83a14f4fc3492e2"
-        },
-        {
           "path": "LICENSE",
           "mode": "100644",
           "size": 1066,
+          "sha256": "dcf1862caccc15b318642682e347ae9794ca5d3376ece18a0e94773968959276",
           "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
-          "sha256": "dcf1862caccc15b318642682e347ae9794ca5d3376ece18a0e94773968959276"
+          "origin_git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
         },
         {
           "path": "NOTICE",
           "mode": "100644",
           "size": 3060,
+          "sha256": "fa1dc369b3de1f19c62011a9459f5b8500e2d0c7a3d46ad7479a05e99f99da3a",
           "git_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0",
-          "sha256": "fa1dc369b3de1f19c62011a9459f5b8500e2d0c7a3d46ad7479a05e99f99da3a"
-        },
-        {
-          "path": "README.md",
-          "mode": "100644",
-          "size": 28776,
-          "git_blob_sha": "dd1be6307e1eeaf4b243c49d04dd159fb5dc4bb6",
-          "sha256": "df519c5fa67a89300a4e706c0663fff9f462e7802510c39e9c2ede7d13278b54"
-        },
-        {
-          "path": "README_JA.md",
-          "mode": "100644",
-          "size": 36573,
-          "git_blob_sha": "f9f2d232a3af9bf856ceab48ed5fe939c11debcf",
-          "sha256": "8541e236cdcf7f825dd5416606b9ce874cc0114da422a7dc0f14a6afe4d2ba56"
-        },
-        {
-          "path": "README_KO.md",
-          "mode": "100644",
-          "size": 33760,
-          "git_blob_sha": "c69d3616fc24a06a2fcafc12dfca615a4811aa40",
-          "sha256": "d4c6f54775334585386c6d1cd00f40cec7b2c8c5d45568e7476cf53b973e69a8"
-        },
-        {
-          "path": "README_ZH.md",
-          "mode": "100644",
-          "size": 26101,
-          "git_blob_sha": "ea44b44006741f493bb6fc77a4b632d6e3635c25",
-          "sha256": "d177c5d5cc55572bb913042d660d7b2c0954f45cd24d6f5a326f3911f6240d63"
-        },
-        {
-          "path": "plugins/music-composition/.claude-plugin/plugin.json",
-          "mode": "100644",
-          "size": 945,
-          "git_blob_sha": "bfe33a7a75c9a4388634f85b495357b3c5de8b8d",
-          "sha256": "71e91252c7ef94a4100a8ea46525559061648dcbdb0a282168208fec389888db"
+          "origin_git_blob_sha": "e14a2c080a7c159c4abf3dc1c51c6a90b7fda6a0"
         },
         {
           "path": "plugins/music-composition/skills/mc-ai-tell-audit/SKILL.md",
           "mode": "100644",
           "size": 12870,
+          "sha256": "3a985a38b019b4724aeff35be530a41dd9d3c7240ad9445056d7321915136781",
           "git_blob_sha": "baab516474a6ad6b3ea30a956a2057e9181d4f98",
-          "sha256": "3a985a38b019b4724aeff35be530a41dd9d3c7240ad9445056d7321915136781"
+          "origin_git_blob_sha": "baab516474a6ad6b3ea30a956a2057e9181d4f98"
         },
         {
           "path": "plugins/music-composition/skills/mc-arrangement-arch/SKILL.md",
           "mode": "100644",
           "size": 28182,
+          "sha256": "b42c952293ffd5262885259fe40e65eab0ddf76be57857c3978edfa817c92456",
           "git_blob_sha": "d7ce09041bcb5eeba5eda65d8e8cdbd71bee5730",
-          "sha256": "b42c952293ffd5262885259fe40e65eab0ddf76be57857c3978edfa817c92456"
+          "origin_git_blob_sha": "d7ce09041bcb5eeba5eda65d8e8cdbd71bee5730"
         },
         {
           "path": "plugins/music-composition/skills/mc-arrangement-arch/reference.md",
           "mode": "100644",
           "size": 7401,
+          "sha256": "62556b2f2236d0c6aa420e927fd19c51f5e63c5b23585d3d17900f4913820129",
           "git_blob_sha": "47e11c21aaa7e2333ca0f199fcc1a040690aa7a3",
-          "sha256": "62556b2f2236d0c6aa420e927fd19c51f5e63c5b23585d3d17900f4913820129"
+          "origin_git_blob_sha": "47e11c21aaa7e2333ca0f199fcc1a040690aa7a3"
         },
         {
           "path": "plugins/music-composition/skills/mc-case-studies/SKILL.md",
           "mode": "100644",
           "size": 11445,
+          "sha256": "66ab35e02bd25ed7b14366b17f932a327d3a84a9e4ef65f4b956089e0df39438",
           "git_blob_sha": "ddb48174a73396a8e25370438e5f6abb298f04dd",
-          "sha256": "66ab35e02bd25ed7b14366b17f932a327d3a84a9e4ef65f4b956089e0df39438"
+          "origin_git_blob_sha": "ddb48174a73396a8e25370438e5f6abb298f04dd"
         },
         {
           "path": "plugins/music-composition/skills/mc-case-studies/reference.md",
           "mode": "100644",
-          "size": 6702,
-          "git_blob_sha": "d607b2bce5244471590c39b9d833678e230a30e7",
-          "sha256": "11e23f0d94f21de73b09bf62f9d9a39ebd10c17730df8a738db8cb16f7dfe2a9"
+          "size": 6037,
+          "sha256": "0bf467c2e5fe6be6f51bf7568a6b6b8fc1b8cf65297d323906be861b0212326b",
+          "git_blob_sha": "a3894529889eefaf7df93b991baabd7e141ff2b4",
+          "origin_git_blob_sha": "d607b2bce5244471590c39b9d833678e230a30e7"
         },
         {
           "path": "plugins/music-composition/skills/mc-counterpoint/SKILL.md",
           "mode": "100644",
-          "size": 13881,
-          "git_blob_sha": "25b4d25695261329b820f7c7e35acf49b42140db",
-          "sha256": "aec17c868003f397ac449ad3a2fe949f33720fc7f0b5d8cc027221f23e72a8aa"
+          "size": 12431,
+          "sha256": "487a05b9de3e6dc8dedc921f9b7d65e180d634cd9c8c698a7c945cd9ecee3551",
+          "git_blob_sha": "94419c27a2cc5089d97a64410ecea19b1b0bc83d",
+          "origin_git_blob_sha": "25b4d25695261329b820f7c7e35acf49b42140db"
         },
         {
           "path": "plugins/music-composition/skills/mc-counterpoint/reference.md",
           "mode": "100644",
-          "size": 24274,
-          "git_blob_sha": "132da06be75042e865afec6cf4c5d02ea1ddf9d0",
-          "sha256": "73866664ffd98cfe6d2fd920c90e9568a9238b679d6765b216d9c353df38ff58"
+          "size": 23419,
+          "sha256": "e164a9d2f4161c6df04a5aff15484a474bfaed0231ebeaca5f7b7fe7916d3cd4",
+          "git_blob_sha": "df8e72e3593713303f0fdb168a87544207575d9b",
+          "origin_git_blob_sha": "132da06be75042e865afec6cf4c5d02ea1ddf9d0"
         },
         {
           "path": "plugins/music-composition/skills/mc-development/SKILL.md",
           "mode": "100644",
-          "size": 38262,
-          "git_blob_sha": "9b8afba56456f055387fe5966e9e017913424adc",
-          "sha256": "c5658ceca949c9400abaf38f5310ee647751fd2964731c0dd0c50a8af60cfe20"
+          "size": 37212,
+          "sha256": "5f9740037359a8c7d776b2c68a182db7b63ac8538184f96b0a0d7b6af0b34147",
+          "git_blob_sha": "f743e9797514065af679d5cbc6d132424f4215c9",
+          "origin_git_blob_sha": "9b8afba56456f055387fe5966e9e017913424adc"
         },
         {
           "path": "plugins/music-composition/skills/mc-development/reference.md",
           "mode": "100644",
-          "size": 33216,
-          "git_blob_sha": "fc088428cb3d6577794dca3ecd42046471681a5f",
-          "sha256": "f4762123ae8f7b827832a11fb52ac37e22557a47274ce7f07057b98bdc4d93ff"
+          "size": 32469,
+          "sha256": "6719790da9201aa4a81b63317d547264e92bdedfa999bd15512902621908238d",
+          "git_blob_sha": "3036d5ccafcb69353b63313347f0e9a07508d796",
+          "origin_git_blob_sha": "fc088428cb3d6577794dca3ecd42046471681a5f"
         },
         {
           "path": "plugins/music-composition/skills/mc-form/SKILL.md",
           "mode": "100644",
-          "size": 17866,
-          "git_blob_sha": "65d6508cf8906f805a9437aec64e575dae879776",
-          "sha256": "a5665de68e5298e3b878b8466eaaa95ee865031bdbc97e53383c2709e7c7415c"
+          "size": 16884,
+          "sha256": "80983287a387b49a542556902d8c4c29d6fba7ca368694037964fe859d6c6916",
+          "git_blob_sha": "df40f2c8e15cfcee61c55694455a15298b189072",
+          "origin_git_blob_sha": "65d6508cf8906f805a9437aec64e575dae879776"
         },
         {
           "path": "plugins/music-composition/skills/mc-form/reference.md",
           "mode": "100644",
-          "size": 16107,
-          "git_blob_sha": "c7ec0c571c62cf501100f68dff3afba07500186c",
-          "sha256": "059ebff17cda76ba09c120f289aec9d3f42b984a7153bd42a526afb65a29e334"
+          "size": 12896,
+          "sha256": "859778b17b5761ee7f0ecfd49ae3f784edf5ac6321b74599a95390820583ad9d",
+          "git_blob_sha": "e20a9c8aecda69c81010d234438fd201ed247d45",
+          "origin_git_blob_sha": "c7ec0c571c62cf501100f68dff3afba07500186c"
         },
         {
           "path": "plugins/music-composition/skills/mc-harmony/SKILL.md",
           "mode": "100644",
           "size": 16142,
+          "sha256": "377c84d9d5a9bb4e0b2a366a3114d75e0c0b5b4051249a223fcc0ef18f969ba4",
           "git_blob_sha": "e0a4ed20799845b6c413fe39340cde8894d62399",
-          "sha256": "377c84d9d5a9bb4e0b2a366a3114d75e0c0b5b4051249a223fcc0ef18f969ba4"
+          "origin_git_blob_sha": "e0a4ed20799845b6c413fe39340cde8894d62399"
         },
         {
           "path": "plugins/music-composition/skills/mc-harmony/reference.md",
           "mode": "100644",
           "size": 24600,
+          "sha256": "ec7f542065d568037d5335328a43efcb996d88c847850076eb8598514203b9c2",
           "git_blob_sha": "9406d103a16f0648ba09c9133f1549fe8bce2d72",
-          "sha256": "ec7f542065d568037d5335328a43efcb996d88c847850076eb8598514203b9c2"
+          "origin_git_blob_sha": "9406d103a16f0648ba09c9133f1549fe8bce2d72"
         },
         {
           "path": "plugins/music-composition/skills/mc-melody/SKILL.md",
           "mode": "100644",
-          "size": 22358,
-          "git_blob_sha": "bc6cc9fb686b313234d2444a0d5283d7413db3d2",
-          "sha256": "42750855371b078f62a051314574453d0fca9b362b39f3754bd2bef664b35070"
+          "size": 22091,
+          "sha256": "647f9c854852ea7c3b63f90b167ddb038ff53f398b61e2aed204ed931a2b02c0",
+          "git_blob_sha": "7012a4775b0c434ff64695e028932704a1300ffa",
+          "origin_git_blob_sha": "bc6cc9fb686b313234d2444a0d5283d7413db3d2"
         },
         {
           "path": "plugins/music-composition/skills/mc-melody/reference.md",
           "mode": "100644",
-          "size": 14359,
-          "git_blob_sha": "8fb01647908bf4ffc035702d6ba5367dfcdc2fb0",
-          "sha256": "eb1961729d532bf9f6d1bde95522724dc316a0ad89ae988c7fc6d5590fb9e347"
+          "size": 10625,
+          "sha256": "94e00403062c1084ea59c37225b49f42f7549298922a8151c4646d196b43f1d6",
+          "git_blob_sha": "d531261fab2525acbd412f14954aafb86c9375dd",
+          "origin_git_blob_sha": "8fb01647908bf4ffc035702d6ba5367dfcdc2fb0"
         },
         {
           "path": "plugins/music-composition/skills/mc-mix-intent/SKILL.md",
           "mode": "100644",
           "size": 17890,
+          "sha256": "42d936f971e8754df7b38afbfa35d1f6938db94052b46a5d8010c9736ba8c04f",
           "git_blob_sha": "c8e26e033eef3647a03623c062dcb60f7ab116fc",
-          "sha256": "42d936f971e8754df7b38afbfa35d1f6938db94052b46a5d8010c9736ba8c04f"
+          "origin_git_blob_sha": "c8e26e033eef3647a03623c062dcb60f7ab116fc"
         },
         {
           "path": "plugins/music-composition/skills/mc-mix-intent/reference.md",
           "mode": "100644",
           "size": 9332,
+          "sha256": "0b21628f54dd7029c3c25a23bff661cf663f90e7795b9832fb83685827aedc6c",
           "git_blob_sha": "6eec4fe30f80fea33cfb9a533716550837a0b560",
-          "sha256": "0b21628f54dd7029c3c25a23bff661cf663f90e7795b9832fb83685827aedc6c"
+          "origin_git_blob_sha": "6eec4fe30f80fea33cfb9a533716550837a0b560"
         },
         {
           "path": "plugins/music-composition/skills/mc-modulation/SKILL.md",
           "mode": "100644",
-          "size": 16825,
-          "git_blob_sha": "9c6637feaa4a325dcfbad49dc2c6ee9fce9b3c60",
-          "sha256": "92ac480d96d9e236765e1ff326f5d04fa0599340a36897cc1655e3468e3eb271"
+          "size": 15813,
+          "sha256": "0df61ad928854cfc7209300a3e5dff041fabd9abc4a5741857ccd7dd0fd33845",
+          "git_blob_sha": "6da8592870d73cb00cded0e23c27ab749a20bed6",
+          "origin_git_blob_sha": "9c6637feaa4a325dcfbad49dc2c6ee9fce9b3c60"
         },
         {
           "path": "plugins/music-composition/skills/mc-modulation/reference.md",
           "mode": "100644",
           "size": 38817,
+          "sha256": "1d034eac78f7454530b428c8b24a41bed4bba3fae4610577381f6816a3baf19c",
           "git_blob_sha": "81e54b54440136362a538e159563e050b33ea336",
-          "sha256": "1d034eac78f7454530b428c8b24a41bed4bba3fae4610577381f6816a3baf19c"
+          "origin_git_blob_sha": "81e54b54440136362a538e159563e050b33ea336"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/SKILL.md",
           "mode": "100644",
-          "size": 40047,
-          "git_blob_sha": "52cf2f3ba58835371a949e82792674b71000968e",
-          "sha256": "63f5c274ca229b30cff3d6bff29191fd56a01b281bbf92b14b928bfa842c578f"
+          "size": 24627,
+          "sha256": "37c79e6831d2b1691e30f07d652118833db457655472b2c7306e4b402866da65",
+          "git_blob_sha": "d6c100db2a522fa1672dcc84c04f02c720a010dd",
+          "origin_git_blob_sha": "52cf2f3ba58835371a949e82792674b71000968e"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference-keyboard-harp.md",
           "mode": "100644",
-          "size": 35996,
-          "git_blob_sha": "3d6d4ce17c1575d97a9b9e2c581b0bc95a791836",
-          "sha256": "f12438eb323147fab11a975abf0efc3df69619536eff2f54c47079f39021920a"
-        },
-        {
-          "path": "plugins/music-composition/skills/mc-orchestration/reference-minyue.md",
-          "mode": "100644",
-          "size": 35424,
-          "git_blob_sha": "161de38b8b5b9e4511f04a7704e8c36149738514",
-          "sha256": "462e4874668dd8692f9d71780bb86c4d04c44b58d2f773e1d49f0c81e3a0a54b"
+          "size": 34079,
+          "sha256": "572422f7fbabddd284ff69c704912557dbd9d9eb8f778ff8b2062c1ac6b4f26d",
+          "git_blob_sha": "a98e41bc6f286edbeed539818bbcf6ebc7b07931",
+          "origin_git_blob_sha": "3d6d4ce17c1575d97a9b9e2c581b0bc95a791836"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference-percussion.md",
           "mode": "100644",
-          "size": 36003,
-          "git_blob_sha": "4fabb8ab400ae9f4df9008ba14251881e23aab53",
-          "sha256": "168bd18c4c51f7bcb4a85f139b32cfbf9b9bfe1a582c6f57f5aa9ee6af983083"
+          "size": 35496,
+          "sha256": "a46f870fe2dae13a42f19555308ae8f67dcc0e35851958983585e275ef460c16",
+          "git_blob_sha": "b6d68d1df2cce60d8fda6f6f6e3bd401f39d4453",
+          "origin_git_blob_sha": "4fabb8ab400ae9f4df9008ba14251881e23aab53"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-brass.md",
           "mode": "100644",
-          "size": 35987,
-          "git_blob_sha": "6ab2bb9438a2eef9b382f6d134e714d1d563ae71",
-          "sha256": "f83c0ecb243cd2be8e2b1cecdf305e464d6af45d472ba7da8cfa0c170b312857"
+          "size": 35713,
+          "sha256": "d0b7bbcdd4e064ddf8be432c54409df31045350fdc3234775034b4a837933ba0",
+          "git_blob_sha": "4dfefe022f5292b455b890b114ce36b8a56dad37",
+          "origin_git_blob_sha": "6ab2bb9438a2eef9b382f6d134e714d1d563ae71"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-strings.md",
           "mode": "100644",
-          "size": 35996,
-          "git_blob_sha": "8c2d7502f54cf2a942259645be45ab89ad959819",
-          "sha256": "ab424ee50d7d2350a8772191c25a7b4300ab2f4340c1a18702b40e0f08447af9"
+          "size": 35855,
+          "sha256": "85434b74188d93e437bebffbed580777033da8b3645fd57fcee534eb32aba04a",
+          "git_blob_sha": "7ee4917c1a62893f97fd83e3b37c5ddd545fce9b",
+          "origin_git_blob_sha": "8c2d7502f54cf2a942259645be45ab89ad959819"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-tutti.md",
           "mode": "100644",
           "size": 36290,
+          "sha256": "4a82b4fe401f6c094d52f5a1f88e9735745022fbb207a5ff2f0fcebe06804547",
           "git_blob_sha": "01dff367a97152ea9d47fe0669eb9e852ee6dcc4",
-          "sha256": "4a82b4fe401f6c094d52f5a1f88e9735745022fbb207a5ff2f0fcebe06804547"
+          "origin_git_blob_sha": "01dff367a97152ea9d47fe0669eb9e852ee6dcc4"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference-yang-winds.md",
           "mode": "100644",
-          "size": 35999,
-          "git_blob_sha": "ebd657e6aa6c9b8439580772478067139916abaf",
-          "sha256": "c13c6d8081d304f22dbe5bba0870934d6803be13545ef621aa81da17630860b6"
+          "size": 35387,
+          "sha256": "715e411b3b01dff96c94bbc845a1d38bc8171cd852271424fff991a8125b5659",
+          "git_blob_sha": "98204ca2195a7d34244444345849a7e969ce2463",
+          "origin_git_blob_sha": "ebd657e6aa6c9b8439580772478067139916abaf"
         },
         {
           "path": "plugins/music-composition/skills/mc-orchestration/reference.md",
           "mode": "100644",
-          "size": 39998,
-          "git_blob_sha": "3cde6c05c4e6140b37a2bcdfd6c494c1e828a210",
-          "sha256": "359d24d7133eaffeb12a71783eebd0e47ca8c12a4e499bae07e42110e5a9fc9f"
+          "size": 38648,
+          "sha256": "fac41de8c03aee68bc0d463ddd19e2b4ad76aebc13af8470d6223fa0219d6fa0",
+          "git_blob_sha": "35895e2297dc21f62fc7062658e20567e95e8ee9",
+          "origin_git_blob_sha": "3cde6c05c4e6140b37a2bcdfd6c494c1e828a210"
         },
         {
           "path": "plugins/music-composition/skills/mc-progressions/SKILL.md",
           "mode": "100644",
-          "size": 10721,
-          "git_blob_sha": "4cad4116e1a091ab0e97b90874afe8b6dea40ac4",
-          "sha256": "3153090f8b0548c6a9f801ce0a962239dbc67d17b315bd8f9f75ff07112eb2ed"
+          "size": 9685,
+          "sha256": "29413fbd67b0599dcc8bb213cd937b89ab7c354028fad1f77e97d732822f563d",
+          "git_blob_sha": "ac760c326a41b818358dc3d85c420585927c1dbb",
+          "origin_git_blob_sha": "4cad4116e1a091ab0e97b90874afe8b6dea40ac4"
         },
         {
           "path": "plugins/music-composition/skills/mc-progressions/progressions-full.md",
           "mode": "100644",
           "size": 30224,
+          "sha256": "d0379719d9ff0bcc81dc1a3ee28c1cb7ff7b8bd9ba4ff54b8a0c5e3260cf0e8d",
           "git_blob_sha": "04b03244649e1c63c3ca281fd6a4904fb95f7d93",
-          "sha256": "d0379719d9ff0bcc81dc1a3ee28c1cb7ff7b8bd9ba4ff54b8a0c5e3260cf0e8d"
+          "origin_git_blob_sha": "04b03244649e1c63c3ca281fd6a4904fb95f7d93"
         },
         {
           "path": "plugins/music-composition/skills/mc-progressions/reference.md",
           "mode": "100644",
-          "size": 11832,
-          "git_blob_sha": "3a194746c2adfb373719794145d69286b0e740f4",
-          "sha256": "34f057e908bae65cf7533b3234c2e6db5aec9921bdf13cf33d116f6e0fd6876e"
+          "size": 11720,
+          "sha256": "8eff7e97a330273f4d5d6d9e9f6242c36a2c21cee5750539cf0c753c1ebba0ab",
+          "git_blob_sha": "f06833f05c8e43c5ac6c47867601e8b0f7595341",
+          "origin_git_blob_sha": "3a194746c2adfb373719794145d69286b0e740f4"
         },
         {
           "path": "plugins/music-composition/skills/mc-render-compile/SKILL.md",
           "mode": "100644",
           "size": 14919,
+          "sha256": "283f54d56eedd91e8de5c1baf617291b1bc73dab5a9e1c542d13cb438afe3f6b",
           "git_blob_sha": "29caff5812a13661877c742783c1627ddf23fcec",
-          "sha256": "283f54d56eedd91e8de5c1baf617291b1bc73dab5a9e1c542d13cb438afe3f6b"
+          "origin_git_blob_sha": "29caff5812a13661877c742783c1627ddf23fcec"
         },
         {
           "path": "plugins/music-composition/skills/mc-rhythm-groove/SKILL.md",
           "mode": "100644",
-          "size": 12505,
-          "git_blob_sha": "88b90dac4f3009cf9dd08dcca6cdf5943925ebb7",
-          "sha256": "bc61b9eb81ea0b9ad97b84ef67724955a72ec34ac92caa65b015f8821971f307"
+          "size": 12091,
+          "sha256": "439679a1f8ecd4d43f6885b9191582972a605755d2629209e7385879f853882e",
+          "git_blob_sha": "8a8cf700d777982e012fbf39bcbc54a20388f5b0",
+          "origin_git_blob_sha": "88b90dac4f3009cf9dd08dcca6cdf5943925ebb7"
         },
         {
           "path": "plugins/music-composition/skills/mc-rhythm-section/SKILL.md",
           "mode": "100644",
           "size": 23759,
+          "sha256": "f885118be824360103a0c41fa095575d93c9953ee934c710467c24c6773201a8",
           "git_blob_sha": "0176c9452b64716abe444883b3e7fc369008e541",
-          "sha256": "f885118be824360103a0c41fa095575d93c9953ee934c710467c24c6773201a8"
+          "origin_git_blob_sha": "0176c9452b64716abe444883b3e7fc369008e541"
         },
         {
           "path": "plugins/music-composition/skills/mc-rhythm-section/reference-styles.md",
           "mode": "100644",
           "size": 25350,
+          "sha256": "2a807744d991965cd3cf15d3abea94e137e0ab47bbf9a7b4e603c104ffc2753e",
           "git_blob_sha": "0b6437a3633f031681367a9470b8c7f9a23aafac",
-          "sha256": "2a807744d991965cd3cf15d3abea94e137e0ab47bbf9a7b4e603c104ffc2753e"
+          "origin_git_blob_sha": "0b6437a3633f031681367a9470b8c7f9a23aafac"
         },
         {
           "path": "plugins/music-composition/skills/mc-rhythm-section/reference.md",
           "mode": "100644",
-          "size": 20899,
-          "git_blob_sha": "be70b9a689fd4bd47a70f88ca2d7d71693b827b9",
-          "sha256": "fbeab10178943f3ad09c151d3af3a71a8e7a1df2661791835c7bd6e7da8dbb01"
+          "size": 20565,
+          "sha256": "0d5430b3ac5cd92b0386f99d791760a4c94a79c661f98307df3a40035dd0efa1",
+          "git_blob_sha": "67c7f8d9556d450d4d9830d83498e4eb04f934e7",
+          "origin_git_blob_sha": "be70b9a689fd4bd47a70f88ca2d7d71693b827b9"
         },
         {
           "path": "plugins/music-composition/skills/mc-sound-design/SKILL.md",
           "mode": "100644",
           "size": 14490,
+          "sha256": "65a2a4a30c80b3809bf25f61f4c1d7a361b5e6d0fecee6b9ea8c3d399bb7466f",
           "git_blob_sha": "31e65c977f35a756ee27e1fa8fccae34f0a96a67",
-          "sha256": "65a2a4a30c80b3809bf25f61f4c1d7a361b5e6d0fecee6b9ea8c3d399bb7466f"
+          "origin_git_blob_sha": "31e65c977f35a756ee27e1fa8fccae34f0a96a67"
         },
         {
           "path": "plugins/music-composition/skills/mc-sound-design/reference.md",
           "mode": "100644",
           "size": 8488,
+          "sha256": "444db5074f9b498efc2df8d178bc7cbd4af177dfca221ce3b3a57f70031637c1",
           "git_blob_sha": "afa6f60a4cfce671c77892531c6872df609903f5",
-          "sha256": "444db5074f9b498efc2df8d178bc7cbd4af177dfca221ce3b3a57f70031637c1"
-        },
-        {
-          "path": "plugins/music-composition/skills/mc-style-chinese-pop/SKILL.md",
-          "mode": "100644",
-          "size": 11495,
-          "git_blob_sha": "724d04622b421e3adfda0941e7f9c348a334074d",
-          "sha256": "559322324b5a751f008e4221127b05a4dec61c6eded4f2916db0d64bf76c0477"
+          "origin_git_blob_sha": "afa6f60a4cfce671c77892531c6872df609903f5"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-cinematic/SKILL.md",
           "mode": "100644",
           "size": 15578,
+          "sha256": "43ef8d12880c32b280f09637cb5b0335aba088c4716e9373eaebec63cd2438ea",
           "git_blob_sha": "e16b8d1f979582581e5990b4faa3b8c4010d0f4c",
-          "sha256": "43ef8d12880c32b280f09637cb5b0335aba088c4716e9373eaebec63cd2438ea"
+          "origin_git_blob_sha": "e16b8d1f979582581e5990b4faa3b8c4010d0f4c"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-citypop-rnb/SKILL.md",
           "mode": "100644",
           "size": 13457,
+          "sha256": "a8d737c795a6a5e12d753cda170aa8061fa041afc3206069688feefeb9c2680e",
           "git_blob_sha": "6980b61101853b2a9eabe13c7ba7245f16674d4d",
-          "sha256": "a8d737c795a6a5e12d753cda170aa8061fa041afc3206069688feefeb9c2680e"
+          "origin_git_blob_sha": "6980b61101853b2a9eabe13c7ba7245f16674d4d"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-edm/SKILL.md",
           "mode": "100644",
           "size": 14803,
+          "sha256": "e16c8fb88e02e19b316e4aa09d76573f6b45c2815c70f967fed54a557b60671a",
           "git_blob_sha": "6ba1d2349f3243ee57db5dc19adf6ff192f12e2f",
-          "sha256": "e16c8fb88e02e19b316e4aa09d76573f6b45c2815c70f967fed54a557b60671a"
+          "origin_git_blob_sha": "6ba1d2349f3243ee57db5dc19adf6ff192f12e2f"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-hiphop/SKILL.md",
           "mode": "100644",
-          "size": 35326,
-          "git_blob_sha": "00ffdd92d5aae051d2768b4c106781c9043ac398",
-          "sha256": "71dc9e1e7abd30e41eb2fec5e880413f8ee74c993509f97d779b698ec85606df"
+          "size": 33798,
+          "sha256": "72a7c472ec4e13fc991b71261eb7a75b41d0749b68a34971d38cdff5424012d4",
+          "git_blob_sha": "936ef7f4870f4088f66ec3e21ed7c6ed18b3ea52",
+          "origin_git_blob_sha": "00ffdd92d5aae051d2768b4c106781c9043ac398"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-hiphop/reference-vocal.md",
           "mode": "100644",
           "size": 20656,
+          "sha256": "567d7d3a91f821318c0d1d887e67879c0da1045879320a62ad4d89e3f6985f00",
           "git_blob_sha": "b4e74513edad4a978d77e62b38502f7230d66a33",
-          "sha256": "567d7d3a91f821318c0d1d887e67879c0da1045879320a62ad4d89e3f6985f00"
+          "origin_git_blob_sha": "b4e74513edad4a978d77e62b38502f7230d66a33"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-hiphop/reference.md",
           "mode": "100644",
           "size": 28258,
+          "sha256": "a93212205e91627746f31fa7055dfa1ea510fb499359c19ca347ca38b6a3aec8",
           "git_blob_sha": "c279240d4a8b5372fe49bd9013c8c221871fcf02",
-          "sha256": "a93212205e91627746f31fa7055dfa1ea510fb499359c19ca347ca38b6a3aec8"
+          "origin_git_blob_sha": "c279240d4a8b5372fe49bd9013c8c221871fcf02"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-jazz/SKILL.md",
           "mode": "100644",
           "size": 14324,
+          "sha256": "868af7e1e21a503ff8c31cbb875d7e7e21172cb7e00f265ae6bc0102c9599ecd",
           "git_blob_sha": "00e1fda9f4765018b48bb18c6b10da9cd8dc9ec7",
-          "sha256": "868af7e1e21a503ff8c31cbb875d7e7e21172cb7e00f265ae6bc0102c9599ecd"
+          "origin_git_blob_sha": "00e1fda9f4765018b48bb18c6b10da9cd8dc9ec7"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-jazz/reference.md",
           "mode": "100644",
           "size": 11834,
+          "sha256": "e3c13b0883907d83e054ee57c270645253f9b709f5f51efd57a97ea15f0b3f4e",
           "git_blob_sha": "a606c6e1a99d29d5eb74edd544c59cfb87e09f37",
-          "sha256": "e3c13b0883907d83e054ee57c270645253f9b709f5f51efd57a97ea15f0b3f4e"
+          "origin_git_blob_sha": "a606c6e1a99d29d5eb74edd544c59cfb87e09f37"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-jpop/SKILL.md",
           "mode": "100644",
-          "size": 12746,
-          "git_blob_sha": "5eb161f6061aa8ad14ff8f8fb97b9cfdbb16a1e3",
-          "sha256": "f72e12c1ff509603433c22b9fe3fb15b837c1c9a7ca693ca88e3cd3984f167a5"
+          "size": 12643,
+          "sha256": "28166cc762b2f45ebf155dcf7aee2c79c65f7b00c38cd37485bd89411a45d4b9",
+          "git_blob_sha": "ce6fb4527482e8a6607509959cd8a63437f1429a",
+          "origin_git_blob_sha": "5eb161f6061aa8ad14ff8f8fb97b9cfdbb16a1e3"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-latin/SKILL.md",
           "mode": "100644",
           "size": 30036,
+          "sha256": "9d77d64bf17be1d1fcbc591b0139766b76b6c2c909c48e5b35b42a8834df5160",
           "git_blob_sha": "ce0c42169bf0fc02a4df945e716168a942bf402f",
-          "sha256": "9d77d64bf17be1d1fcbc591b0139766b76b6c2c909c48e5b35b42a8834df5160"
+          "origin_git_blob_sha": "ce0c42169bf0fc02a4df945e716168a942bf402f"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-latin/reference.md",
           "mode": "100644",
           "size": 18160,
+          "sha256": "c0ab717d7e06e580b246c1540366a79f446b2603b51092c525ee761e64f088a8",
           "git_blob_sha": "a3c488ee521a4eae342c51cc66d50195953277f5",
-          "sha256": "c0ab717d7e06e580b246c1540366a79f446b2603b51092c525ee761e64f088a8"
+          "origin_git_blob_sha": "a3c488ee521a4eae342c51cc66d50195953277f5"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-rock-band/SKILL.md",
           "mode": "100644",
           "size": 33874,
+          "sha256": "bcb8fb166d05706fdc90914ff962905cfdd992c07fa847fc94c9a95a080bbe84",
           "git_blob_sha": "eb4b55a38f20867c3c049891f4ed4a492e2930ec",
-          "sha256": "bcb8fb166d05706fdc90914ff962905cfdd992c07fa847fc94c9a95a080bbe84"
+          "origin_git_blob_sha": "eb4b55a38f20867c3c049891f4ed4a492e2930ec"
         },
         {
           "path": "plugins/music-composition/skills/mc-style-rock-band/reference.md",
           "mode": "100644",
           "size": 34803,
+          "sha256": "6f37ea44ec8d06ec1687bcd9dbb831bf5084698f57217ee64a365d2f715b8083",
           "git_blob_sha": "cd1cbcb274b64a01f0bdb841935bbb0ba32ee0a4",
-          "sha256": "6f37ea44ec8d06ec1687bcd9dbb831bf5084698f57217ee64a365d2f715b8083"
+          "origin_git_blob_sha": "cd1cbcb274b64a01f0bdb841935bbb0ba32ee0a4"
         },
         {
           "path": "plugins/music-composition/skills/mc-symbolic-score/SKILL.md",
           "mode": "100644",
-          "size": 16723,
-          "git_blob_sha": "6d3e053ebb1f651d10408a7d9524c7014958681f",
-          "sha256": "26b8e9d4cb558df847f85dbfb4b8cc0c5d5ed170831016e50edf933f657acb6b"
+          "size": 16019,
+          "sha256": "0e2a5e584954948c239b532cb8de78b4f999cddd646611ec46c2ef7d3dccba67",
+          "git_blob_sha": "90ec28933438f01191aac9b34d439a2feb62f97e",
+          "origin_git_blob_sha": "6d3e053ebb1f651d10408a7d9524c7014958681f"
         },
         {
           "path": "plugins/music-composition/skills/mc-symbolic-score/reference.md",
           "mode": "100644",
           "size": 5868,
+          "sha256": "70da346cc7cf190237d72f2bb24091d032e2a23909beada956db7c6f652f2b71",
           "git_blob_sha": "4c5183b6d7f0c15ef5e0df59f73139e5faeb522d",
-          "sha256": "70da346cc7cf190237d72f2bb24091d032e2a23909beada956db7c6f652f2b71"
+          "origin_git_blob_sha": "4c5183b6d7f0c15ef5e0df59f73139e5faeb522d"
         },
         {
           "path": "plugins/music-composition/skills/mc-texture-layering/SKILL.md",
           "mode": "100644",
-          "size": 19132,
-          "git_blob_sha": "5ec1b5629d6ecef4f2b112a83d413a1cecb5081f",
-          "sha256": "089943088fce18817037aba7d7411f6775943770aeb67f93eb7f3022efc1d254"
+          "size": 18364,
+          "sha256": "43fb04675b231196d433056a1b7d77500e0655417715b15a1caff570d1784cd4",
+          "git_blob_sha": "d3c88edf98845e80867fa95f574c2bc3a7f5a7fe",
+          "origin_git_blob_sha": "5ec1b5629d6ecef4f2b112a83d413a1cecb5081f"
         },
         {
           "path": "plugins/music-composition/skills/mc-texture-layering/reference.md",
           "mode": "100644",
-          "size": 23129,
-          "git_blob_sha": "65f3bd53b1710710d3a230c83616190f07ae0004",
-          "sha256": "5ffaae22d8b82ff8b6752ee10a8cc8da40753b2f8fb9f803180fd5fc33aa1f0d"
+          "size": 22651,
+          "sha256": "710ba84d764209a342bb7fac808e836ecc6ec2b6bddb5031f399da63a9b7336f",
+          "git_blob_sha": "542fb286691f53f497e771ac221d8a7786657a74",
+          "origin_git_blob_sha": "65f3bd53b1710710d3a230c83616190f07ae0004"
         },
         {
           "path": "plugins/music-composition/skills/mc-vocal-direction/SKILL.md",
           "mode": "100644",
-          "size": 15121,
-          "git_blob_sha": "cce25a397fb213d3e01a0aec9b0f822b667f9399",
-          "sha256": "04a1b89f6f1e00aa04c4dcf6e473617509998620a60db5e188eab7565eddc33e"
+          "size": 15032,
+          "sha256": "b75617bc5d189deb5d9c75719563da95f7e0e3438f6f540b96f3b57087118d5c",
+          "git_blob_sha": "c0d9df8161bb667c585b97988f2a120e11d759ae",
+          "origin_git_blob_sha": "cce25a397fb213d3e01a0aec9b0f822b667f9399"
         },
         {
           "path": "plugins/music-composition/skills/mc-vocal-direction/reference.md",
           "mode": "100644",
           "size": 8872,
+          "sha256": "91652cc79d8c89d4a332c2424f95e023ad8a8c29f6a80b0b82554abfccb01f4f",
           "git_blob_sha": "87a14e753cfb04ba8730e7c178b741a481f54352",
-          "sha256": "91652cc79d8c89d4a332c2424f95e023ad8a8c29f6a80b0b82554abfccb01f4f"
+          "origin_git_blob_sha": "87a14e753cfb04ba8730e7c178b741a481f54352"
         },
         {
           "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.schema.md",
           "mode": "100644",
-          "size": 30463,
-          "git_blob_sha": "197715e9de2e3341b958df2fbbd24a55053d6a1f",
-          "sha256": "5d9180bb6aa44f4cc23f82f1250866be4763a371e288a1631b0b259fc13fe08d"
+          "size": 30110,
+          "sha256": "765fe521bffebcf22e3397cb484f8f3462887f7edf69bde7ce19c32313c8aa5b",
+          "git_blob_sha": "673146867e5995d9d7c7c0a4cdac4a9fe139ca59",
+          "origin_git_blob_sha": "197715e9de2e3341b958df2fbbd24a55053d6a1f"
         },
         {
           "path": "plugins/music-composition/skills/mc-workflow/ARR-SPEC.template.yaml",
           "mode": "100644",
           "size": 11078,
+          "sha256": "3bee2c849722e9b83be7b044f8007c6c979751bd9276841f08b8334f009b40f2",
           "git_blob_sha": "aa30f4ab23a10c765f993e0a9136c9f04838ea9c",
-          "sha256": "3bee2c849722e9b83be7b044f8007c6c979751bd9276841f08b8334f009b40f2"
+          "origin_git_blob_sha": "aa30f4ab23a10c765f993e0a9136c9f04838ea9c"
         },
         {
           "path": "plugins/music-composition/skills/mc-workflow/SKILL.md",
           "mode": "100644",
-          "size": 24322,
-          "git_blob_sha": "4bfbd34258ad668b9a7417d982fc9338f5f3a314",
-          "sha256": "3c4c1e1cf06447d6211aa00de9bdfae5f09b06f607b9f4b34cfe5700d616969d"
+          "size": 23308,
+          "sha256": "f6791a08033eb9c755d1d018a00788c39c8515d5be6f22142b1f1751d77f03c8",
+          "git_blob_sha": "d4603d2d6c90c89e7972d6875c9f9c419a4c7019",
+          "origin_git_blob_sha": "4bfbd34258ad668b9a7417d982fc9338f5f3a314"
         },
         {
           "path": "plugins/music-composition/skills/mc-workflow/backends.yaml",
           "mode": "100644",
           "size": 9450,
+          "sha256": "560311c399964a5c8a6957b5508894832629a79ce3de3cac543cbd82e6ef15ad",
           "git_blob_sha": "dddf09243bf059b299fa9817f087492a6c90e2d6",
-          "sha256": "560311c399964a5c8a6957b5508894832629a79ce3de3cac543cbd82e6ef15ad"
+          "origin_git_blob_sha": "dddf09243bf059b299fa9817f087492a6c90e2d6"
         },
         {
           "path": "plugins/music-composition/skills/mc-workflow/example-00-ai-default.yaml",
           "mode": "100644",
           "size": 5140,
+          "sha256": "ef918b39c3460ab5ca5d58c9849ab9aa730e3f17364a0c2561df69dad65dffc2",
           "git_blob_sha": "60ad637287d06a4329a01845dd8831735a2ee8ea",
-          "sha256": "ef918b39c3460ab5ca5d58c9849ab9aa730e3f17364a0c2561df69dad65dffc2"
+          "origin_git_blob_sha": "60ad637287d06a4329a01845dd8831735a2ee8ea"
         },
         {
           "path": "plugins/music-composition/skills/mc-workflow/example-01-citypop.yaml",
           "mode": "100644",
           "size": 14911,
+          "sha256": "5d11200417e1c01b7b00c63fef107d9965e641fa158e302b01471f3e27b69783",
           "git_blob_sha": "c61478055cfea42aa791f5e5664492ba52516c4e",
-          "sha256": "5d11200417e1c01b7b00c63fef107d9965e641fa158e302b01471f3e27b69783"
-        },
-        {
-          "path": "plugins/music-composition/skills/mc-workflow/example-02-fusion.yaml",
-          "mode": "100644",
-          "size": 3450,
-          "git_blob_sha": "b9f6bf7233fc9898f07f987dce824f009dd232a8",
-          "sha256": "3a852cdc47a36eafd7231531155b0a5c4ccb35a8ce8487e5c232e9ae763467ea"
+          "origin_git_blob_sha": "c61478055cfea42aa791f5e5664492ba52516c4e"
         }
-      ]
+      ],
+      "snapshot_kind": "selected-and-edited; not a complete original snapshot"
     },
     {
       "repo": "jtydhr88/lyric-writing-skills",
       "commit": "91bb089a835fbccd268ea5b6da81f284d84526d5",
       "tree": "dd199fa771a98508951e9083a0f407afd417901b",
-      "archive": "archives/lyric-writing-skills.zip",
-      "archive_sha256": "d9464be2e885dafb676723d3d7cc192fb3bba174274bbfb0e372c1dc1a93968f",
+      "archive": "archives/lyrics-selected.zip",
+      "archive_sha256": "b4758de4f06a0fef521337c2cf0241a9bf32e1b9aa47d3862f1ad2aa7db8975d",
       "skills_directory": "plugins/lyric-writing/skills",
       "modules": [
         "lw-ai-tell-audit",
-        "lw-cantonese",
         "lw-case-studies",
-        "lw-chinese-style",
         "lw-english",
         "lw-imagery",
         "lw-japanese",
         "lw-korean",
-        "lw-mandarin",
         "lw-musical-theatre",
         "lw-narrative",
         "lw-rap",
@@ -584,340 +575,244 @@
         "lw-song-intent",
         "lw-structure",
         "lw-suno-interface",
-        "lw-tone-check",
         "lw-workflow"
       ],
       "files": [
         {
-          "path": ".agents/plugins/marketplace.json",
-          "mode": "100644",
-          "size": 1022,
-          "git_blob_sha": "9c6a88cca66b2f7b30e849341976516da0ce9330",
-          "sha256": "f2b15f067b699afaf6f99627725208a9683fbcf885ca701164129e145d1942c4"
-        },
-        {
-          "path": ".claude-plugin/marketplace.json",
-          "mode": "100644",
-          "size": 1208,
-          "git_blob_sha": "7556d41ccd9c81d531961bf934079d72c4916049",
-          "sha256": "2efa868b5cbd9b1d76a2df809cb351ddf3697b36a5470a4c44a815bd9d5cb780"
-        },
-        {
           "path": "LICENSE",
           "mode": "100644",
           "size": 1066,
+          "sha256": "dcf1862caccc15b318642682e347ae9794ca5d3376ece18a0e94773968959276",
           "git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001",
-          "sha256": "dcf1862caccc15b318642682e347ae9794ca5d3376ece18a0e94773968959276"
+          "origin_git_blob_sha": "9a83492645adba94a2bc4885c7e98b7957c2e001"
         },
         {
           "path": "NOTICE",
           "mode": "100644",
           "size": 2884,
+          "sha256": "b5acd9aa90db49e9bad687b56cddecdefe7651157b1b8b182db08f11fc8b49a7",
           "git_blob_sha": "b7f2307870dceea0ddee56b81aed88e790fd9bd0",
-          "sha256": "b5acd9aa90db49e9bad687b56cddecdefe7651157b1b8b182db08f11fc8b49a7"
-        },
-        {
-          "path": "README.md",
-          "mode": "100644",
-          "size": 27337,
-          "git_blob_sha": "afab4cfd041751fcbe0affa4e304e8690546afbc",
-          "sha256": "cfc907fe7bb68560323983fc90a5537ffdf9dc571d6b6239b4670a38898c8ee2"
-        },
-        {
-          "path": "README_JA.md",
-          "mode": "100644",
-          "size": 34600,
-          "git_blob_sha": "36be7f759af15288b695dc75a6aaccfa3dedc27e",
-          "sha256": "6b467726238380b5c2686b1d6c04c04da966a0e1a6011804ea00f8fcc8a439b5"
-        },
-        {
-          "path": "README_KO.md",
-          "mode": "100644",
-          "size": 35053,
-          "git_blob_sha": "ea6359aea17114f868e6c2b8de46ec26ad63bf59",
-          "sha256": "9a269f777b2ad1973d4ab0b9aec2f863a9478578c89b432ec678e57c6afc19db"
-        },
-        {
-          "path": "README_ZH.md",
-          "mode": "100644",
-          "size": 24406,
-          "git_blob_sha": "a264952f5d9936d4f458d24a4e157f63819c4755",
-          "sha256": "cbb1931373a995a9dd1df20310d7d6e9d59b4adc5d18ab4bc7198313ebc6d8b8"
-        },
-        {
-          "path": "plugins/lyric-writing/.claude-plugin/plugin.json",
-          "mode": "100644",
-          "size": 958,
-          "git_blob_sha": "4623b5f0629406be516fc4a3baf5b96552f15759",
-          "sha256": "083054ff8fcb6aa1aac9fdad65724cfc60f53e32b31c6ee0c03abbf2a6fe335a"
+          "origin_git_blob_sha": "b7f2307870dceea0ddee56b81aed88e790fd9bd0"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-ai-tell-audit/SKILL.md",
           "mode": "100644",
-          "size": 8545,
-          "git_blob_sha": "2bfae95eb0a07378b567aeff937b51fdfbf57533",
-          "sha256": "e8c029ee1d47545f7a3860102ad9dff44bebc6aabbd6237fa0505f7b84aabeff"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-cantonese/SKILL.md",
-          "mode": "100644",
-          "size": 34084,
-          "git_blob_sha": "9ac60a6058ab85c57757a3ef788a825978a4845a",
-          "sha256": "9fc8745592f5560afc2e16fc8a05774140abf13f98d492fc4ae52f42379dd4be"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-cantonese/reference-calc.md",
-          "mode": "100644",
-          "size": 8172,
-          "git_blob_sha": "9ac6a714cf93b9ee176a5d9da9e5d141a9b379c0",
-          "sha256": "a06ce60be5e6551d2200a50dedb3a441478abec5ccf78fccb41f454474141b3c"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-cantonese/reference.md",
-          "mode": "100644",
-          "size": 32411,
-          "git_blob_sha": "a94f612acd6fd263cdcdc565fea38b44f3f0b916",
-          "sha256": "c50873a6b76c04772d1103a7add5899e78d774b8b1c4aaff0593f04753346992"
+          "size": 7888,
+          "sha256": "29dd3987ddcc92a58a645084f90a11f516d56985bd5b900312566eec2c673600",
+          "git_blob_sha": "35d37d96359b41706f8d69eceb9fbb2f0d7b2091",
+          "origin_git_blob_sha": "2bfae95eb0a07378b567aeff937b51fdfbf57533"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-case-studies/SKILL.md",
           "mode": "100644",
-          "size": 33521,
-          "git_blob_sha": "ecf728b00afff0b5acd1e743d496b4812a9be027",
-          "sha256": "3965420c073641a98e46c474a13a062c65d5d0f92b54b307cbddfd0c5fc26b0b"
+          "size": 32590,
+          "sha256": "3e523ad372fc1dfe2fa00465cd36568e90c780ca1db7359735730a572db1d59e",
+          "git_blob_sha": "ed2031a42667a84f1e3399fd4b80deeea9e2203e",
+          "origin_git_blob_sha": "ecf728b00afff0b5acd1e743d496b4812a9be027"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-case-studies/reference-corpus-2.md",
           "mode": "100644",
-          "size": 30197,
-          "git_blob_sha": "04a12059da3f04fb756516907eb1671eb70c378e",
-          "sha256": "756e478a023d9ab9c770e1a6b10fcb114df344c7d15566e8a7886f333d726ae9"
+          "size": 4946,
+          "sha256": "c8726592609db8677cc02241edf6fc8232cc5e657fd7f7e9c622bfb12428c202",
+          "git_blob_sha": "d0798126fc08477c4f1ebfcca3f649e23fd2e54c",
+          "origin_git_blob_sha": "04a12059da3f04fb756516907eb1671eb70c378e"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-case-studies/reference-corpus.md",
           "mode": "100644",
-          "size": 16888,
-          "git_blob_sha": "6e74358207656eeeb8ca2c0c194ee64b55cb8b09",
-          "sha256": "5a69bb6ced02cacd2f4ebe728168e80d8de22975d4af329fca88466ceb51e186"
+          "size": 3208,
+          "sha256": "273be31cc7fd3496a57302ef621f6016e4e1440ef64b6a6bd92c6e5ee83ecc78",
+          "git_blob_sha": "8cfd4cb05252aee3dabc7c89a0bc19c57ff7154f",
+          "origin_git_blob_sha": "6e74358207656eeeb8ca2c0c194ee64b55cb8b09"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-case-studies/reference.md",
           "mode": "100644",
-          "size": 24403,
-          "git_blob_sha": "c5ef907c1c00660bde201ecd1d34d7f376ec0cb3",
-          "sha256": "9aa5c1a1ed9ebbd99853ef0df64d7ce20c1e8d6f659721acfe5684dbdff2cadd"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-chinese-style/SKILL.md",
-          "mode": "100644",
-          "size": 37131,
-          "git_blob_sha": "cf72aa995ff9f7a5a605b42c27750244cd841082",
-          "sha256": "9e8d6231778e08607cc27c1a6a9a21745e4de66bec2726ec248dd1d693087353"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-chinese-style/reference.md",
-          "mode": "100644",
-          "size": 16551,
-          "git_blob_sha": "f607618e2daa2dad8e54fd94a37ea5de0f8b0c7a",
-          "sha256": "82d2331f51071fc48f3c5f06e4356089be934395281ab0d426a65658b1eba085"
+          "size": 23116,
+          "sha256": "2072576e313ba5f0ab4688a76112aaf7cdf8d7d344887e3b996cb17fe0fa5efb",
+          "git_blob_sha": "27fa02130781451fb77de4243ec98c273a4b5c36",
+          "origin_git_blob_sha": "c5ef907c1c00660bde201ecd1d34d7f376ec0cb3"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-english/SKILL.md",
           "mode": "100644",
-          "size": 33118,
-          "git_blob_sha": "f27e5a445a9711ba6eea4c663224abbfd09ed453",
-          "sha256": "4feca3da64ff8723ff9c3e9e0812ba406e7f9b027d8fee3be87bdf8162bf4875"
+          "size": 26228,
+          "sha256": "f65c3685793963abdf345e50f7d9a8659e00aff9d71861eab87aed1d93e16349",
+          "git_blob_sha": "a3b277387e79b797217f27b81082554fc03a7c9b",
+          "origin_git_blob_sha": "f27e5a445a9711ba6eea4c663224abbfd09ed453"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-english/reference.md",
           "mode": "100644",
-          "size": 24393,
-          "git_blob_sha": "60d7fb9dc129b265db3399557d89bfb259281bcd",
-          "sha256": "40637006c0a3e83dc7088f4448300d62c7c115f3adea00cdba8c56e62621ac63"
+          "size": 22820,
+          "sha256": "be7d9c55557a58c3185ca508fa89d00927df9d83dbe709a6f3fd822419ec6a92",
+          "git_blob_sha": "baac6a0ab2130664daf5cbfb862010edc77f8275",
+          "origin_git_blob_sha": "60d7fb9dc129b265db3399557d89bfb259281bcd"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-imagery/SKILL.md",
           "mode": "100644",
-          "size": 33944,
-          "git_blob_sha": "dc7d2aa2bdd21538e72317f817a0d4697bdf62cc",
-          "sha256": "af33cb3e346e700c270fc1d5a3e979dc1ad7649fb59a9b44a5c01e07eb022b89"
+          "size": 31705,
+          "sha256": "4800815d82af2636f06e8544a4d6274306704388be7055fabb6fcbe93c6d4f75",
+          "git_blob_sha": "7774f61f2c8743f00ac65112f40f788dd12ec128",
+          "origin_git_blob_sha": "dc7d2aa2bdd21538e72317f817a0d4697bdf62cc"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-imagery/reference.md",
           "mode": "100644",
-          "size": 36795,
-          "git_blob_sha": "ab03ce1711745985d24a659b83676352f46d2f8c",
-          "sha256": "cb78d3889bb9ab13cf6e308ef022255103556b630ac608cd569eb13baa62dcc3"
+          "size": 34436,
+          "sha256": "06483cf5157a48a9f695c132ac1aa10ed2facde1927d07b11e3a1b44b29ce3e9",
+          "git_blob_sha": "0ae3862758e53d63f725429e1eaefb187d693de2",
+          "origin_git_blob_sha": "ab03ce1711745985d24a659b83676352f46d2f8c"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-japanese/SKILL.md",
           "mode": "100644",
-          "size": 37676,
-          "git_blob_sha": "83b0d91e36089f19a4bc7790f04bbb75a35c2d10",
-          "sha256": "efa24d80f8b7a76c1c34a5487bf67f8b2424be2bde256e68411423bc9f69ee20"
+          "size": 31377,
+          "sha256": "0dd5870c0c41559eeed3fb9956929e6c8e681b29631310488f215d298c8a8d1a",
+          "git_blob_sha": "92b559b9dabbb75c852a336b63b49d8a86e39b35",
+          "origin_git_blob_sha": "83b0d91e36089f19a4bc7790f04bbb75a35c2d10"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-japanese/reference.md",
           "mode": "100644",
-          "size": 18649,
-          "git_blob_sha": "97cabfcc094b3b744f58cb7d2e61a4bfe4ed1799",
-          "sha256": "86741dc462f4f152af3613e14cb015f59eeee09d16e70b8aed8ddc462d598a83"
+          "size": 18316,
+          "sha256": "8b9e337e59731a71b7e8ee13cdc81a7b4fb884c3334314ed6eef9fe4fd9c0e60",
+          "git_blob_sha": "70fdef89f670f7f9c85b9b5c77a785e11d0f99cb",
+          "origin_git_blob_sha": "97cabfcc094b3b744f58cb7d2e61a4bfe4ed1799"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-korean/SKILL.md",
           "mode": "100644",
-          "size": 36931,
-          "git_blob_sha": "fe2db378a3ce89cf4de9f88e8ecd42335a78c285",
-          "sha256": "c011c75664ecaf11877b5e210b8a1aa7ad56fda45267b5614d15ddfc4771db4b"
+          "size": 23348,
+          "sha256": "48df9da6da2c3d0f0b23ca223a6c216058d25be8e77dc43b3f507d3dd14bc2a8",
+          "git_blob_sha": "71aec6cd225ff4d27f2a733fe0db1b977fa43a97",
+          "origin_git_blob_sha": "fe2db378a3ce89cf4de9f88e8ecd42335a78c285"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-korean/reference-terms.md",
           "mode": "100644",
-          "size": 2999,
-          "git_blob_sha": "35e01052551c74135f7b3cf1ba52b0b5c004bd52",
-          "sha256": "187787420d45aa88c81577748bc7e27d7daef1bbc137ff7592541ff363a93ff9"
+          "size": 1821,
+          "sha256": "034986b8b2e5011e2ea32ecb9ced1072e1d265d9ab6b5fdeb24e283a088f119b",
+          "git_blob_sha": "991a615ef732e684d2e975b4a381dd0748f11a3c",
+          "origin_git_blob_sha": "35e01052551c74135f7b3cf1ba52b0b5c004bd52"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-korean/reference.md",
           "mode": "100644",
-          "size": 38309,
-          "git_blob_sha": "c48dad0d9796f89db003aabe0bc414ed675998a4",
-          "sha256": "d388bc95eb2e1e798a8406b8b848b3ded049dc8ac155678a261e2cd231006460"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-mandarin/SKILL.md",
-          "mode": "100644",
-          "size": 37964,
-          "git_blob_sha": "5a803466b1c814e5a5394054a507943bdbb538c1",
-          "sha256": "bd553bffcc8934eb24ab045e8575b5e308083ff09b1ed8ade8b9ed744a02692d"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-mandarin/reference.md",
-          "mode": "100644",
-          "size": 17974,
-          "git_blob_sha": "bbfd8f1276a423183bc524c7809b3b8fd323e97a",
-          "sha256": "31e439a85a4bc57c42d0da493e35a20355b998a1d8f02eff200787a5223b6ecd"
+          "size": 29651,
+          "sha256": "e11058d9f92d934463fc2a7d2f9f869049f62723ffbc1fbae4c085a64e578f05",
+          "git_blob_sha": "bb8a5eee2792f066a85b232f0f4a625edbf9c3fd",
+          "origin_git_blob_sha": "c48dad0d9796f89db003aabe0bc414ed675998a4"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-musical-theatre/SKILL.md",
           "mode": "100644",
-          "size": 36955,
-          "git_blob_sha": "216c3fbeb64ec59dd67691cd9258fcfed44f2e8b",
-          "sha256": "b7983e9e1bd7495187a448b52886120fa8149c2a5104ca1b070e73752bef6c02"
+          "size": 34142,
+          "sha256": "bc12ba297b595a0c6de68516c5a946fbc26857eef5a8d19844f501c4fe1da886",
+          "git_blob_sha": "d21b8cfd2086cfcdc3cd3dab0eddc5cd0ddf6374",
+          "origin_git_blob_sha": "216c3fbeb64ec59dd67691cd9258fcfed44f2e8b"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-narrative/SKILL.md",
           "mode": "100644",
-          "size": 33830,
-          "git_blob_sha": "0528a2d2cdb534a4bc26056119573f8d8da8e54c",
-          "sha256": "c2baadac9c4e90db9793b8e422ce71e4cf75b3e37de2d511742ca8051cd47204"
+          "size": 32615,
+          "sha256": "76d968104e12d3270c895c5c8efa3530f6245760fe9d0b8dd67fd5f135e6eb94",
+          "git_blob_sha": "caa246828a00dbb8d0fca7aa7f90a5404903d7e0",
+          "origin_git_blob_sha": "0528a2d2cdb534a4bc26056119573f8d8da8e54c"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-rap/SKILL.md",
           "mode": "100644",
-          "size": 39033,
-          "git_blob_sha": "1e19a5744d0dec920ecc6c807e0a4bfbd2da72c2",
-          "sha256": "c82b9d33e7328f5f3fed8d2d01a4a43c97171821a522aec9d2c3b325153fd904"
+          "size": 29607,
+          "sha256": "65539250efc39e2403fac792666b435d65f84cc13b741ae0ac86e62e2274b82a",
+          "git_blob_sha": "89665f397edbe1359feaf8bb65af867ff7d6bebb",
+          "origin_git_blob_sha": "1e19a5744d0dec920ecc6c807e0a4bfbd2da72c2"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-rap/reference.md",
           "mode": "100644",
           "size": 15752,
+          "sha256": "1d87ec37fbfa8ad9614b3576d2f31059daa0c9a3709816a69ab83aac765bafef",
           "git_blob_sha": "5cefb8cb84653ca16a4f4a97d4e55e48739055f2",
-          "sha256": "1d87ec37fbfa8ad9614b3576d2f31059daa0c9a3709816a69ab83aac765bafef"
+          "origin_git_blob_sha": "5cefb8cb84653ca16a4f4a97d4e55e48739055f2"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-rhyme/SKILL.md",
           "mode": "100644",
-          "size": 28730,
-          "git_blob_sha": "fdb5dc54b345caeeb9f540dcad4b8ca1a330879f",
-          "sha256": "037ce5869bf1bccfc2a53135d26755ff41f2012b82d7b2e1725155fc412136d4"
+          "size": 25563,
+          "sha256": "40c610974ef4e904f2e25e77fc58406bc6aa623da4cd3075b2b9dfbf30e8cc75",
+          "git_blob_sha": "00b99611bb5d8900345b82bfdadd7f1579cbd178",
+          "origin_git_blob_sha": "fdb5dc54b345caeeb9f540dcad4b8ca1a330879f"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-rhyme/reference.md",
           "mode": "100644",
-          "size": 17841,
-          "git_blob_sha": "54004301e0371ad55b83817784e42f08e15a5009",
-          "sha256": "c5b0ce7e29d22f26d06a47639f0a10c8ea4798777103110d4928a0d39a45bb4f"
+          "size": 17504,
+          "sha256": "d90ac488c257ef1e2864789bd774a4d8078f8e89e156548a401d5aa77b863068",
+          "git_blob_sha": "3cbdf39e691960b1f6f3fda28bdaebff841487d3",
+          "origin_git_blob_sha": "54004301e0371ad55b83817784e42f08e15a5009"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-song-intent/SKILL.md",
           "mode": "100644",
-          "size": 21861,
-          "git_blob_sha": "956dd146c7bdd27c2682e8ead208d30e09f32e98",
-          "sha256": "2cdd8184691936f8706b183e32429aef399e79bef14b8f9d4aaf69361b6552aa"
+          "size": 18642,
+          "sha256": "27631067d37c20db93a335a0521b8b4a8ae26754c8d64682438cd881f184381a",
+          "git_blob_sha": "8fef1d155ab5f1fc6a92869b63fdb7720d1531a7",
+          "origin_git_blob_sha": "956dd146c7bdd27c2682e8ead208d30e09f32e98"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-structure/SKILL.md",
           "mode": "100644",
-          "size": 32690,
-          "git_blob_sha": "359741047e28b95b724e14a530a3db124c4a1ab0",
-          "sha256": "4f039e0d33975e0a659f0a7b8a1a0a05cd0f62e7d46e9865582899dcb0c8324e"
+          "size": 31971,
+          "sha256": "db74fb6a0e88b60e12e7ce6ef706d84a886da0b34054fa320860da317c7889ef",
+          "git_blob_sha": "0d32a1052ee9b89fd1821c8c37d45c64828a99f5",
+          "origin_git_blob_sha": "359741047e28b95b724e14a530a3db124c4a1ab0"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-structure/reference-stability.md",
           "mode": "100644",
-          "size": 9978,
-          "git_blob_sha": "6887064a1c56563b54b3a45a746a782f5e63201a",
-          "sha256": "aa496b83032a7c7022699b3a965b371af3261103145dc2f4951e86b9ea0d5b62"
+          "size": 9689,
+          "sha256": "21e3334c4807e44e62a041bd3ae2efc009ce63ab1ff881f295e2babe02e756be",
+          "git_blob_sha": "5e697ede7a24d8841d3dc7cbc74d1fd441119f1c",
+          "origin_git_blob_sha": "6887064a1c56563b54b3a45a746a782f5e63201a"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-structure/reference.md",
           "mode": "100644",
-          "size": 34046,
-          "git_blob_sha": "aae7d317bbd39a72bbbe1768d650b1d3b18d0bb5",
-          "sha256": "f9ef8d1e390a7c69bc68ec6f6f1a04cf4728e98881629009112d4bb1f81199c4"
+          "size": 32925,
+          "sha256": "6921e5f9f536a6aa110c6faca17390712dc684afca96d9286b8a355b34d90f9a",
+          "git_blob_sha": "a212b50cef0eddabb53e10b9440c3a78974ca6ba",
+          "origin_git_blob_sha": "aae7d317bbd39a72bbbe1768d650b1d3b18d0bb5"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-suno-interface/SKILL.md",
           "mode": "100644",
-          "size": 7756,
-          "git_blob_sha": "d842001f88f3a3045fd4bd94d43018f0ae68bac4",
-          "sha256": "cd6811398f47c4fbdac5c0b6a8c3cb499d00360ce77a7299a0b53c44855eb35e"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-tone-check/SKILL.md",
-          "mode": "100644",
-          "size": 10342,
-          "git_blob_sha": "fb6ec5edc2d872d7848f30404deed373681a25fc",
-          "sha256": "342d12a45401d5a28ee29a8a9f67aefe5febafea5fe5c4709a51ae5419f7ca8d"
+          "size": 7319,
+          "sha256": "f2f22d457662ad7a96a1a64eb7cf5df5c36d0fb04ce1f38ebd3c42cdac2196cf",
+          "git_blob_sha": "ff4c25bdc13ec3bfd993f8be7cfd398f2e3fb707",
+          "origin_git_blob_sha": "d842001f88f3a3045fd4bd94d43018f0ae68bac4"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-workflow/LYR-SPEC.schema.md",
           "mode": "100644",
-          "size": 12037,
-          "git_blob_sha": "1a3373a9f18a4058cc6a7e2636fc17bcae8a84f9",
-          "sha256": "a9b5fc9fa41f9874341ea2c2e69200afc35db62ae4d08bc1ad7bdb34c8a1579c"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-workflow/LYR-SPEC.template.yaml",
-          "mode": "100644",
-          "size": 6062,
-          "git_blob_sha": "8fcf8b61a97cd59c70872d2a3e783ec08c976d28",
-          "sha256": "73328cdc06fea8133dc5be83a7e1aa5d0cdc54daf3da2de748b986844f36047e"
+          "size": 8829,
+          "sha256": "5b8da1c988b013b15aefeb57068f7ece207fb89f417751e38dceb1408e8e56bc",
+          "git_blob_sha": "33f592ea0b4ab6fd085fe7c09bc407daec064bdd",
+          "origin_git_blob_sha": "1a3373a9f18a4058cc6a7e2636fc17bcae8a84f9"
         },
         {
           "path": "plugins/lyric-writing/skills/lw-workflow/SKILL.md",
           "mode": "100644",
-          "size": 15590,
-          "git_blob_sha": "2ac387a0ab914c7693504bb451d5965fa7569749",
-          "sha256": "78eb1a8eb4d87209923e7ff12dbee2fee2d191356a8dc236d952aaa750e439a0"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-workflow/example-00-ai-default.yaml",
-          "mode": "100644",
-          "size": 2792,
-          "git_blob_sha": "aa8b132424db07ca845c6f0f21a612e1b1b17dab",
-          "sha256": "c6ea399ccbbd215f95302a7ed830ab2daddea4e5f8f2328578af890fff316e5a"
-        },
-        {
-          "path": "plugins/lyric-writing/skills/lw-workflow/example-01-jacket.yaml",
-          "mode": "100644",
-          "size": 6995,
-          "git_blob_sha": "563372925fc4ff079a1a6e107ac7a8d24fa43b53",
-          "sha256": "28308b38edd330325fa0d40698099860c662db8f22000d45da5febc753d24b22"
+          "size": 11212,
+          "sha256": "36bab0219d8b4e94736b7d4847f6ddb9535cc609333b085810442203a5d03e1b",
+          "git_blob_sha": "7320aad854258fd6f02d740fddb7771f2216444c",
+          "origin_git_blob_sha": "2ac387a0ab914c7693504bb451d5965fa7569749"
         }
-      ]
+      ],
+      "snapshot_kind": "selected-and-edited; not a complete original snapshot"
     }
-  ]
+  ],
+  "selection": "ko-en-ja/general-theory; excluded originals physically absent"
 }

@@ -6,65 +6,228 @@
       "repo": "jtydhr88/music-composition-skills",
       "commit": "064683f05643ba1801063c0f4cac848cdd1e36a8",
       "skills_directory": "plugins/music-composition/skills",
-      "local_archive": "plugins/music-producer-kit/library/archives/music-composition-skills.zip",
-      "preservation": "complete-local-copy",
+      "local_archive": "plugins/music-producer-kit/library/archives/composition-selected.zip",
+      "preservation": "selected-local-copy; excluded originals removed",
       "skills": [
-        {"name":"mc-workflow","decision":"replace-workflow","destination":"SKILL.md"},
-        {"name":"mc-melody","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-harmony","decision":"scoped-summary","destination":"references/music.md"},
-        {"name":"mc-progressions","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-modulation","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-rhythm-groove","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-form","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-counterpoint","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-development","decision":"scoped-summary","destination":"references/music.md"},
-        {"name":"mc-arrangement-arch","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-orchestration","decision":"scoped-summary","destination":"references/arrangement.md"},
-        {"name":"mc-texture-layering","decision":"scoped-summary","destination":"references/arrangement.md"},
-        {"name":"mc-rhythm-section","decision":"scoped-summary","destination":"references/music.md"},
-        {"name":"mc-sound-design","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-vocal-direction","decision":"scoped-summary","destination":"references/lyrics.md"},
-        {"name":"mc-mix-intent","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-jpop","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-citypop-rnb","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-jazz","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-latin","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-chinese-pop","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-edm","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-rock-band","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-cinematic","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-style-hiphop","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"mc-render-compile","decision":"inactive-backend","destination":"references/ableton.md"},
-        {"name":"mc-symbolic-score","decision":"midi-subset-implemented","destination":"scripts/midi_tools.py"},
-        {"name":"mc-ai-tell-audit","decision":"replace-aesthetic-gates","destination":"references/review.md"},
-        {"name":"mc-case-studies","decision":"evidence-index-only","destination":null}
+        {
+          "name": "mc-workflow",
+          "decision": "replace-workflow",
+          "destination": "SKILL.md"
+        },
+        {
+          "name": "mc-melody",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-harmony",
+          "decision": "scoped-summary",
+          "destination": "references/music.md"
+        },
+        {
+          "name": "mc-progressions",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-modulation",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-rhythm-groove",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-form",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-counterpoint",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-development",
+          "decision": "scoped-summary",
+          "destination": "references/music.md"
+        },
+        {
+          "name": "mc-arrangement-arch",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-orchestration",
+          "decision": "scoped-summary",
+          "destination": "references/arrangement.md"
+        },
+        {
+          "name": "mc-texture-layering",
+          "decision": "scoped-summary",
+          "destination": "references/arrangement.md"
+        },
+        {
+          "name": "mc-rhythm-section",
+          "decision": "scoped-summary",
+          "destination": "references/music.md"
+        },
+        {
+          "name": "mc-sound-design",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-vocal-direction",
+          "decision": "scoped-summary",
+          "destination": "references/lyrics.md"
+        },
+        {
+          "name": "mc-mix-intent",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-jpop",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-citypop-rnb",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-jazz",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-latin",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-edm",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-rock-band",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-cinematic",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-style-hiphop",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "mc-render-compile",
+          "decision": "inactive-backend",
+          "destination": "references/ableton.md"
+        },
+        {
+          "name": "mc-symbolic-score",
+          "decision": "midi-subset-implemented",
+          "destination": "scripts/midi_tools.py"
+        },
+        {
+          "name": "mc-ai-tell-audit",
+          "decision": "replace-aesthetic-gates",
+          "destination": "references/review.md"
+        },
+        {
+          "name": "mc-case-studies",
+          "decision": "evidence-index-only",
+          "destination": null
+        }
       ]
     },
     {
       "repo": "jtydhr88/lyric-writing-skills",
       "commit": "91bb089a835fbccd268ea5b6da81f284d84526d5",
       "skills_directory": "plugins/lyric-writing/skills",
-      "local_archive": "plugins/music-producer-kit/library/archives/lyric-writing-skills.zip",
-      "preservation": "complete-local-copy",
+      "local_archive": "plugins/music-producer-kit/library/archives/lyrics-selected.zip",
+      "preservation": "selected-local-copy; excluded originals removed",
       "skills": [
-        {"name":"lw-workflow","decision":"replace-workflow","destination":"SKILL.md"},
-        {"name":"lw-song-intent","decision":"scoped-summary","destination":"references/lyrics.md"},
-        {"name":"lw-structure","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-imagery","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-rhyme","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-narrative","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-mandarin","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-cantonese","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-english","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-japanese","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-korean","decision":"inference-demoted","destination":"references/lyrics.md"},
-        {"name":"lw-chinese-style","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-musical-theatre","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-rap","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-tone-check","decision":"local-source-not-yet-adapted","destination":null},
-        {"name":"lw-suno-interface","decision":"inactive-backend","destination":null},
-        {"name":"lw-ai-tell-audit","decision":"replace-aesthetic-gates","destination":"references/review.md"},
-        {"name":"lw-case-studies","decision":"local-source-not-yet-adapted","destination":null}
+        {
+          "name": "lw-workflow",
+          "decision": "replace-workflow",
+          "destination": "SKILL.md"
+        },
+        {
+          "name": "lw-song-intent",
+          "decision": "scoped-summary",
+          "destination": "references/lyrics.md"
+        },
+        {
+          "name": "lw-structure",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-imagery",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-rhyme",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-narrative",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-english",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-japanese",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-korean",
+          "decision": "inference-demoted",
+          "destination": "references/lyrics.md"
+        },
+        {
+          "name": "lw-musical-theatre",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-rap",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        },
+        {
+          "name": "lw-suno-interface",
+          "decision": "inactive-backend",
+          "destination": null
+        },
+        {
+          "name": "lw-ai-tell-audit",
+          "decision": "replace-aesthetic-gates",
+          "destination": "references/review.md"
+        },
+        {
+          "name": "lw-case-studies",
+          "decision": "local-source-not-yet-adapted",
+          "destination": null
+        }
       ]
     }
   ]

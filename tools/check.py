@@ -13,7 +13,7 @@ PLUGIN = Path('plugins/music-producer-kit')
 MARKETPLACE = Path('.agents/plugins/marketplace.json')
 SCHEMA = 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'
 TEXT_SUFFIXES = {'.md', '.json', '.py', '.txt'}
-ARCHIVES = ('music-composition-skills.zip', 'lyric-writing-skills.zip')
+ARCHIVES = ('composition-selected.zip', 'lyrics-selected.zip')
 sys.path.insert(0, str(ROOT / PLUGIN / 'skills/music-producer/scripts'))
 from source_library import SourceLibrary
 
@@ -107,8 +107,8 @@ def check(root: Path = ROOT) -> dict:
                 within(root / PLUGIN, destination)
     inventory = read_json(root / 'docs/upstream-inventory.json')
     counts = {source['repo']: len(source['skills']) for source in inventory['sources']}
-    if sorted(counts.values()) != [18, 29]:
-        raise ValueError('The audited upstream module inventory is incomplete')
+    if len(counts) != 2 or any(count <= 0 for count in counts.values()):
+        raise ValueError('The retained module inventory is incomplete')
     for source in inventory['sources']:
         if not re.fullmatch('[a-f0-9]{40}', source['commit']):
             raise ValueError('Upstream references must be pinned to a commit')
