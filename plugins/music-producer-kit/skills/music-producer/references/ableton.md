@@ -1,13 +1,16 @@
 # Ableton execution: discover capabilities, then act
 
-No MCP server is bundled in this first package. This is a capability-checking procedure, not an imaginary API adapter.
+No Ableton MCP server is bundled. This is an execution procedure supported by a real diagnostic client, not an imaginary API adapter.
+For first connection, server changes or a missing tool, use [MCP discovery and first acceptance](mcp-connection.md).
+The diagnostic connects through the official SDK and reads tool definitions only; it does not invoke application tools or prove Live is running.
 
 ## Before writing
 
 Read the available MCP tools, exact schemas, server/version and current Live state.
-Record a private capability note with evidence for the operations needed now: track/clip/note read/write, Arrangement placement, device/sample loading, save, export and reopen.
-Use actual IDs and paths obtained from reads; do not guess tool names, index bases or device parameters.
-Mark untested and unsupported operations separately. Do not infer support from an advertised tool count.
+Keep standalone discovery, Codex tool availability and actual Live state as separate observations.
+Record a private capability note for the operations needed now: track/clip/note read/write, Arrangement placement, device/sample loading, save, export and reopen.
+Use IDs and paths obtained from actual reads; do not guess tool names, index bases or device parameters.
+Mark untested and unsupported operations separately. Do not infer support from an advertised tool count or a readOnlyHint annotation.
 Session View clips and Arrangement clips are not interchangeable evidence.
 
 ## Scope and timing
@@ -21,7 +24,7 @@ Batch calls only when the tool supports it and ordering is safe. Read back actua
 ## Sources and devices
 
 Prefer owned installed devices and local licensed audio. Do not make purchases or consume credits without explicit permission.
-Do not reshare paid samples in the plugin/repository. Keep private workspace paths and account credentials out of version control.
+Keep private workspace paths and account credentials out of version control; paid samples are not redistributed with this plugin.
 Inspect actual Drum Rack assignments; sample key and tempo labels may need verification.
 Existing VST loading does not imply access to Melodyne's note editor or a singing engine's lyrics editor.
 Retain source recordings and editable MIDI; freeze/render to a new version rather than destroying the editable source by default.
@@ -31,7 +34,8 @@ Retain source recordings and editable MIDI; freeze/render to a new version rathe
 For a requested Live deliverable, verify actual .als/project save, source references, devices and editability after reopening.
 Check file collection separately from external plugin installation/library dependencies.
 A MIDI export alone or a successful save command is not this full acceptance test.
-If a required capability is unavailable, report it and the still-useful completed portion honestly; do not report a substitute as the requested finished Set.
+Record a manual intervention as manual, not an automated capability. Do not close an unsaved song or erase scratch work without authorization.
+If a required capability is unavailable, report it and the completed portion honestly; do not relabel a substitute as the requested finished Set.
 
 Official behavior references to verify against the installed Live version:
 https://www.ableton.com/en/manual/live-concepts/
