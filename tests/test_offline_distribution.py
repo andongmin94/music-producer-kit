@@ -56,14 +56,16 @@ class OfflineDistributionTests(unittest.TestCase):
         self.assertNotIn(extra, package.package_files(self.root))
 
     def test_every_module_and_reference_has_a_local_file(self):
-        library = SourceLibrary(self.plugin / 'library')
+        # Preservation coverage is deliberately wider than production scope.
+        library = SourceLibrary(self.plugin / 'library', archive_audit=True)
         library.verify()
-        for module in sorted(library.modules):
+        for module in library.list_modules():
             with self.subTest(module=module):
                 self.assertIn('SKILL.md', library.list_files(module))
                 for filename in library.list_files(module):
                     result = library.read(module, filename, lines=1)
                     self.assertEqual(result['source'], library.modules[module]['repo'])
+                    self.assertTrue(result['archive_audit'])
 
     def test_complete_snapshot_counts(self):
         result = package.check(self.root)['local_source_library']

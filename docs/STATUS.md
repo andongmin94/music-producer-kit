@@ -1,51 +1,44 @@
 # Current status
 
-Updated: 2026-09-18. Milestone: 0.3.0 scoped craft guides and local source navigation.
+Updated: 2026-09-18. Milestone: 0.4.0 Korean/English/Japanese scope and language-specific curation.
 
-## Implemented
+## Implemented in this increment
 
-- Seven working guides: harmony, melody/form, rhythm, texture/instruments, lyric craft, prosody and vocal production. The single entry skill selects only the applicable guide; former broad summaries are routing indexes.
-- Each guide records bounded local source ranges, editorial corrections and remaining specialist coverage. See knowledge-curation.md.
-- Explicit distinctions between protected melody/chords/bass, tonal conventions and requirements, pronunciation and written counts, note events and syllables, recorded vocals and synthesis.
-- The existing standard-library source reader supports module-scoped literal search and fenced-code-aware ATX outlines, with bounded output, source positions and evidence warnings.
-- An original four-bar editable harmony/bass study using the existing Mido helper, with document-to-note and protected-edit checks.
-- Fourteen additional tests. No new dependencies, MCP implementation or extra permanent CI workflow.
+- Owner-confirmed lyric/vocal scope: ko, en, ja, including mixtures. Instrumental work remains independent of lyric language and non-excluded genres remain broad.
+- Chinese/Mandarin/Cantonese production, Chinese-style songwriting and Chinese traditional orchestration removed from active routing and future editorial priorities.
+- Default source list/read/outline/find excludes five Chinese-specialist modules and mc-orchestration/reference-minyue.md. Default module count: 42.
+- An explicit maintenance-only archive-audit view preserves access to all 47 modules; it is not a production fallback.
+- Chinese-written general theory stays available. No character-range language detector is used; Japanese kanji must not be rejected as Mandarin.
+- Common prosody is separated from three focused Korean/English/Japanese guides with local source locators and original working examples.
+- Eight additional behavioral scenario definitions cover long Korean syllables, Japanese kanji, English melisma, mixtures, excluded requests, general-theory language and instrumental genres.
+- Fifteen additional static/tool/distribution tests. Existing preservation test explicitly uses archive-audit mode for full coverage.
 
-## Observed verification
+## Preservation and implementation limits
 
-CI run 35306688700 for PR #1, head 9108ef409df015331f62817b2ac9ba202af78d46, passed on ubuntu-latest and windows-latest with Python 3.12.
-Both jobs passed package validation, unittest discovery and install-ZIP generation. Ubuntu log explicitly records 78 tests, all passing (64 existing + 14 added).
-Validated behavior of the tools: literal Unicode/case-insensitive module search; bounded results and truncation; heading pagination; exclusion of fenced-code headings; invalid arguments; network-disabled reads; no source extraction; real source-range markers; independent distribution; original MIDI voicing/length correspondence; scoped bass replacement with unchanged harmony and source.
-The current documentation-only follow-up records that observed run; it does not claim an unobserved later run passed.
+All 121 original files / 47 modules / 2,512,420 bytes remain unchanged, including source archives and original notices.
+Module/file scope filtering does not scrub every Chinese-specific sentence from shared source documents. Curated routing and source warnings distinguish transferable theory from excluded examples.
+No new dependency, remote source lookup, automatic updater, synthesizer, MCP implementation, DAW controller or permanent CI workflow was added.
+The existing Mido helper and editable harmony study are unchanged.
 
-The review-only source inspection run 35305684141 read selected evidence directly from the local archives and passed the baseline 64-test suite on both platforms.
-Its temporary source-inspection CI step and review-branch trigger have been removed. One ordinary Windows/Linux CI workflow remains.
-No complete new-version local checkout/test run in this chat container is claimed; the integrated results above were observed in GitHub Actions.
+## Verification checkpoint
 
-Static/offline tests are not model behavioral or musical-quality evaluations. The 12 model behavior scenarios remain defined, NOT RUN.
-Codex plugin activation, actual Ableton MCP operations, Live save/reopen, audio rendering and listening: NOT RUN.
-No Splice/Melodyne/singing connector or project-wide license grant has been added.
+Baseline 0.3.0: PR #1 runs 35306688700 and 35306874476 passed before merge; 78 tests and packaging on Windows/Linux were observed.
+The 0.4.0 changes and 15 new tests are written. Their CI result is pending at this checkpoint; the old baseline pass is not a new-version pass.
+This chat container could not resolve github.com for a local clone. No full local checkout/test pass is claimed; integrated validation will be observed through GitHub Actions.
 
-## Preservation versus editorial adaptation
-
-Both complete pinned source snapshots remain unchanged: 47 modules, 121 tracked files, 2,512,420 original bytes, with file/archive hashes and LICENSE/NOTICE.
-The original SKILL.md files remain archived data, not discoverable skills. No upstream download, submodule, silent remote recovery or automatic update is introduced.
-The scoped MIDI helper remains unchanged. Source books, audio, private tools and corpora never shipped by upstream are not included.
-
-Full original file preservation: COMPLETE.
-Selected seven-guide adaptation with local examples and caveats: IMPLEMENTED; offline tool/package/example tests PASS in the run above.
-Editorial conversion or independent verification of every source paragraph/table: NOT COMPLETE.
-Genre, specialist orchestration, extended harmony/form/counterpoint, language and sound-design details remain in the local library for targeted review.
-See knowledge-curation.md for what moved and what still needs work; do not claim all 47 modules were fully rewritten.
+Actual Codex behavior scenarios: 20 DEFINED, NOT RUN. Static tests of definitions do not execute prompts.
+Codex activation, actual Ableton/MCP operations, Live save/reopen, rendering, listening and native-language performance review: NOT RUN.
+Full archival preservation: COMPLETE. Editorial adaptation or independent verification of every in-scope source paragraph/table: NOT COMPLETE.
+No project-wide license grant, Splice/Melodyne/singing connector or purchase authorization was added.
 
 ## Next concrete step
 
-Verify real Windows/Codex activation and actual MCP schemas; prove an editable scratch Live Set, save/reopen and a scoped edit before claiming DAW automation.
-Continue specialist knowledge adaptation from local evidence without a genre whitelist or mandatory aesthetic gates.
-Use the installed local outline/find/read commands rather than reading whole archives or fetching upstream websites.
+Observe Windows/Linux CI for this change before merging. Record the run and fix failures without weakening the scope contract.
+Then verify actual Windows/Codex activation and real MCP capabilities, and prove editable Live creation, save/reopen and a scoped edit.
+Continue useful general theory and ko/en/ja specialist curation; Chinese-specific modules are excluded, not deferred.
 
 ## Session handoff
 
-Read actual repository state, AGENTS.md and this file before work.
-Do not repeat resolved global genre/voice questions. Keep private paths, recordings, samples and unpublished songs outside this repository.
-Record actual test run IDs, failures, fixes and remaining blockers when ending a session. A queued run is not a passing run.
+Read actual state, AGENTS.md and requirements before continuing. Do not re-ask for permanent genre/voice defaults or reopen the language scope without a new owner decision.
+Keep private recordings, paths, samples and unpublished songs outside this public repository.
+Update status with actual run IDs, results, limitations and next steps at the end of each session.
