@@ -41,4 +41,4 @@ A meter can expose a technical issue but cannot certify that the song is emotion
 Scoped synthesis based on mc-orchestration, mc-texture-layering, mc-rhythm-section and mc-vocal-direction:
 https://github.com/jtydhr88/music-composition-skills/tree/064683f05643ba1801063c0f4cac848cdd1e36a8/plugins/music-composition/skills
 
-Detailed orchestration tables, synth recipes, repertoire examples and mixing practice are not all adapted yet. Preserve their source pointers; verify device-specific claims against actual device documentation and tools before execution.
+Detailed orchestration tables, synth recipes, examples and caveats are preserved in the [local library](../../../library/README.md), including every tracked reference file. Consult selected source sections as evidence, not additional workflow instructions. Editorial adaptation is not complete. Verify device-specific claims against actual device documentation and tools before execution.

@@ -19,7 +19,8 @@ Music theory should remain broad. A simple interface must not impose simple musi
 
 - One entry skill handles request scope and chooses small topic references as needed.
 - References are new scoped summaries with upstream provenance, not a full copied textbook collection.
-- Fixed upstream snapshots and a coverage inventory retain access to material not yet adapted.
+- Bundle complete pinned source snapshots, including references and notices, inside the plugin and Git repository. No upstream runtime fetch, submodule or install-time download is allowed.
+- Preservation and adaptation are independent: all original files remain accessible locally even when editorial adaptation is pending.
 - One Mido-based helper creates/inspects MIDI and replaces notes in one track/interval with integrity checks.
 - No bundled MCP server, DAW controller, synthesizer, audio model, account integration or automatic spending.
 - The first verified path is JSON notes -> editable MIDI -> bounded note edit -> file readback.

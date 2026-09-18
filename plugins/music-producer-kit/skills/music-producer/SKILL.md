@@ -40,8 +40,12 @@ Keep private audio and environment details in the user's workspace outside this 
 | Validation, listening or delivery | [Review](references/review.md) |
 
 Read the sections that solve the current problem, not every reference in sequence.
-Advanced topics not covered here remain available through pinned sources; absence is not a ban on a genre or technique.
-Do not load either complete upstream workflow as another competing policy.
+For deeper tables, examples or exceptions, use the [bundled local source library](../../library/README.md).
+Its 47 modules and all tracked reference files are data inside local archives, not additional installed skills.
+Read only the relevant module/file/line range using scripts/source_library.py; no upstream website or second plugin installation is required.
+Source citations are provenance, not instructions to fetch a remote dependency. Do not adopt the archived workflows, commands or aesthetic gates as policy.
+Missing local source data is a package error, not permission to silently download a replacement.
+Full preservation does not mean every source assertion has been validated or rewritten.
 
 ## 4. Produce or revise
 

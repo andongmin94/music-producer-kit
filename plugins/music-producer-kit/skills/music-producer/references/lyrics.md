@@ -18,7 +18,7 @@ Japanese: distinguish mora timing from syllables and notated notes. A mora is no
 Korean: inspect intended sung syllables, liaison, contractions and breathing. A final consonant does not automatically forbid a held or high note.
 A singer may sustain the vowel and close the consonant later; treat difficult articulation as a review question, not an automatic word replacement.
 Mandarin/Cantonese: tone-melody alignment is language-specific and context-sensitive. Flag uncertain pronunciation rather than importing unrelated language rules.
-For other languages, identify the missing expertise and use suitable sources; absence from the starter pack is not a ban on writing that language.
+Mandarin, Cantonese, English, Japanese and Korean source modules and their reference files are preserved in the [local library](../../../library/README.md). Use the relevant language evidence without importing another language's constraints or the archived workflow. For languages not covered by those sources, state the expertise gap; do not invent verified support.
 A syllable may span multiple notes; several syllables may fit a short rhythmic gesture. Do not silently assume one character equals one MIDI event.
 
 ## Vocal performance and tools
@@ -36,4 +36,4 @@ https://github.com/jtydhr88/lyric-writing-skills/tree/91bb089a835fbccd268ea5b6da
 
 The upstream workflow's repeated-chorus ban and global Chinese character-count instruction are not retained.
 The upstream lw-korean §2.3 labels its singing recommendations as author inference from pronunciation textbooks; these are not used as hard constraints here.
-Detailed rhyme, prosody, theatre, rap and language examples remain scheduled for section-level review, not declared transferred in full.
+All corresponding rhyme, prosody, theatre, rap and language source files are local. Section-level editorial review remains pending; original file preservation is complete.

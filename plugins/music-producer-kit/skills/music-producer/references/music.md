@@ -47,4 +47,4 @@ Selection sources, not independent verification of every underlying book:
 https://github.com/jtydhr88/music-composition-skills/tree/064683f05643ba1801063c0f4cac848cdd1e36a8/plugins/music-composition/skills
 
 Relevant sections: mc-harmony §§6-7 (reharmonization and stop rule); mc-development §§1-3 (material and development); mc-rhythm-section §1.1 (feel and pattern selection).
-The broader melody, progressions, modulation, counterpoint, formal analysis and genre references are retained in the repository's upstream inventory for further section-level review, not silently discarded or claimed fully transferred.
+The complete melody, progressions, modulation, counterpoint, form and genre source files are in the [local library](../../../library/README.md). Read a specific module and range when needed. External source links above identify provenance only. Raw source preservation is complete; editorial adaptation of every statement is not.

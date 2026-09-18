@@ -1,44 +1,44 @@
 # Current status
 
-Updated: 2026-09-18. Milestone: 0.1.0 initial plugin + offline MIDI editing path.
+Updated: 2026-09-18. Milestone: 0.2.0 self-contained upstream source preservation.
 
 ## Implemented
 
-- Portable root plugin manifest, repo marketplace and one music-production entry skill.
-- Conditional craft, arrangement, lyric/vocal, MIDI, Ableton capability and review references.
-- Mido-based editable MIDI creation, inspection and scoped note replacement with protected-event checks.
-- Pinned 29+18 upstream module inventory; explicit partial/deferred knowledge coverage.
-- Offline package checks, reproducible install ZIP, helper tests and one Windows/Linux CI definition.
-- Public repository boundaries and AGENTS.md session continuity requirements.
+- Complete tracked-file snapshots of both pinned sources are committed locally: 29 composition modules / 74 files and 18 lyric modules / 47 files. Total 121 files, 2,512,420 original bytes.
+- Original file bytes, LICENSE/NOTICE, source commits/tree IDs, per-file Git blob SHA and SHA256, and archive SHA256 are preserved. See SOURCE_SNAPSHOT_REPORT.json.
+- Source archives are included inside the plugin, not Git submodules or references to a remote installation.
+- A standard-library-only reader lists modules/files and reads bounded line ranges from local archives without extraction, execution or downloads.
+- One curated entry skill remains discoverable; raw source workflows are data, not operating policies.
+- Package checks verify both archives, source-file hashes, notices and 47-module coverage. Only the two named source ZIPs are allowlisted.
+- Existing scoped MIDI helper remains unchanged.
+- The one-time network snapshot workflow has been removed after its successful capture. Normal installation/read/verification never fetches upstream sources.
 
-## Verification
+## Verification recorded so far
 
-Local environment: Linux / Python 3.13.5 / Mido 1.3.3.
-`python tools/check.py`: PASS (metadata, links, 47-module inventory, 12 scenario definitions).
-`python -m unittest discover -s tests -v`: 39 tests PASS.
-Two independent ZIP builds: byte-identical in the local environment.
-A passing file test is not a passing music or Live test.
-Host Codex plugin installation/activation: NOT RUN.
-Behavior scenarios (12): DEFINED, NOT RUN.
-Windows execution and remote CI: NOT YET OBSERVED.
-Ableton MCP, device loading, Arrangement editing, save/reopen: NOT RUN.
-Audio generation, listening and subjective quality: NOT RUN.
+Source capture run 35299006712: SUCCESS. Both pinned Git commits fetched, all tracked blob hashes checked, ZIP readback checked, and source data committed as 9da6420.
+Existing package/MIDI tests passed in that source-capture run.
+Local Linux: 19 new reader unit tests PASS, including network-disabled reading, missing/corrupt archive errors, line ranges, paths and notice integrity.
+Six distribution integration tests added, including install-ZIP extraction separated from the checkout with network calls blocked.
+Final Windows/Linux suite and package build for 0.2.0: pending observation at this checkpoint.
+Static/offline tests are not Codex behavioral or music-quality evaluations.
+Codex plugin activation, actual Ableton MCP operations, Live save/reopen and listening: NOT RUN.
+
+## Preservation versus adaptation
+
+Full original file preservation: COMPLETE.
+Editorial conversion of every source paragraph/table into curated production guidance: NOT COMPLETE.
+Detailed knowledge can now be consulted locally; do not silently turn an archived source's imperatives or inferred rules into new instructions.
+Source books, recordings, private tools and corpora that upstream never shipped were not acquired.
+No bundled MCP server, Splice/Melodyne/singing connector, or project-wide license grant.
 
 ## Next concrete step
 
-On the target Windows machine, follow docs/local-smoke-test.md with the owned instruments.
-Verify plugin activation, inspect candidate MCP implementation and actual tool schemas, then build a scratch Live Set and prove save/reopen plus a drum-only edit.
-Do not select an MCP by advertised tool count or invent missing operations.
-Use the pinned inventory for deeper section-by-section theory/genre/language adaptations only after recording source conditions and remaining gaps.
-
-## Boundaries still open
-
-No bundled MCP server or Melodyne/Splice/singing-engine connector.
-The genre/language inventory is preserved by pinned links; the complete original reference library has not been copied or rewritten.
-No project-wide redistribution license chosen. No model-quality benchmark result exists.
+Verify real Windows/Codex activation and actual MCP schemas, then create a scratch Live Set and prove save/reopen plus a drum-only edit.
+Continue section-level adaptation from the LOCAL library, retaining conditions, counterexamples and provenance.
+Do not repeat resolved genre/voice preference questions or restore a dependency on upstream websites.
 
 ## Session handoff
 
-Read actual repository state and this file before work. Do not repeat resolved product questions.
-Keep private environment facts, file paths, voice recordings and sample ownership records outside this public repo.
-Append actual validation outcomes and unresolved blockers whenever a work session ends.
+Read actual repository state, this file and AGENTS.md first.
+Keep private equipment paths, recordings and samples outside this public repository.
+Append actual outcomes and blockers before each session ends; do not call a queued run a passing run.
