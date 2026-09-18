@@ -1,47 +1,51 @@
 # Current status
 
-Updated: 2026-09-18. Milestone: 0.5.0 physically selected sources and read-only local sample discovery.
+Updated: 2026-09-18. Milestone: 0.6.0 local MCP discovery and Windows acceptance handoff.
 
 ## Implemented
 
-- Removed the full source snapshot ZIPs and the archive-audit API/CLI, rather than hiding excluded data.
-- Retained 41 modules / 89 files / 1,805,308 bytes. Removed six specialist/corpus modules, topical examples and folk-orchestra content; cleaned reviewed topical sections/cross-links in shared files. Unneeded upstream installer/presentation files were also removed: 32 source files deleted, 43 retained files edited.
-- General craft prose written in Chinese and Korean/English/Japanese sources remain. Legal notices are retained unmodified.
-- One version-2 selected catalog records current and original hashes/ranges for edited files. Removed the duplicate upstream inventory and obsolete full-snapshot report. SOURCE_SELECTION_REPORT.json records deletion/selection locations, not removed content.
-- Updated guide locators to actual selected-source positions. No empty-line preservation, alternate view, upstream download or remote recovery.
-- Added sample_library.py and producer guidance: explicitly scoped local directory -> read-only audio-header inventory -> literal filename search -> selected-file reinspection and SHA256.
-- SoundFile 0.13.1 reads headers, including float WAV/FLAC/AIFF. No custom codec, account integration, key/BPM detector, listening claim or automatic license approval.
-- Original sample files are not modified. Private reports are exclusively created outside the sample root, installed plugin and project checkout.
-- Existing Mido helper is unchanged. Temporary editing/transfer workflows are absent from the final tree; one ordinary Windows/Linux CI workflow remains.
+- mcp_probe.py uses the official MCP Python SDK 2.2.0 to inspect an explicitly authorized literal-loopback HTTP endpoint or trusted installed stdio server. No custom JSON-RPC transport or Ableton MCP server is added.
+- Reads the actual paginated tool catalog, input/output schemas, server-reported identity/capabilities and negotiated protocol. Keeps a private timestamped report and catalog hash; it never calls application tools, resources or prompts.
+- Checks endpoint/report scope, exclusive output creation, duplicate names, repeated cursors, page/tool/size budgets and timeouts. HTTP proxy inheritance is disabled. Credentials are explicitly selected by environment-variable name rather than printed or copied into the report.
+- Does not read or change Codex configuration/credentials. Discovery, Codex availability, Live state, edits, save/reopen and listening remain separate claims; the diagnostic never sets the latter verification flags true.
+- Added a concrete Windows first-run request and acceptance sequence: inspect versions/existing connection, discover tools, read the actual Set, use an authorized disposable four-bar harmony/bass test, revise bass bar 2, compare protected content and verify save/reopen.
+- Fourteen additional tests: nine units and five official-SDK transport/connection tests. The fixture exposes a write tool whose invocation is forbidden; it is not an Ableton simulator.
 
 ## Observed verification
 
-PR #3 head a680f9b9b03751110f352b519bf43946224dea38 was preserved from the interrupted session.
-Its ordinary CI run 35311126409 completed successfully on windows-latest and ubuntu-latest, Python 3.12. Both jobs passed package validation, unittest discovery and distribution ZIP generation; the Ubuntu log explicitly records 96 passing tests.
-These results were read and verified during recovery. The current documentation-only update records the observed implementation run; no later unobserved check is claimed to have passed.
+PR #5 code head 69b742bfd12c3dda20c16386eda275a26de58daa: CI run 35317232583 completed successfully on windows-latest and ubuntu-latest, Python 3.12.
+Both jobs passed package validation, full unittest discovery and distribution ZIP generation. The Windows log explicitly records 110 passing tests (96 existing + 14 added).
+Actual protocol checks cover in-memory SDK discovery, a stdio child process, a loopback HTTP ASGI server, ignored proxy environment, server shutdown, refused HTTP connections and a hanging stdio timeout with no success report. No application tool was executed by discovery.
 
-The preceding implementation session recorded a full local Linux checkout with Python 3.13.5, Mido 1.3.3 and SoundFile 0.13.1: package validation, 96 tests and ZIP generation passed. The source apply workflow 35311073133 also passed before committing a680f9b. These are earlier-session records, not a claim of a new full local run during recovery.
+The first run 35316828602 passed 109 tests and packaging on Ubuntu but failed one Windows unit assertion comparing a normalized path with its 8.3 temporary-directory alias.
+The fixture now resolves its root before comparison and still checks existing-file protection and rejection of plugin/repository output paths. Runtime path validation was not weakened and no compatibility branch was added.
+An additional positive HTTP transport test was added before the successful run above; the new test is not merely an HTTP failure simulation.
 
-Audio fixtures test PCM/float WAV, stereo, FLAC, AIFF, malformed files, Unicode names, bounded scans, protected outputs, stale inspection, hashes, CLI and network-blocked operation. No personal recordings or sample directory were accessed.
-Removal tests inspect actual inner ZIP content, absence of full original archives and the audit API/flag, selected provenance, offline retrieval, updated guide locators and independent distribution.
-The earlier 42-module/103-test alternative created during recovery is duplicate PR #4, not the chosen implementation. Keep PR #3's more complete corpus removal, single catalog and audio-header tool; do not merge both alternatives.
+Nine standalone unit tests had passed earlier in this chat container on Linux/Python 3.13.5. GitHub cloning was unavailable here and the new SDK was not locally installed, so the complete SDK/repository results are GitHub Actions observations, not a local full-suite claim.
+This documentation follow-up records the observed code run. It does not assert that an unobserved later run has passed.
 
-## Limits
+## Preserved product and boundaries
 
-Current-tree/new-distribution deletion covers the selected Chinese-specialist modules, dedicated corpora/examples and reviewed mixed-document sections. It is not a rewrite of Git history; old commits and external clones are not retroactively erased.
-The retained library is selected source evidence, not an untouched upstream snapshot or certification of every assertion.
-Sample metadata is header-only. It does not prove full-file decode, license rights, musical suitability or sound similarity. Filename search does not recheck current files; inspect again before actual use.
-Actual Codex behavior: 21 scenarios DEFINED, NOT RUN. Codex activation, Ableton MCP, Live creation/save/reopen, rendering/listening and native-language review: NOT RUN.
-No project-wide license, Splice/Melodyne/singing-engine connector, purchase or upload authorization was added.
+The 41-module/89-file/1,805,308-byte selected library, removed-specialist boundary, Mido and SoundFile helpers, ko/en/ja guides and single producer skill are unchanged.
+No complete upstream source, audit bypass, automatic knowledge download, second entry skill or extra CI workflow was restored or added.
+Dependencies now include the official MCP SDK; package installation can require network, but retained music knowledge does not fetch upstream sources.
+The diagnostic starts a trusted specified stdio process; it is not a sandbox that prevents that process's startup side effects. HTTP reports can contain private server-supplied schema text. Keep reports and stderr outside this public repo and review before sharing.
 
-## Next concrete step
+Actual user-PC access was not available in this chat; available app discovery did not expose an Ableton connection.
+Codex activation, real Live state, creating/editing a Live Set, save/reopen, rendering/listening and native-language review: NOT RUN.
+The existing 21 behavior scenarios remain DEFINED, NOT RUN. Protocol fixture tests do not execute model prompts or grade music.
+MCP server selection is not finalized without inspecting the installed Live version and required functions. No automatic install, purchase, upload, account change or sandbox-permission change was performed.
+ulm0/ableton-live-mcp was inspected as one candidate and explicitly lacks transport control, third-party insertion and automation curves. It was not adopted as a complete production backend.
 
-On the target Windows machine, activate the kit, scan an explicitly supplied owned sample directory, inspect actual Ableton MCP schemas, and prove a small editable Live Set plus save/reopen and a scoped edit.
-Do not expand unsupported languages, restore excluded sources, infer capabilities from marketing text, or substitute another broad documentation expansion for real DAW validation.
+## Next concrete step: actual local Windows acceptance
 
-## Recovery and session handoff
+Run docs/windows-first-run.md in Codex on the Windows machine that has Ableton installed, not in a hosted web workspace.
+Inspect the existing connection/version, run mcp_probe.py on the authorized endpoint, then separately check actual Codex tool availability and a reviewed read-only Live state call.
+Use only an authorized disposable Set for the four-bar study and bass-only revision. Save/reopen and record actual evidence in the private song workspace; manual interventions must remain labeled manual.
+If a required capability is absent, stop at that specific boundary instead of inventing tools or substituting another round of broad documentation expansion for a real local test.
 
-Before creating a new branch, inspect main, existing work branches, open pull requests and their checks. An interrupted chat may already have saved the requested implementation outside main.
-Resume and validate that work before rebuilding it. Explicitly close a superseded duplicate rather than merging two incompatible implementations.
-Read AGENTS.md and requirements; keep private paths, audio and unreleased songs outside this public repo.
-Record actual run IDs, failures, blockers and next actions before ending each session. A plan, defined scenario or successful MIDI file is not an executed Ableton workflow.
+## Session continuity
+
+Read AGENTS.md, requirements, actual refs, open PRs and their checks before making another branch. Recover saved interrupted work before rebuilding it.
+Do not repeat the user's questionnaire or restore excluded language specialties. Keep private audio, paths, diagnostics and unpublished work outside the repo.
+Record actual run IDs, failures, fixes, limitations and next actions at the end of a session. A plan, queued run or successful MIDI file is not an executed Live workflow.
