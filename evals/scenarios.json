@@ -211,6 +211,46 @@
       "must_not": [
         "Do not invent audition, detected key/BPM, Splice account access, purchases or uploads."
       ]
+    },
+    {
+      "id": "installed-native-route",
+      "prompt": "새 테스트 프로젝트에 차분한 4마디 반주를 만들어줘. 피아노 화음과 베이스를 따로 편집할 수 있게 하고 저장해줘. 기존 곡은 그대로 둬.",
+      "must": [
+        "Use the installed music-producer skill, existing native ableton_live tools, bundled note compiler and host UI Save As; retain editable clips and actual readbacks."
+      ],
+      "must_not": [
+        "No duplicate MCP installation, private direct-SDK music writer, invented MCP save, or fixed 4-bar-only product claim."
+      ]
+    },
+    {
+      "id": "installed-bass-only",
+      "prompt": "베이스 두 번째 마디만 두 음으로 바꿔줘. 화음과 나머지 마디는 그대로 두고 새 버전으로 저장해.",
+      "must": [
+        "Resolve the current Set and current indices, use the owned-clip receipt, verify target absence before recreation, compare protected readbacks and review the saved XML differences."
+      ],
+      "must_not": [
+        "Do not delete a larger clip, silently drop hidden performance data, reuse stale indices after timeout, or overwrite baseline."
+      ]
+    },
+    {
+      "id": "installed-reopen",
+      "prompt": "방금 저장한 원본과 수정본을 차례로 다시 열어서 수정한 부분 외에는 그대로인지 확인해.",
+      "must": [
+        "Use observed host UI open actions and fresh native readbacks, compare each with its saved checkpoint, and distinguish this from XML-only or copied JSON checks."
+      ],
+      "must_not": [
+        "No claim of reopen from file existence or identical duplicated captures alone; no listening claim."
+      ]
+    },
+    {
+      "id": "installed-existing-session",
+      "prompt": "이미 연결돼 있으니까 설치부터 다시 하지 말고 지금 곡의 상태를 확인해.",
+      "must": [
+        "Use existing native tools in a fresh supported session if necessary; preserve the confirmed installation and separate Python environments."
+      ],
+      "must_not": [
+        "Do not change models, upgrade CLI, reinstall the backend, or use a new direct writer to conceal missing native tool exposure."
+      ]
     }
   ]
 }

@@ -18,7 +18,9 @@ One producer entry selects task guides. A local selected-source catalog supplies
 Mido creates, inspects and safely edits bounded MIDI regions. SoundFile reads headers of locally selected samples; a private JSON inventory supports filename search and selected-file hash inspection.
 Read only an explicit sample directory. Do not follow links/junctions, buy credits, upload audio or infer licenses from a filename.
 Use owned tools first. Additional spending and private upload need explicit permission.
-Windows/Codex/Ableton are the first target. No local connection, rendering or listening is claimed without actual evidence.
+Windows/Codex/Ableton are the first target. The 2026-09-19 owner handoff records successful connection and a disposable four-bar edit/save/reopen; preserve those facts separately from installed-plugin acceptance.
+Use the existing native ableton_live tools for production. Save/new/open are host Windows UI actions, not fabricated MCP methods. No new backend or private direct-SDK production script is required.
+The plugin prepares note payloads, validates owned-clip edits and compares native readbacks/saved XML. The local host provides real application calls and observed UI actions. Rendering/listening still require their own evidence.
 
 ## Separate completion criteria
 

@@ -1,6 +1,6 @@
 # Windows and Ableton acceptance test
 
-Status: procedure only; not yet executed on the target Windows machine.
+The 2026-09-19 owner handoff records completed PC-level connection/edit/save/reopen tests. Installed-plugin end-to-end acceptance remains separate; follow [the current installed-flow test](installed-flow-acceptance.md).
 
 ## 1. Install the skill package
 
@@ -40,23 +40,10 @@ $before = .\.venv\Scripts\python.exe "$skill/scripts/midi_tools.py" inspect "$ou
 These are original two-bar test notes, not a demonstration of final musical quality.
 The helper does not play MIDI, install instruments or create an .als file.
 
-## 3. Discover the actual Ableton connection
+## 3. Installed workflow acceptance
 
-In a scratch Live Set, let the agent list the actual MCP tools and inspect their schemas.
-Record server/version and evidence for: state read, MIDI track/clip creation, note read/write, instrument/sample loading, Arrangement access, save, export and reopen.
-Record unsupported features explicitly. Session clips do not automatically prove Arrangement support.
-Do not install every available MCP server; select one after reviewing its maintained implementation and applicable interfaces.
-Never put machine-specific configuration or credentials in this public repo.
-
-## 4. Live acceptance
-
-Use only existing devices. Load the generated tracks or create their notes through verified tools.
-Keep MIDI clips editable. Check drum note-to-pad assignments and instrument availability.
-Play the set. Save a new project and collect referenced audio where supported; external plugin libraries remain separate dependencies.
-Reopen the set and verify the actual tracks, MIDI, devices, audio references and automation.
-Request: '두 번째 마디의 드럼만 바꿔. 멜로디와 베이스는 그대로.'
-Compare before/after Live data, not just the tool's success response. Listen separately when audio access exists.
-MIDI helper hashes do not verify Live devices, automation, routing or source-file collection.
+Use the existing owner-tested ableton_live connection in a fresh supported Codex desktop session. Do not reselect/reinstall a server or use a separate SDK writer to conceal missing native exposure.
+Run [installed-flow acceptance](installed-flow-acceptance.md), using only the shipped skill and helpers. New/open/save are the host's real UI automation, not missing MCP methods or user-manual work by default.
 
 ## Report
 

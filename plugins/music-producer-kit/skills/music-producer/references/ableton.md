@@ -1,7 +1,8 @@
 # Ableton execution: discover capabilities, then act
 
 No Ableton MCP server is bundled. This is an execution procedure supported by a real diagnostic client, not an imaginary API adapter.
-For first connection, server changes or a missing tool, use [MCP discovery and first acceptance](mcp-connection.md).
+For ordinary production use [the installed workflow](live-workflow.md), which reuses the owner-tested ableton_live backend.
+Only for a genuinely missing connection, server changes or a missing tool, use [MCP discovery and first acceptance](mcp-connection.md).
 The diagnostic connects through the official SDK and reads tool definitions only; it does not invoke application tools or prove Live is running.
 
 ## Before writing

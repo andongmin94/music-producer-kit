@@ -31,6 +31,9 @@ Do not re-ask permanent genre/voice questions or reopen the language scope witho
 
 ## Current priority
 
-Complete an actual Windows/Codex/Ableton smoke test: inspect capabilities, create editable material, save/reopen and perform a scoped edit.
+The attached 2026-09-19 handoff records successful real Windows connection, native read exposure, SDK-authored four-bar editing and UI save/reopen. Do not label these observations unrun or repeat the installation interview.
+Current priority is the installed plugin's end-to-end natural-language flow using native Codex MCP calls, bundled helpers and host UI. Prior SDK write scripts are not evidence of installed-skill execution.
+Use the already selected nicholasbien/ableton-mcp-pro backend; keep the server and diagnostic environments separate. No second server or speculative adapter framework.
+Keep docs/web-handoff.md as historical input, and update STATUS plus the local acceptance request with this increment's actual scope.
 Use the local sample inventory to identify real available files rather than inventing presets or sample names.
 Continue in-scope specialist craft curation only where it helps these workflows.

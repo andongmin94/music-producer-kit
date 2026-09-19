@@ -8,6 +8,13 @@ Compare result with the current brief, requested edit range and protected materi
 A whole song is not complete when only a short loop exists. A lyrics-only task is not improved by unsolicited DAW changes.
 For references and humming, separate observed input features from assumptions and extraction errors.
 
+## Installed workflow evidence
+
+Use [the installed Live workflow](live-workflow.md), not a new private diagnostic writer.
+Its bundled comparison covers the captured native fields; missing reads fail rather than being skipped. It does not prove hidden automation/MPE/return-device data.
+Keep a separate saved .als XML comparison and actual observed host UI open evidence. Changed clip IDs and transport position require contextual review, not wholesale masking.
+A checkpoint with the same bytes copied twice is not evidence of a reopen. The original PC smoke test is prior evidence, not evidence that this installed plugin executed the current request.
+
 ## Technical checks
 
 Read files or Live state after writing. Check note timing/ranges, track identity, missing sources, relevant controls, export duration and saved versions.
