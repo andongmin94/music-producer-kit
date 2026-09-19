@@ -91,6 +91,10 @@ def check(root: Path = ROOT) -> dict:
         if not desc or len(desc) > 1024:
             raise ValueError('Skill description is missing or too long')
         seen.add(name)
+    for retired in ('skills/music-producer/scripts/live_workflow.py',
+                    'skills/music-producer/references/live-workflow.md'):
+        if (root / PLUGIN / retired).exists():
+            raise ValueError('Retired trial-backend route must not be distributed: ' + retired)
     files = package_files(root)
     for path in files:
         if path.suffix == '.json':

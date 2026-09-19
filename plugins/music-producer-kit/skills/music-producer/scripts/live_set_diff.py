@@ -9,14 +9,29 @@ from __future__ import annotations
 import argparse
 import gzip
 import hashlib
+import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from live_workflow import save_new
+PLUGIN = Path(__file__).resolve().parents[3]
 
 MAX_BYTES = 64 * 1024 * 1024
 MAX_NODES = 500_000
 MAX_DEPTH = 128
+
+
+def save_report(value: dict, path: Path) -> None:
+    """Create a private report without any backend-specific import or overwrite."""
+    path = Path(path).expanduser()
+    resolved = path.resolve()
+    checkout = PLUGIN.parent.parent
+    if resolved.is_relative_to(PLUGIN) or ((checkout / 'AGENTS.md').is_file() and resolved.is_relative_to(checkout)):
+        raise ValueError('Keep reports outside the plugin and public checkout')
+    if path.suffix.lower() != '.json' or not path.parent.is_dir() or path.is_symlink():
+        raise ValueError('Use a new .json file in an existing private directory')
+    payload = json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n'
+    with path.open('x', encoding='utf-8') as stream:
+        stream.write(payload)
 
 
 def read_set(path: Path) -> tuple[ET.Element, dict]:
@@ -107,7 +122,7 @@ def main() -> None:
     args = parser.parse_args()
     try:
         result = compare(args.before, args.after, args.limit)
-        save_new(result, args.output)
+        save_report(result, args.output)
     except (ValueError, OSError, EOFError, ET.ParseError) as exc:
         parser.exit(2, f'error: {exc}\n')
     print(f"Saved XML comparison: {result['difference_count']} differences; scope review required={not result['xml_equivalent']}")

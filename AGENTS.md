@@ -29,11 +29,12 @@ Update docs/STATUS.md with outcomes, blockers and the next step before ending ea
 Never call a queued run passing or a defined model scenario executed. Song state belongs in the private song workspace.
 Do not re-ask permanent genre/voice questions or reopen the language scope without a new owner decision.
 
-## Current priority
+## Current priority: official-first, not a connected product
 
-The attached 2026-09-19 handoff records successful real Windows connection, native read exposure, SDK-authored four-bar editing and UI save/reopen. Do not label these observations unrun or repeat the installation interview.
-Current priority is the installed plugin's end-to-end natural-language flow using native Codex MCP calls, bundled helpers and host UI. Prior SDK write scripts are not evidence of installed-skill execution.
-Use the already selected nicholasbien/ableton-mcp-pro backend; keep the server and diagnostic environments separate. No second server or speculative adapter framework.
-Keep docs/web-handoff.md as historical input, and update STATUS plus the local acceptance request with this increment's actual scope.
-Use the local sample inventory to identify real available files rather than inventing presets or sample names.
-Continue in-scope specialist craft curation only where it helps these workflows.
+Read docs/web-handoff.md and docs/official-path-review.md. The owner's latest decision supersedes the old trial-backend recommendation.
+The previous third-party MCP was removed from the PC; no replacement, Extensions SDK or Live Beta was installed. Never restore the removed connection or its production writer.
+Preserve the previous PC experiment as historical evidence, not current availability or installed-plugin acceptance.
+The 0.7.0 general tools remain; the retired backend-specific helper and procedure are removed in 0.7.1, not hidden behind a flag.
+First inspect official SDK documentation/types and host compatibility. Do not invent API symbols from third-party code or assume a manufacturer SDK is a ready-made official MCP service.
+Beta enrollment/install, new software, account access and settings changes need explicit approval. Inspect safely available facts first; do not repeat the musical questionnaire.
+No speculative bridge, parallel backends or UI stopgap. Build one approved route after its actual contract is known and test the complete installed flow before calling it complete.

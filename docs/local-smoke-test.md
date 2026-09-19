@@ -1,6 +1,7 @@
 # Windows and Ableton acceptance test
 
-The 2026-09-19 owner handoff records completed PC-level connection/edit/save/reopen tests. Installed-plugin end-to-end acceptance remains separate; follow [the current installed-flow test](installed-flow-acceptance.md).
+The owner's latest handoff records successful historical PC tests followed by removal of that trial connection. This release does not provide a replacement Live bridge.
+Package/MIDI checks below remain runnable. [Official-path review](official-path-review.md) is the next integration step; installed Live acceptance is blocked until that route exists.
 
 ## 1. Install the skill package
 
@@ -40,10 +41,10 @@ $before = .\.venv\Scripts\python.exe "$skill/scripts/midi_tools.py" inspect "$ou
 These are original two-bar test notes, not a demonstration of final musical quality.
 The helper does not play MIDI, install instruments or create an .als file.
 
-## 3. Installed workflow acceptance
+## 3. Installed workflow acceptance — blocked pending replacement
 
-Use the existing owner-tested ableton_live connection in a fresh supported Codex desktop session. Do not reselect/reinstall a server or use a separate SDK writer to conceal missing native exposure.
-Run [installed-flow acceptance](installed-flow-acceptance.md), using only the shipped skill and helpers. New/open/save are the host's real UI automation, not missing MCP methods or user-manual work by default.
+Do not reconnect the removed trial server. Review official SDK compatibility/API and obtain required approvals first.
+Then use [installed-flow acceptance](installed-flow-acceptance.md) with the actual new route. A fresh session alone cannot create a missing integration.
 
 ## Report
 

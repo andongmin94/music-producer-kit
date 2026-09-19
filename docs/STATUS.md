@@ -1,41 +1,38 @@
 # Current status
 
-Updated: 2026-09-19. Milestone: 0.7.0 installed-producer workflow integration.
+Updated: 2026-09-19. Version: 0.7.1 official-first correction, NOT a completed production plugin.
 
-## Product state: do not collapse these observations
+## Current state
 
-- Real PC connection, editable four-bar Arrangement, one scoped edit, UI save/reopen: VERIFIED IN THE OWNER'S LOCAL HANDOFF below, not rerun in this hosted environment.
-- Reusable installed-skill workflow and deterministic note/readback/Set-diff helpers: IMPLEMENTED in this increment.
-- Installed plugin activation plus natural-language create/edit/save/reopen in the same user flow: NOT YET RUN. This is the next local acceptance, not another initial setup exercise.
+The owner's latest official-first handoff supersedes the 0.7.0 recommendation to reuse the trial MCP.
+The handoff reports removal of the Codex entry, Live control-surface selection, listener/process, and trial-only server/Remote Script folders. Private evidence/test Sets were retained and the user's current Set was not touched.
+No replacement MCP, official Extensions SDK or Live Beta has been installed according to that handoff. Do not restore the removed trial or interpret a previous successful run as a current connection.
 
-## Implemented in 0.7.0
+## Changes
 
-The existing single producer skill now routes ordinary Live tasks to references/live-workflow.md. It uses the already installed ableton_live native MCP; no new server, direct SDK writer or parallel connection is added. The handoff's separate backend/kit environments and desktop-core versus old PATH-CLI distinction are preserved.
+Applied the new decision to the verified 0.7.0 source tree (926d67a5cb0dc37fc8637a1a423e16fbd17c6c4b), not the older 0.6.0 code in the handoff ZIP.
+Removed the backend-specific live_workflow.py, its operation guide and the 21 tests for that retired route. There is no compatibility switch or hidden fallback.
+Preserved the five generic saved-Set tests in test_live_set_diff.py and moved its small report writer into live_set_diff.py, removing its dependency on the retired module.
+Music/lyric guides, source data and notices, Mido, SoundFile, read-only MCP probe and pinned requirements are unchanged. One entry skill and one CI workflow remain.
+Updated the skill, manifest, README, requirements and acceptance docs to say the replacement is unimplemented. The installed-flow criteria remain, but execution is explicitly blocked pending that integration.
+Added official-path-review.md with checked public facts and the specific local SDK/API review needed next. No guessed official API, SDK download, new bridge, account access or PC change was made here.
+Updated five existing behavioral definitions and added two official-path/approval cases. All 27 model scenarios remain DEFINED, NOT RUN.
 
-live_workflow.py compiles the existing score format into clip-local notes for the inspected backend, checks empty destinations, records complete required ordinary-track readbacks, verifies creation and provides owned-basic-clip receipts. Narrow edits require a current matching receipt and exactly one clip range. Deletion is followed by an absence/protected-field check before creation. Successful readback updates the receipt for the next edit. Plans are not executed by this helper; Codex's native tools retain their actual permission boundaries.
+## Evidence and remaining work
 
-live_set_diff.py reads saved gzip/XML Sets without writing them. It reports all changed paths, including IDs, cursor, automation and device data, with file hashes and bounded output. No XML region is automatically exempted. This complements incomplete MCP readbacks; it is not a proof of UI action, external assets, or all supported Live format variants.
+Official public SDK/FAQ pages were read on 2026-09-19. They specify the Suite Beta channel; the detailed SDK/download link required an authenticated Centercode session in this environment.
+The exact SDK invocation, note editing, persistence and distribution contract is not available here yet. Existing PC tests and third-party API shapes do not answer those questions.
+Read docs/official-path-review.md next: safely inspect available host/SDK facts; obtain missing official material through the owner; request separate approval for any installation. Then implement ONE documented route and execute docs/installed-flow-acceptance.md.
+Actual official-first Live creation/edit/save/reopen, installed model flow and audio quality: NOT RUN. Packet/file checks are not substitutes.
 
-The working score is not restricted to the four-bar test: duration, meter, part names and clip segmentation are data. Korean/Japanese part names remain intact. The conservative replacement helper does not silently destroy advanced or manually altered performances to satisfy a partial edit.
+## Validation for this correction
 
-Added 26 tests for native-shaped fixtures, creation and empty-target checks, scoped changes, intermediate deletion readback, stale/tampered plans, consecutive edits, protected mixer/routing/devices/master, Unicode names, other durations/meters, independent installed ZIP operation, private outputs and saved XML changes. Synthetic fixtures are explicitly not real Live/model traces.
+Local Python 3.13.5 ran 118 of 123 discovered tests successfully, including all eight new official-first retirement/report checks and the five retained saved-Set comparison tests.
+The five existing ProbeSDKTests could not run locally because mcp/httpx2 are not installed. They remain enabled and unchanged for the full Windows/Linux CI; no full local pass is claimed.
+Package validation and selected-library integrity passed. Full remote CI for this correction is pending at this checkpoint.
+The removed 21 tests belonged to the deleted backend-specific code, not failing retained functionality. Test totals must not be compared as quality scores.
 
-Four installed-user scenarios were added to the existing 21: 25 DEFINED, NOT RUN. docs/installed-flow-acceptance.md specifies fresh installed-path activation, native calls, automated UI actions, repeated scoped changes and saved/reopened evidence. The authoring helpers are internal to the skill; the user does not supply their JSON or shell commands.
-
-## Observed hosted validation
-
-The attachment was extracted and used as the working baseline; remote main was still 983946c and open PRs were empty. The supplied local README/STATUS/handoff observations were preserved rather than replaced with older remote claims.
-
-Local Python has Mido 1.3.3 and SoundFile 0.13.1, but no mcp/httpx2 installation and no reachable package service. Initial full baseline discovery exposed those missing SDK dependencies; that failed attempt is not a full passing run.
-The five existing ProbeSDKTests are not runnable here. They remain enabled and unchanged in the repository/CI; local regression reporting explicitly separates them rather than removing or weakening them.
-New helpers require no new dependencies. Local package validation passed. All 26 added tests passed, including the independently extracted install ZIP. The explicit local regression ran 131 of 136 discovered tests successfully; only the five pre-existing SDK transport tests were not run here because mcp/httpx2 are absent. Those tests remain required in ordinary Windows/Linux CI.
-
-PR #6 code head 143918e92c8315b6e0187e63b43a44dd4010892d: run 35437165154 completed successfully on windows-latest and ubuntu-latest, Python 3.12. Both jobs passed package validation, all 136 tests and install-ZIP generation. The Windows log explicitly records 136 tests, OK, including the five SDK tests unavailable in this local container. No tests were disabled to obtain that result.
-The tested local Git tree matched the uploaded code tree 469679a77ec3baaa6ad560416936521fc5a8003b exactly. This documentation-only follow-up records the observed code run; it does not claim an unobserved later run passed. Protocol fixtures and backend-shaped data still do not constitute a model or Live execution.
-
-There is no Codex executable, configured model API, private Windows workspace or Live process in this environment. Actual model/installed-user scenarios cannot be executed here; do not relabel deterministic fixture tests as model evaluations.
-
-## Local Windows first connection — 2026-09-19
+## Historical PC experiment — successful, subsequently removed
 
 Initial inspection found no Ableton MCP. Following the owner's trial approval, the pinned nicholasbien/ableton-mcp-pro implementation was installed privately, with one Live User Library Remote Script and one Codex stdio entry. Actual Live 12 Suite 12.4.6 exposed 78 tools through the server. Its Live-side TCP listener was verified on literal IPv4 loopback; no firewall exception or public endpoint was added.
 
@@ -47,23 +44,9 @@ Both baseline and revised .als files were saved through the native Live UI and a
 
 Local package validation and full unittest discovery passed using the separate diagnostic Python 3.12 environment: 110 tests run, 109 passed and one symlink-capability skip. Earlier missing-dependency and sandbox temporary-directory failures remain recorded privately. These are local results, not new CI results. No purchases, credit use, external audio uploads or account changes occurred. Listening, rendering, musical quality and arbitrary existing-song/MPE preservation were not tested.
 
-## Preserved implementation and limits
+## Evidence boundary
 
-The 41-module/89-file/1,805,308-byte selected library, legal notices, Mido helper, SoundFile helper, read-only mcp_probe, existing requirements and one permanent CI workflow are unchanged. No Chinese-specialist originals, hidden backup, compatibility view, automatic download or extra entry skill was restored.
-
-MCP readbacks omit advanced note properties, some automation and return-device details. The initial owned-clip route is intentionally limited; it is not a verified arbitrary existing-song editor. Requests beyond it require an actually supported preservation path, not destructive fallback.
-Checkpoint hashes prove consistency of supplied observations, not that those observations came from Live. Reopen comparisons require an independent actual host open event and saved-file identity. Saved XML review is explicit and includes every reported difference; private real Sets were not included in the attachment.
-
-Save/new/open have no MCP tools in the approved backend. The host's already demonstrated Windows UI automation supplies them. This kit does not claim to ship or test a new UI driver here.
-No listening, rendering, full-song quality or native-language review is newly claimed. No purchases, credit use, private uploads, account/config changes or broader permissions were performed.
-
-## Next local action: installed user flow, not setup
-
-Use docs/installed-flow-acceptance.md with the updated installation in a fresh local desktop Codex session. Record the actual installed SKILL.md path/hash and plugin version, then issue ordinary create / bass-bar-only-edit / saved-version-reopen requests without injecting checkout instructions or using the private SDK writer.
-Retain the working ableton_live entry, backend commit and separate environments. Use already verified UI automation for new/save/open. Validate helpers against the actual readback shape and actual .als files, then record results and blockers privately. Send back only a redacted summary; do not upload raw calls, samples or projects by default.
-Stop at the specific missing capability or mismatch and report it rather than reinstalling the environment or repeating the user's musical interview.
-
-## Session continuity
-
-Read the handoff, actual refs, open PRs, AGENTS and this status before further work. Preserve the latest local evidence even when remote docs lag.
-Record the scope of every test result and the next concrete action. A usable MIDI file, passing package, or matching fixture is not a completed installed-plugin music workflow.
+The preceding experiment is kept as historical evidence from the owner's local handoff; it is not new hosted execution and does not endorse or retain its backend.
+The 0.7.0 installed-flow implementation passed 136 Windows/Linux tests before the supplier decision changed, but its full natural-language PC acceptance was never run.
+No new SDK or driver is bundled. SDK-based kit code would still be kit-authored, not Ableton-provided or manufacturer-certified.
+Private logs, sample files, credentials and .als projects were not added. Chinese-specialist material stays removed. No purchases, external uploads, configuration changes or history rewriting.
