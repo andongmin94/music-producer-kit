@@ -28,7 +28,10 @@ The attachment was extracted and used as the working baseline; remote main was s
 
 Local Python has Mido 1.3.3 and SoundFile 0.13.1, but no mcp/httpx2 installation and no reachable package service. Initial full baseline discovery exposed those missing SDK dependencies; that failed attempt is not a full passing run.
 The five existing ProbeSDKTests are not runnable here. They remain enabled and unchanged in the repository/CI; local regression reporting explicitly separates them rather than removing or weakening them.
-New helpers require no new dependencies. Local package validation passed. All 26 added tests passed, including the independently extracted install ZIP. The explicit local regression ran 131 of 136 discovered tests successfully; only the five pre-existing SDK transport tests were not run here because mcp/httpx2 are absent. Those tests remain required in ordinary Windows/Linux CI. Remote results are pending at this checkpoint.
+New helpers require no new dependencies. Local package validation passed. All 26 added tests passed, including the independently extracted install ZIP. The explicit local regression ran 131 of 136 discovered tests successfully; only the five pre-existing SDK transport tests were not run here because mcp/httpx2 are absent. Those tests remain required in ordinary Windows/Linux CI.
+
+PR #6 code head 143918e92c8315b6e0187e63b43a44dd4010892d: run 35437165154 completed successfully on windows-latest and ubuntu-latest, Python 3.12. Both jobs passed package validation, all 136 tests and install-ZIP generation. The Windows log explicitly records 136 tests, OK, including the five SDK tests unavailable in this local container. No tests were disabled to obtain that result.
+The tested local Git tree matched the uploaded code tree 469679a77ec3baaa6ad560416936521fc5a8003b exactly. This documentation-only follow-up records the observed code run; it does not claim an unobserved later run passed. Protocol fixtures and backend-shaped data still do not constitute a model or Live execution.
 
 There is no Codex executable, configured model API, private Windows workspace or Live process in this environment. Actual model/installed-user scenarios cannot be executed here; do not relabel deterministic fixture tests as model evaluations.
 
