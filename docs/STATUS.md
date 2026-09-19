@@ -29,7 +29,9 @@ Actual official-first Live creation/edit/save/reopen, installed model flow and a
 
 Local Python 3.13.5 ran 118 of 123 discovered tests successfully, including all eight new official-first retirement/report checks and the five retained saved-Set comparison tests.
 The five existing ProbeSDKTests could not run locally because mcp/httpx2 are not installed. They remain enabled and unchanged for the full Windows/Linux CI; no full local pass is claimed.
-Package validation and selected-library integrity passed. Full remote CI for this correction is pending at this checkpoint.
+Package validation and selected-library integrity passed locally.
+Code head 63576fa4cf82ebe6d20b6627af0a966bd69ce5e8 passed ordinary CI run 35438537092 on ubuntu-latest and windows-latest, Python 3.12. Both jobs completed package validation, all test discovery and ZIP generation successfully. The Ubuntu log explicitly records 123 tests, all passing, including the five SDK tests unavailable locally.
+The tested local and remote code trees matched at 4afdff5c8a6db15302b92b65d7d52a18383b2bbd. This documentation-only follow-up records that observed run, not an unobserved later result.
 The removed 21 tests belonged to the deleted backend-specific code, not failing retained functionality. Test totals must not be compared as quality scores.
 
 ## Historical PC experiment — successful, subsequently removed
