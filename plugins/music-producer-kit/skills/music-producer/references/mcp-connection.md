@@ -1,7 +1,14 @@
-# MCP discovery and the first Live acceptance test
+# MCP connection diagnostics
 
 Use for first connection, changed server versions, missing tools or a genuine Live task. Do not run it for lyrics-only or theory work.
 The kit supplies a diagnostic client, not an Ableton MCP server. Do not confuse the two.
+
+## Owner-tested connection (2026-09-19)
+
+The owner already trial-installed nicholasbien/ableton-mcp-pro at 6ae148de18c8042df041b95c6e830bcdf22be526 as ableton_live and verified a narrow Live 12.4.6 workflow. Use [the installed production path](live-workflow.md) for ordinary work.
+Do not reselect the previously rejected extension candidate, reinstall the server, combine its MCP 1.30.0 environment with the kit's 2.2.0 environment, or interpret the Live-side TCP 9877 listener as HTTP MCP.
+Old open Codex sessions may lack the new tools. Start a fresh supported desktop session; the older PATH CLI's default-model failure is already known and is not authorization to upgrade or change models.
+Actual Save As/Open used automated Windows UI, not MCP and not user-manual saving. This capability is a host requirement rather than a bundled UI driver.
 
 ## 1. Inspect the actual local host
 
@@ -9,7 +16,7 @@ On the user's Windows machine, read the installed Live version, Codex version an
 Use `codex mcp list` and the host's `/mcp` view. Do not dump configuration files, environment values or authentication stores into chat/public reports.
 Codex's CLI, IDE and desktop clients can share MCP configuration, but a standalone Python probe does not establish that Codex enabled or approved those tools.
 Do not change approval settings, disable sandboxing, overwrite config.toml, upgrade Live or install another server merely because a connection failed.
-When a server is absent, determine the actual Live version and required functions before selecting an implementation. The user already chose Windows, Codex, Ableton and ko/en/ja; do not repeat that interview.
+If the owner-tested server truly is absent, inspect its approved local installation and report the missing piece before proposing a configuration change. The user already chose Windows, Codex, Ableton and ko/en/ja; do not repeat that interview.
 
 ## 2. Discover without modifying the song
 
@@ -52,7 +59,7 @@ No row proves the next. A tool named save/export or a readOnlyHint annotation is
 Review actual tool schemas and the server's implementation before the first state read. This helper never auto-selects a tool based on its name or annotation.
 If save/reopen, Arrangement placement, device loading or automation is absent, report the particular gap rather than claim full DAW control.
 
-## 4. Small authorized acceptance exercise
+## 4. Isolated connection exercise (not installed-product acceptance)
 
 Use a new, disposable Set or an explicitly approved scratch project. Do not clear, repurpose or close an unsaved current song.
 Create the original four-bar [harmony study](../examples/harmony-study.json) as two editable parts using actual tool schemas and discovered IDs.
@@ -69,4 +76,4 @@ Keep the scratch result and private evidence for inspection rather than automati
 - https://py.sdk.modelcontextprotocol.io/client/ — official v2 Client and paginated tool discovery.
 - https://py.sdk.modelcontextprotocol.io/client/transports/ — explicit stdio environment and HTTP transport ownership.
 
-The public extension implementation ulm0/ableton-live-mcp was inspected at README blob 3d32186aeae3afd455c6f7123b2dfbe6d1006ceb. It declares Live 12.4.5+ but also no transport control, third-party plugin insertion or automation curves. It is not certified here as the complete production backend and is not auto-installed.
+Previously, the public extension implementation ulm0/ableton-live-mcp was inspected at README blob 3d32186aeae3afd455c6f7123b2dfbe6d1006ceb. It declares Live 12.4.5+ but also no transport control, third-party plugin insertion or automation curves. It is not certified here as the complete production backend and is not auto-installed.

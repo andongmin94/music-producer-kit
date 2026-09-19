@@ -1,10 +1,16 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "music-producer-kit",
-  "version": "0.6.0",
-  "description": "Scoped music production with editable sources and local MCP discovery. Korean, English and Japanese; real Live acceptance still requires local validation.",
+  "version": "0.7.0",
+  "description": "Natural-language Ableton production and scoped edits using an existing native MCP connection, bundled note/readback tools and host UI persistence. Korean, English and Japanese.",
   "repository": "https://github.com/andongmin94/music-producer-kit",
-  "keywords": ["music", "composition", "ableton", "lyrics", "midi"],
+  "keywords": [
+    "music",
+    "composition",
+    "ableton",
+    "lyrics",
+    "midi"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
