@@ -8,12 +8,19 @@ Compare result with the current brief, requested edit range and protected materi
 A whole song is not complete when only a short loop exists. A lyrics-only task is not improved by unsolicited DAW changes.
 For references and humming, separate observed input features from assumptions and extraction errors.
 
-## Installed workflow evidence
+## Live workflow evidence
 
-Use [the installed Live workflow](live-workflow.md), not a new private diagnostic writer.
-Its bundled comparison covers the captured native fields; missing reads fail rather than being skipped. It does not prove hidden automation/MPE/return-device data.
-Keep a separate saved .als XML comparison and actual observed host UI open evidence. Changed clip IDs and transport position require contextual review, not wholesale masking.
-A checkpoint with the same bytes copied twice is not evidence of a reopen. The original PC smoke test is prior evidence, not evidence that this installed plugin executed the current request.
+No current official-first production connection is implemented. Past third-party PC success is historical and cannot certify the replacement or installed product.
+After a route is approved, record real before/after state and inspect missing fields rather than assuming they were preserved.
+The independent saved-Set inspector can compare files without any MCP backend. From the installed skill directory:
+
+```text
+python scripts/live_set_diff.py BASELINE.als REVISED.als --output PRIVATE_REPORT.json
+```
+
+Use actual input files and a new report outside the installed plugin and public repository. This reads files only; it does not open them in Live.
+The inspector reports changed XML fields, including IDs, automation and transport. Review all differences against the requested scope; truncation is not an all-clear.
+Identical XML or copied captures do not prove an actual UI/API reopen, external-file availability or audio quality. Real new-route .als validation is pending.
 
 ## Technical checks
 

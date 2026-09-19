@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "music-producer-kit",
-  "version": "0.7.0",
-  "description": "Natural-language Ableton production and scoped edits using an existing native MCP connection, bundled note/readback tools and host UI persistence. Korean, English and Japanese.",
+  "version": "0.7.1",
+  "description": "Music production skills, editable MIDI, local sample inspection and saved-Set comparison. Official-first Ableton integration is pending; no current Live production backend.",
   "repository": "https://github.com/andongmin94/music-producer-kit",
   "keywords": [
     "music",
